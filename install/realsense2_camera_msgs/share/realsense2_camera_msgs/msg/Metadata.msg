@@ -1,2 +1,1 @@
-std_msgs/Header header
-string json_data
+/home/aidanr/R2G_robot/src/realsense-ros/realsense2_camera_msgs/msg/Metadata.msg

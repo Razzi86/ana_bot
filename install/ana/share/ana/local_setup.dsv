@@ -1,2 +1,1 @@
-source;share/ana/environment/ament_prefix_path.sh
-source;share/ana/environment/path.sh
+/home/aidanr/R2G_robot/build/ana/ament_cmake_environment_hooks/local_setup.dsv

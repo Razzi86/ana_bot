@@ -1,9 +1,1 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
-
-    <!-- Example Link -->
-    <xacro:include filename="robot_core.xacro" />
-
-    <xacro:include filename="gazebo_diff_control.xacro"/>
-    
-</robot>
+/home/aidanr/R2G_robot/src/ana/description/robot.urdf.xacro

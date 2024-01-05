@@ -1,2 +1,1 @@
-float64[9] rotation
-float64[3] translation
+/home/aidanr/R2G_robot/src/realsense-ros/realsense2_camera_msgs/msg/Extrinsics.msg
