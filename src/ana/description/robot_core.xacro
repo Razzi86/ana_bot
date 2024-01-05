@@ -38,7 +38,7 @@
             <geometry>
                 <mesh filename="file:///home/aidanr/R2G_robot/src/ana/meshes/ana_chassis.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="white"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <origin xyz="0.1175 0.0835 0.0295"/> <!-- chassis location ajusted to be in the middle of the chassis -->
@@ -50,6 +50,10 @@
             <origin xyz="0.1175 0.0835 0.0295" rpy="0 0 0"/>
         </xacro:inertial_box>
     </link>
+
+    <gazebo reference="chassis">
+        <material>Gazebo/Blue</material>
+    </gazebo>
 
     <!-- FRONT LEFT WHEEL LINK -->
 
@@ -76,6 +80,10 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
+    <gazebo reference="front_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
     
     <!-- FRONT RIGHT WHEEL LINK -->
 
@@ -103,6 +111,10 @@
         </xacro:inertial_cylinder>
     </link>
 
+    <gazebo reference="front_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
     <!-- BACK LEFT WHEEL LINK -->
 
     <joint name="back_left_wheel_joint" type="continuous">
@@ -128,6 +140,10 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
+    <gazebo reference="back_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
     
     <!-- BACK RIGHT WHEEL LINK -->
 
@@ -154,5 +170,9 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
+    <gazebo reference="back_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
 
 </robot>

@@ -27,9 +27,25 @@ def generate_launch_description():
         arguments=['-topic', 'robot_description', '-entity', 'my_bot'],
         output='screen')
     
+    joint_state_publisher = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        name='joint_state_publisher'
+    )
+    
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', "rviz_config_file/home/aidanr/R2G_robot/src/ana/config/diff_TF.rviz"],
+        output='screen'
+    )
+
     # Launch them all!
     return LaunchDescription([
         rsp,
         gazebo,
         spawn_entity,
+        joint_state_publisher,
+        rviz_node,
     ])

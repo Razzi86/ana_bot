@@ -2,10 +2,26 @@ ros2 launch realsense2_camera rs_launch.py camera_name:=D435i_1 pointcloud.enabl
 
 colcon build
 source /home/aidanr/R2G_robot/install/setup.bash
-ros2 launch ana rsp.launch.py use_sim_time:=true
+ros2 launch ana rsp.launch.py
 ---
 ros2 run joint_state_publisher_gui joint_state_publisher_gui 
 ros2 launch gazebo_ros gazebo.launch.py
 ros2 run gazebo_ros spawn_entity.py -topic robot_description -entity ana
+
+
+with launch file:
+source /home/aidanr/R2G_robot/install/setup.bash
+ros2 launch ana launch_sim.launch.py
+ros2 launch ana launch_sim.launch.py world:=./src/ana/worlds/obstacles.world
+
+
+github:
+git status 
+git pull origin main
+git add .
+git commit -m "Simulation Xacros, Differential Drive"
+git push origin main
+
+
 
 

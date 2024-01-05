@@ -27,16 +27,9 @@ def generate_launch_description():
         arguments=['-topic', 'robot_description', '-entity', 'my_bot'],
         output='screen')
     
-    joint_state_publisher = Node(
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
-        name='joint_state_publisher'
-    )
-
     # Launch them all!
     return LaunchDescription([
         rsp,
         gazebo,
         spawn_entity,
-        joint_state_publisher,
     ])
