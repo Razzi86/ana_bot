@@ -1,0 +1,21 @@
+static transformation
+T1: ros2 run tf2_ros static_transform_publisher 2 1 0 0.785 0 0 world robot_1
+T2: ros2 run tf2_ros static_transform_publisher 1 0 0 0 0 0 robot_1 robot_2
+T3: rviz2
+RViz2: change "Fixed Frame" to "world"
+Add: transform, show names
+Finally, change anything from T1 or T2 to see live transformation updates
+
+dynamic transform
+T1: ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/aidanr/R2G_robot/ROS2_Examples/Transform/example_robot.urdf.xacro)"
+THIS CAN BE A PAIN, SO LAUNCH FILES ARE TYPICALLY USED
+T2: ros2 run joint_state_publisher_gui joint_state_publisher_gui
+T3: rviz2
+RViz2: change "Fixed Frame" to "world"
+Add: transform, show names
+Mess with GUI to change where robot is
+Add: RobotModel, change Description Topic to "/robot_description"
+
+debugging
+T1: ros2 run tf2_tools view_frames.py
+Spits out two pdfs of frame transformations (didn't work for me)

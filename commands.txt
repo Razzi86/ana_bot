@@ -1,0 +1,6 @@
+ros2 launch realsense2_camera rs_launch.py camera_name:=D435i_1 pointcloud.enable:=true enable_gyro:=true enable_accel:=true
+
+colcon build
+source /home/aidanr/R2G_robot/install/setup.bash
+ros2 launch ana rsp.launch.py
+ros2 run joint_state_publisher_gui joint_state_publisher_gui 

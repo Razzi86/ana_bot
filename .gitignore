@@ -1,0 +1,21 @@
+# Ignore build and devel directories created by catkin_make
+build/
+devel/
+
+# Ignore log files
+logs/
+
+# Python compiled files
+*.pyc
+
+# Ignore temporary files
+*~
+
+.DS_Store
+
+# Ignore other common directories
+.idea/  # For PyCharm users
+.vscode/  # For VS Code users
+
+# If using a ROS 2 workspace, you might also have a log directory
+log/
