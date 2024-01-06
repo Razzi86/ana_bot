@@ -1,13 +1,24 @@
 import os
-
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
+from launch.substitutions import Command
 
 def generate_launch_description():
     package_name='ana'
+    
+    xacro_file = os.path.join(get_package_share_directory(package_name), 'description', 'robot.urdf.xacro')
+    robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=true sim_mode:=true'])
+
+    # Create a robot_state_publisher node
+    node_robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        output='screen',
+        parameters=[{'robot_description': robot_description_config}]
+    )
     
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands
 
@@ -42,6 +53,8 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
     
+    
+    
     # Launch them all!
     return LaunchDescription([
         rsp,
@@ -49,4 +62,5 @@ def generate_launch_description():
         spawn_entity,
         diff_drive_spawner,
         joint_broad_spawner,
+        node_robot_state_publisher,
     ])
