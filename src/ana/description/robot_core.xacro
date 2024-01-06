@@ -73,7 +73,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.0325" length="0.027" />
+                <sphere radius="0.0325"/> <!-- reduces chances of gazebo/rviz car location drift (friction) -->
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.027" radius = "0.0325">
@@ -103,7 +103,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.0325" length="0.027" />
+                <sphere radius="0.0325"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.027" radius = "0.0325">
@@ -133,7 +133,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.0325" length="0.027" />
+                <sphere radius="0.0325"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.027" radius = "0.0325">
@@ -143,8 +143,8 @@
 
     <gazebo reference="back_left_wheel">
         <material>Gazebo/Black</material>
-        <mu1 value="0.001"/>
-        <mu2 value="0.001"/>
+        <!-- <mu1 value="0.001"/>
+        <mu2 value="0.001"/> -->
     </gazebo>
     
     <!-- BACK RIGHT WHEEL LINK -->
@@ -165,7 +165,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.0325" length="0.027" />
+                <sphere radius="0.0325"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.027" radius = "0.0325">
@@ -175,8 +175,8 @@
 
     <gazebo reference="back_right_wheel">
         <material>Gazebo/Black</material>
-        <mu1 value="0.001"/>
-        <mu2 value="0.001"/>
+        <!-- <mu1 value="0.001"/>
+        <mu2 value="0.001"/> -->
     </gazebo>
 
 </robot>
