@@ -21,7 +21,7 @@ git status
 git pull origin main
 --- passwords
 git add .
-git commit -m "Simulation and D435i camera/pointclouds viewable in RViz2"
+git commit -m "Addes ROS2 control, back wheels temporarily frictionless"
 git push origin main
 
 
