@@ -4,6 +4,8 @@
     <!-- Example Link -->
     <xacro:include filename="robot_core.xacro" />
     <xacro:include filename="gazebo_diff_control.xacro"/>
-    <xacro:include filename="camera_xacro.xacro"/>
+    <!-- <xacro:include filename="camera.xacro"/> -->
+    <xacro:include filename="depth_camera.xacro"/>
+
     
 </robot>

@@ -21,7 +21,7 @@ git status
 git pull origin main
 --- passwords
 git add .
-git commit -m "Added D435i camera that works in a world file"
+git commit -m "Simulation and D435i camera/pointclouds viewable in RViz2"
 git push origin main
 
 
