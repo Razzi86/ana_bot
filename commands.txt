@@ -1,5 +1,9 @@
+USEFUL COMMANDS:
+
+1 - VIEW D435i DATA IN RVIZ2
 ros2 launch realsense2_camera rs_launch.py camera_name:=D435i_1 pointcloud.enable:=true enable_gyro:=true enable_accel:=true
 
+2 - RUN ANA WITH GAZEBO_DIFF - NO STATE PUBLISHER??
 colcon build --symlink-install
 source /home/aidanr/R2G_robot/install/setup.bash
 ros2 launch ana rsp.launch.py
@@ -8,21 +12,38 @@ ros2 run joint_state_publisher_gui joint_state_publisher_gui
 ros2 launch gazebo_ros gazebo.launch.py
 ros2 run gazebo_ros spawn_entity.py -topic robot_description -entity ana
 
+3 - RUN ANA WITH ROS_DIFF - WITH STATE PUBLISHER?
+ros2 run controller_manager spawner.py joint_broad
+ros2 control list_hardware_interfaces 
+ros2 control list_controllers
+ros2 run controller_manager spawner.py
+ros2 run controller_manager spawner.py diff_cont
+ros2 run controller_manager spawner.py joint_broad
+-----
+ros2 launch ana launch_sim.launch.py world:=./src/ana/worlds/obstacles.world
+-----
+ros2 run teleop_twist_keyboard teleop_twist_keyboard  --ros-args -r /cmd_vel:=diff_cont/cmd_vel_unstamped
 
+4 - I FORGOR
 with launch file:
 source /home/aidanr/R2G_robot/install/setup.bash
 ros2 launch ana launch_sim.launch.py
 ros2 launch ana launch_sim.launch.py world:=./src/ana/worlds/obstacles.world
-
+-----
 ros2 run teleop_twist_keyboard teleop_twist_keyboard 
 
-github:
+5 - GITHUB:
 git status 
 git pull origin main
 --- passwords
 git add .
-git commit -m "goodbye"
+git commit -m "edited commands.txt to never deal with ~that mess~ again"
 git push origin main
+
+
+
+
+
 
 
 
