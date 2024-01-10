@@ -20,7 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
     'console_scripts': [
-        'my_node = my_python_pkg.my_node:main',
+        # node name = package.node:main
+        'motor_control = my_python_pkg.my_node:main',
+        'arduino_serial = my_python_pkg.arduino_serial:main',
         ],
     },
 )

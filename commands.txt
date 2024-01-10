@@ -37,7 +37,7 @@ git status
 git pull origin main
 --- passwords
 git add .
-git commit -m "edited commands.txt to never deal with ~that mess~ again"
+git commit -m "arduino serial communication to ros2, encoders working"
 git push origin main
 
 

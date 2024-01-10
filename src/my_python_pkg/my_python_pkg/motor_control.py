@@ -72,12 +72,20 @@ class MotorControlNode(Node):
     def read_arduino_data(self):
         while True:
             if self.arduino_right.in_waiting > 0:
-                data = self.arduino_right.readline().decode().strip()
-                print("Right Arduino:", data)
+                data_right = self.arduino_right.readline().decode().strip()
+                self.print_position("Right Arduino:", data_right)
             if self.arduino_left.in_waiting > 0:
-                data = self.arduino_left.readline().decode().strip()
-                print("Left Arduino:", data)
+                data_left = self.arduino_left.readline().decode().strip()
+                self.print_position("Left Arduino:", data_left)
             time.sleep(0.1)  # Adjust as needed to match Arduino sending rate
+
+    def print_position(self, prefix, data):
+        print(f"{prefix} Raw data: {data}")  # Print raw data for debugging
+        try:
+            pos_front, pos_back = map(int, data.split())
+            print(f"{prefix} Position Front: {pos_front}, Position Back: {pos_back}")
+        except ValueError:
+            print(f"{prefix} Error parsing data: {data}")
 
 def main(args=None):
     rclpy.init(args=args)
