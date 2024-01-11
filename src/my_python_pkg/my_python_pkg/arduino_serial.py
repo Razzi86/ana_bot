@@ -15,8 +15,8 @@ class SerialNode(Node):
             self.send_command_to_arduino,
             10)
 
-        self.serial_port1 = serial.Serial('/dev/ttyACM0', 115200, timeout=0)  # Set timeout to 0 for non-blocking
-        self.serial_port2 = serial.Serial('/dev/ttyACM1', 115200, timeout=0)  # Set timeout to 0 for non-blocking
+        self.serial_port1 = serial.Serial('/dev/ttyACM2', 115200, timeout=0)  # Set timeout to 0 for non-blocking
+        self.serial_port2 = serial.Serial('/dev/ttyACM3', 115200, timeout=0)  # Set timeout to 0 for non-blocking
 
         self.serial_thread1 = threading.Thread(target=self.read_from_arduino, args=(self.serial_port1, self.publisher_1))
         self.serial_thread2 = threading.Thread(target=self.read_from_arduino, args=(self.serial_port2, self.publisher_2))
