@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# EASY-INSTALL-ENTRY-SCRIPT: 'my-python-pkg','console_scripts','arduino_serial'
+# EASY-INSTALL-ENTRY-SCRIPT: 'my-python-pkg','console_scripts','motor_control'
 __requires__ = 'my-python-pkg'
 import re
 import sys
@@ -8,5 +8,5 @@ from pkg_resources import load_entry_point
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
     sys.exit(
-        load_entry_point('my-python-pkg', 'console_scripts', 'arduino_serial')()
+        load_entry_point('my-python-pkg', 'console_scripts', 'motor_control')()
     )

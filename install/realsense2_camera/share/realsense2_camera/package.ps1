@@ -114,6 +114,5 @@ colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/realse
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/realsense2_camera/hook/ld_library_path_lib.ps1"
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/realsense2_camera/hook/path.ps1"
 colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/realsense2_camera/hook/pythonscriptspath.ps1"
-colcon_package_source_powershell_script "$env:COLCON_CURRENT_PREFIX\share/realsense2_camera/local_setup.ps1"
 
 Remove-Item Env:\COLCON_CURRENT_PREFIX

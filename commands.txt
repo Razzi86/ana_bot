@@ -37,8 +37,12 @@ git status
 git pull origin main
 --- passwords
 git add .
-git commit -m "arduino serial communication to ros2, encoders working"
+git commit -m "working state with encoders and ana nodes"
 git push origin main
+
+
+colcon build --symlink-install --packages-skip realsense2_camera
+
 
 
 
