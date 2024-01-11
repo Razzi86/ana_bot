@@ -37,7 +37,7 @@ git status
 git pull origin main
 --- passwords
 git add .
-git commit -m "working state with encoders and ana nodes"
+git commit -m "/odom being sent (add TimerActions)"
 git push origin main
 
 
