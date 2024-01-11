@@ -61,6 +61,7 @@ void loop() {
   if (millis() - lastSendTime > sendInterval) {
     Serial.print("Front pos: ");
     Serial.print(pos_front);
+    Serial.print(" ");
     Serial.print( "Back pos: ");
     Serial.println(pos_back);
 
