@@ -1,6 +1,15 @@
 # ANA - Autonomous Navigation Assembly
 temporary unfinished readme.
 
+## List of components:
+- NVIDIA Jetson Orin Nano Developer Kit
+- RealSense Depth Camera
+- 2x Arduino Leonardo
+- 2x Arduino Motor Shield Rev3
+- 4x Polou 25D 12V Encoder Motors
+- 2x CNHL 2200mAh Lipo Batteries
+- AOHI 100W 30000mAh Power Bank
+
 ## 3D Model of the Chassis
 View the 3D model of the ANA chassis here: [ANA Chassis 3D Model](https://github.com/Razzi86/ana_bot/blob/main/ana_chassis.stl)
 
