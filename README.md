@@ -1,9 +1,13 @@
 # ANA - Autonomous Navigation Assembly
 temporary unfinished readme.
 
+## Framework
+- ROS2 Galactic
+- Ubuntu 20.04
+
 ## List of components:
 - NVIDIA Jetson Orin Nano Developer Kit
-- RealSense Depth Camera
+- Intel D435i RealSense Depth Camera
 - 2x Arduino Leonardo
 - 2x Arduino Motor Shield Rev3
 - 4x Polou 25D 12V Encoder Motors
