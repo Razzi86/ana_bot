@@ -4,6 +4,8 @@
 #include <sstream>
 #include <vector>
 
+// THIS DOESN'T WORK. FAILED EXPERIMENT WITH RESEARCH + CHATGPT. TODO: Watch PID tutorial
+
 class PIDController : public rclcpp::Node
 {
 public:

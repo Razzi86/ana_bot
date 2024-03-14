@@ -5,6 +5,7 @@ from rclpy.node import Node
 import serial
 import time
 
+# SEND MOTOR COMMANDS TO ARDUINO
 class MotorControlNode(Node):
     def __init__(self):
         super().__init__('motor_control_node')

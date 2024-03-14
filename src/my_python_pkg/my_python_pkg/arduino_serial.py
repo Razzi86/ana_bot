@@ -4,6 +4,7 @@ from std_msgs.msg import String
 import serial
 import threading
 
+# READ ARDUINO SERIAL DATA
 class SerialNode(Node):
     def __init__(self):
         super().__init__('serial_node')

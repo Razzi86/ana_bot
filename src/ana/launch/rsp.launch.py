@@ -34,11 +34,11 @@ def generate_launch_description():
     )
 
     delayed_rviz_launch = TimerAction(
-        period=5.0,  # Delay in seconds
+        period=5.0,  # Delay in seconds TODO: MAKE DELAY WAIT UNTIL SPECIFIC VARIABLES ARE LOADED, 5 SECONDS DOES NOT GUARANTEE THEY WILL BE. THIS IS WHY ODOM IS MESSED UP.
         actions=[rviz_node]
     )
 
-    # Launch!
+    # Launch
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
