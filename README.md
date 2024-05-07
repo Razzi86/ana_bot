@@ -19,10 +19,10 @@ View the 3D model of the ANA chassis here: [ANA Chassis 3D Model](https://github
 
 ## 3D printed chassis and assembled components
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/car.jpg" width="48%" />
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/car_stuff.jpg" width="28%" />
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/car_moving.gif" width="21%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="48%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_stuff.jpg" width="28%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_moving.gif" width="21%" />
 </p>
 
 ## RViz2 & Gazebo
-<img src="https://github.com/Razzi86/ana_bot/blob/main/car_gif.gif" width="80%" />
+<img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_gif.gif" width="80%" />
