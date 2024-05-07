@@ -2,8 +2,10 @@
 temporary unfinished readme.
 
 ## Framework
-- ROS2 Galactic
-- Ubuntu 20.04
+- ROS2 Humble
+- Ubuntu 22.04
+- Gazebo Classic
+- RViz2
 
 ## List of components:
 - NVIDIA Jetson Orin Nano Developer Kit
