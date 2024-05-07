@@ -26,5 +26,5 @@ View the 3D model of the ANA chassis here: [ANA Chassis 3D Model](https://github
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_moving.gif" width="21%" />
 </p>
 
-## RViz2 & Gazebo
+## RViz2 & Gazebo (new more-in-sync RViz/Gazebo gif to be added soon)
 <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_gif.gif" width="80%" />
