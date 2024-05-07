@@ -1,0 +1,20 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+writing my_python_pkg.egg-info/PKG-INFO
+writing dependency_links to my_python_pkg.egg-info/dependency_links.txt
+writing entry points to my_python_pkg.egg-info/entry_points.txt
+writing requirements to my_python_pkg.egg-info/requires.txt
+writing top-level names to my_python_pkg.egg-info/top_level.txt
+reading manifest file 'my_python_pkg.egg-info/SOURCES.txt'
+writing manifest file 'my_python_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/aidan/ros2_ws/install/my_python_pkg/lib/python3.10/site-packages/my-python-pkg.egg-link (link to .)
+Installing arduino_serial script to /home/aidan/ros2_ws/install/my_python_pkg/lib/my_python_pkg
+Installing motor_control script to /home/aidan/ros2_ws/install/my_python_pkg/lib/my_python_pkg
+
+Installed /home/aidan/ros2_ws/build/my_python_pkg
+running symlink_data
+symbolically linking /home/aidan/ros2_ws/build/my_python_pkg/resource/my_python_pkg -> /home/aidan/ros2_ws/install/my_python_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/aidan/ros2_ws/build/my_python_pkg/package.xml -> /home/aidan/ros2_ws/install/my_python_pkg/share/my_python_pkg

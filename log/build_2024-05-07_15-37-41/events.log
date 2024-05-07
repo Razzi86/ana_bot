@@ -1,0 +1,182 @@
+[0.000000] (-) TimerEvent: {}
+[0.000181] (ana) JobQueued: {'identifier': 'ana', 'dependencies': OrderedDict()}
+[0.000211] (my_python_pkg) JobQueued: {'identifier': 'my_python_pkg', 'dependencies': OrderedDict()}
+[0.000233] (ana) JobStarted: {'identifier': 'ana'}
+[0.003330] (my_python_pkg) JobStarted: {'identifier': 'my_python_pkg'}
+[0.007652] (ana) JobProgress: {'identifier': 'ana', 'progress': 'cmake'}
+[0.008029] (ana) Command: {'cmd': ['/usr/bin/cmake', '/home/aidan/ros2_ws/src/ana', '-DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana'], 'cwd': '/home/aidan/ros2_ws/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2273'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2245,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2245'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c6cbaf5c_9dc7_47a0_9c83_77ab080937d3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.189'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ros2_ws/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.018000] (ana) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099229] (-) TimerEvent: {}
+[0.102635] (ana) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.123905] (ana) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.125815] (ana) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.130071] (ana) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.137919] (ana) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.149062] (ana) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.191015] (ana) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.191895] (ana) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.199408] (-) TimerEvent: {}
+[0.274768] (ana) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.299507] (-) TimerEvent: {}
+[0.394273] (ana) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.399590] (-) TimerEvent: {}
+[0.435493] (my_python_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_python_pkg', 'build', '--build-base', '/home/aidan/ros2_ws/build/my_python_pkg/build', 'install', '--record', '/home/aidan/ros2_ws/build/my_python_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/aidan/ros2_ws/src/my_python_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aidan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/aidan', 'OLDPWD': '/home/aidan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2273', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'aidan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aidan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2245,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2245', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c6cbaf5c_9dc7_47a0_9c83_77ab080937d3', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.189', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aidan/ros2_ws/build/my_python_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aidan/ros2_ws/build/my_python_pkg/prefix_override:/home/aidan/ros2_ws/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.458032] (ana) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.459281] (ana) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.459473] (ana) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[0.459577] (ana) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.460349] (ana) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.460460] (ana) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.460812] (ana) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.461362] (ana) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.461794] (ana) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.462799] (ana) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.462909] (ana) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.463258] (ana) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.464367] (ana) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.470658] (ana) StdoutLine: {'line': b'-- Generating done\n'}
+[0.471587] (ana) StdoutLine: {'line': b'-- Build files have been written to: /home/aidan/ros2_ws/build/ana\n'}
+[0.476533] (ana) CommandEnded: {'returncode': 0}
+[0.477030] (ana) JobProgress: {'identifier': 'ana', 'progress': 'build'}
+[0.477513] (ana) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aidan/ros2_ws/build/ana', '--', '-j16', '-l16'], 'cwd': '/home/aidan/ros2_ws/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2273'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2245,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2245'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c6cbaf5c_9dc7_47a0_9c83_77ab080937d3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.189'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ros2_ws/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.499687] (-) TimerEvent: {}
+[0.509780] (ana) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pid_node.dir/src/PID.cpp.o\x1b[0m\n'}
+[0.599790] (-) TimerEvent: {}
+[0.629912] (my_python_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.630363] (my_python_pkg) StdoutLine: {'line': b'writing ../../build/my_python_pkg/my_python_pkg.egg-info/PKG-INFO\n'}
+[0.630551] (my_python_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/my_python_pkg/my_python_pkg.egg-info/dependency_links.txt\n'}
+[0.630725] (my_python_pkg) StdoutLine: {'line': b'writing entry points to ../../build/my_python_pkg/my_python_pkg.egg-info/entry_points.txt\n'}
+[0.630838] (my_python_pkg) StdoutLine: {'line': b'writing requirements to ../../build/my_python_pkg/my_python_pkg.egg-info/requires.txt\n'}
+[0.630950] (my_python_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/my_python_pkg/my_python_pkg.egg-info/top_level.txt\n'}
+[0.631963] (my_python_pkg) StdoutLine: {'line': b"reading manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.632519] (my_python_pkg) StdoutLine: {'line': b"writing manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.632636] (my_python_pkg) StdoutLine: {'line': b'running build\n'}
+[0.632706] (my_python_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.632952] (my_python_pkg) StdoutLine: {'line': b'running install\n'}
+[0.633151] (my_python_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.634456] (my_python_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.634602] (my_python_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.635526] (my_python_pkg) StdoutLine: {'line': b"removing '/home/aidan/ros2_ws/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.635702] (my_python_pkg) StdoutLine: {'line': b'Copying ../../build/my_python_pkg/my_python_pkg.egg-info to /home/aidan/ros2_ws/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info\n'}
+[0.636352] (my_python_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.650475] (my_python_pkg) StdoutLine: {'line': b'Installing arduino_serial script to /home/aidan/ros2_ws/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.650729] (my_python_pkg) StdoutLine: {'line': b'Installing motor_control script to /home/aidan/ros2_ws/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.650959] (my_python_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/aidan/ros2_ws/build/my_python_pkg/install.log'\n"}
+[0.664439] (my_python_pkg) CommandEnded: {'returncode': 0}
+[0.671148] (my_python_pkg) JobEnded: {'identifier': 'my_python_pkg', 'rc': 0}
+[0.699899] (-) TimerEvent: {}
+[0.800121] (-) TimerEvent: {}
+[0.900360] (-) TimerEvent: {}
+[1.000727] (-) TimerEvent: {}
+[1.100960] (-) TimerEvent: {}
+[1.201217] (-) TimerEvent: {}
+[1.301470] (-) TimerEvent: {}
+[1.401731] (-) TimerEvent: {}
+[1.502011] (-) TimerEvent: {}
+[1.602273] (-) TimerEvent: {}
+[1.702539] (-) TimerEvent: {}
+[1.802824] (-) TimerEvent: {}
+[1.903100] (-) TimerEvent: {}
+[2.003381] (-) TimerEvent: {}
+[2.103645] (-) TimerEvent: {}
+[2.203923] (-) TimerEvent: {}
+[2.304205] (-) TimerEvent: {}
+[2.404480] (-) TimerEvent: {}
+[2.504711] (-) TimerEvent: {}
+[2.604965] (-) TimerEvent: {}
+[2.705230] (-) TimerEvent: {}
+[2.805514] (-) TimerEvent: {}
+[2.905792] (-) TimerEvent: {}
+[3.006051] (-) TimerEvent: {}
+[3.106304] (-) TimerEvent: {}
+[3.206549] (-) TimerEvent: {}
+[3.306819] (-) TimerEvent: {}
+[3.407094] (-) TimerEvent: {}
+[3.507370] (-) TimerEvent: {}
+[3.607630] (-) TimerEvent: {}
+[3.707921] (-) TimerEvent: {}
+[3.808201] (-) TimerEvent: {}
+[3.908478] (-) TimerEvent: {}
+[4.008687] (-) TimerEvent: {}
+[4.108954] (-) TimerEvent: {}
+[4.209240] (-) TimerEvent: {}
+[4.309516] (-) TimerEvent: {}
+[4.409799] (-) TimerEvent: {}
+[4.510066] (-) TimerEvent: {}
+[4.610335] (-) TimerEvent: {}
+[4.710585] (-) TimerEvent: {}
+[4.810851] (-) TimerEvent: {}
+[4.911105] (-) TimerEvent: {}
+[5.011358] (-) TimerEvent: {}
+[5.111603] (-) TimerEvent: {}
+[5.211852] (-) TimerEvent: {}
+[5.312101] (-) TimerEvent: {}
+[5.412367] (-) TimerEvent: {}
+[5.512655] (-) TimerEvent: {}
+[5.612959] (-) TimerEvent: {}
+[5.713209] (-) TimerEvent: {}
+[5.813476] (-) TimerEvent: {}
+[5.913728] (-) TimerEvent: {}
+[6.013996] (-) TimerEvent: {}
+[6.114244] (-) TimerEvent: {}
+[6.214496] (-) TimerEvent: {}
+[6.314733] (-) TimerEvent: {}
+[6.414970] (-) TimerEvent: {}
+[6.515236] (-) TimerEvent: {}
+[6.615499] (-) TimerEvent: {}
+[6.715750] (-) TimerEvent: {}
+[6.816002] (-) TimerEvent: {}
+[6.916239] (-) TimerEvent: {}
+[7.016477] (-) TimerEvent: {}
+[7.116719] (-) TimerEvent: {}
+[7.217020] (-) TimerEvent: {}
+[7.302423] (ana) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pid_node\x1b[0m\n'}
+[7.317132] (-) TimerEvent: {}
+[7.417427] (-) TimerEvent: {}
+[7.517720] (-) TimerEvent: {}
+[7.584123] (ana) StdoutLine: {'line': b'[100%] Built target pid_node\n'}
+[7.591025] (ana) CommandEnded: {'returncode': 0}
+[7.604533] (ana) JobProgress: {'identifier': 'ana', 'progress': 'install'}
+[7.609753] (ana) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aidan/ros2_ws/build/ana'], 'cwd': '/home/aidan/ros2_ws/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2273'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2245,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2245'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c6cbaf5c_9dc7_47a0_9c83_77ab080937d3'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.189'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ros2_ws/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[7.614284] (ana) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.614506] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/lib/ana/pid_node\n'}
+[7.617140] (ana) StdoutLine: {'line': b'-- Set runtime path of "/home/aidan/ros2_ws/install/ana/lib/ana/pid_node" to ""\n'}
+[7.617321] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/config\n'}
+[7.617497] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/config/simulation_depth.rviz\n'}
+[7.617648] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/config/diff_drive_bot.rviz\n'}
+[7.617723] (-) TimerEvent: {}
+[7.617822] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/config/gazebo_params.yaml\n'}
+[7.617906] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/config/ana.rviz\n'}
+[7.617969] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/config/my_controllers.yaml\n'}
+[7.618030] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description\n'}
+[7.618097] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/camera.xacro\n'}
+[7.618155] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/ros2_diff_control.xacro\n'}
+[7.618219] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/depth_camera.xacro\n'}
+[7.618274] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/robot_core.xacro\n'}
+[7.618331] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/gazebo_diff_control.xacro\n'}
+[7.618379] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/inertial_macros.xacro\n'}
+[7.618436] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/description/robot.urdf.xacro\n'}
+[7.618483] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/launch\n'}
+[7.618540] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/launch/launch_sim.launch.py\n'}
+[7.618586] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/launch/rsp.launch.py\n'}
+[7.618643] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/worlds\n'}
+[7.618689] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/worlds/obstacles.world\n'}
+[7.618753] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/worlds/empty.world\n'}
+[7.618800] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ament_index/resource_index/package_run_dependencies/ana\n'}
+[7.618857] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ament_index/resource_index/parent_prefix_path/ana\n'}
+[7.618914] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/environment/ament_prefix_path.sh\n'}
+[7.618971] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/environment/ament_prefix_path.dsv\n'}
+[7.619018] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/environment/path.sh\n'}
+[7.619084] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/environment/path.dsv\n'}
+[7.619140] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.bash\n'}
+[7.619201] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.sh\n'}
+[7.619247] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.zsh\n'}
+[7.619303] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.dsv\n'}
+[7.619358] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/package.dsv\n'}
+[7.619415] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ament_index/resource_index/packages/ana\n'}
+[7.619472] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/cmake/anaConfig.cmake\n'}
+[7.619519] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/cmake/anaConfig-version.cmake\n'}
+[7.619564] (ana) StdoutLine: {'line': b'-- Installing: /home/aidan/ros2_ws/install/ana/share/ana/package.xml\n'}
+[7.620761] (ana) CommandEnded: {'returncode': 0}
+[7.642728] (ana) JobEnded: {'identifier': 'ana', 'rc': 0}
+[7.643371] (-) EventReactorShutdown: {}

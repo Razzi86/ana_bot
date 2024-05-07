@@ -1,0 +1,2 @@
+Invoking command in '/home/aidan/ros2_ws/build/ana': /usr/bin/cmake /home/aidan/ros2_ws/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana
+Invoked command in '/home/aidan/ros2_ws/build/ana' returned '1': /usr/bin/cmake /home/aidan/ros2_ws/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana

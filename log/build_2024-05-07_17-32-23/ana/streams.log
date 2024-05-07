@@ -1,0 +1,70 @@
+[0.010s] Invoking command in '/home/aidan/ros2_ws/build/ana': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/aidan/ros2_ws/src/ana -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana
+[0.018s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.113s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.120s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.148s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.151s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.158s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.172s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.192s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.268s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.270s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.392s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.534s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.592s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.594s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.594s] -- Configured cppcheck include dirs: 
+[0.594s] -- Configured cppcheck exclude dirs and/or files: 
+[0.595s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.595s] -- Configured cpplint exclude dirs and/or files: 
+[0.596s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.596s] -- Added test 'lint_cmake' to check CMake code style
+[0.597s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.598s] -- Added test 'uncrustify' to check C / C++ code style
+[0.598s] -- Configured uncrustify additional arguments: 
+[0.599s] -- Added test 'xmllint' to check XML markup files
+[0.599s] -- Configuring done
+[0.609s] -- Generating done
+[0.611s] -- Build files have been written to: /home/aidan/ros2_ws/build/ana
+[0.621s] Invoked command in '/home/aidan/ros2_ws/build/ana' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/aidan/ros2_ws/src/ana -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana
+[0.622s] Invoking command in '/home/aidan/ros2_ws/build/ana': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/aidan/ros2_ws/build/ana -- -j16 -l16
+[0.651s] [35m[1mConsolidate compiler generated dependencies of target pid_node[0m
+[0.665s] [ 50%] [32m[1mLinking CXX executable pid_node[0m
+[1.137s] [100%] Built target pid_node
+[1.147s] Invoked command in '/home/aidan/ros2_ws/build/ana' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/aidan/ros2_ws/build/ana -- -j16 -l16
+[1.173s] Invoking command in '/home/aidan/ros2_ws/build/ana': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/aidan/ros2_ws/build/ana
+[1.178s] -- Install configuration: ""
+[1.178s] -- Execute custom install script
+[1.178s] -- Symlinking: /home/aidan/ros2_ws/install/ana/lib/ana/pid_node
+[1.187s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/config/ana.rviz
+[1.194s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/config/diff_drive_bot.rviz
+[1.202s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/config/gazebo_params.yaml
+[1.210s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/config/my_controllers.yaml
+[1.218s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/config/simulation_depth.rviz
+[1.227s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/camera.xacro
+[1.234s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/depth_camera.xacro
+[1.242s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/gazebo_diff_control.xacro
+[1.249s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/inertial_macros.xacro
+[1.255s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/robot.urdf.xacro
+[1.264s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/robot_core.xacro
+[1.271s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/description/ros2_diff_control.xacro
+[1.278s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/launch/launch_sim.launch.py
+[1.287s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/launch/rsp.launch.py
+[1.294s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/worlds/empty.world
+[1.301s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/worlds/obstacles.world
+[1.311s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ament_index/resource_index/package_run_dependencies/ana
+[1.317s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ament_index/resource_index/parent_prefix_path/ana
+[1.324s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/environment/ament_prefix_path.sh
+[1.331s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/environment/ament_prefix_path.dsv
+[1.338s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/environment/path.sh
+[1.349s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/environment/path.dsv
+[1.358s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.bash
+[1.366s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.sh
+[1.374s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.zsh
+[1.381s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/local_setup.dsv
+[1.390s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/package.dsv
+[1.399s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ament_index/resource_index/packages/ana
+[1.408s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/cmake/anaConfig.cmake
+[1.418s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/cmake/anaConfig-version.cmake
+[1.426s] -- Symlinking: /home/aidan/ros2_ws/install/ana/share/ana/package.xml
+[1.436s] Invoked command in '/home/aidan/ros2_ws/build/ana' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/aidan/ros2_ws/build/ana

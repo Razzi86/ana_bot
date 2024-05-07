@@ -1,0 +1,73 @@
+[0.010s] Invoking command in '/home/aidan/ros2_ws/build/ana': /usr/bin/cmake /home/aidan/ros2_ws/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana
+[0.100s] -- The C compiler identification is GNU 11.4.0
+[0.167s] -- The CXX compiler identification is GNU 11.4.0
+[0.174s] -- Detecting C compiler ABI info
+[0.220s] -- Detecting C compiler ABI info - done
+[0.225s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.226s] -- Detecting C compile features
+[0.226s] -- Detecting C compile features - done
+[0.229s] -- Detecting CXX compiler ABI info
+[0.279s] -- Detecting CXX compiler ABI info - done
+[0.285s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.285s] -- Detecting CXX compile features
+[0.285s] -- Detecting CXX compile features - done
+[0.288s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.391s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.462s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.500s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.504s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.512s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.525s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.542s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.601s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.604s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.675s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.693s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.726s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.735s] -- Looking for pthread.h
+[0.784s] -- Looking for pthread.h - found
+[0.784s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.829s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.830s] -- Found Threads: TRUE  
+[0.959s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.995s] Error parsing '/home/aidan/ros2_ws/src/ana/package.xml':
+[1.025s] Traceback (most recent call last):
+[1.025s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[1.025s]     root = dom.parseString(data)
+[1.025s]   File "/usr/lib/python3.10/xml/dom/minidom.py", line 2000, in parseString
+[1.026s]     return expatbuilder.parseString(string)
+[1.026s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 925, in parseString
+[1.026s]     return builder.parseString(string)
+[1.027s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 223, in parseString
+[1.027s]     parser.Parse(string, True)
+[1.027s] xml.parsers.expat.ExpatError: XML or text declaration not at start of entity: line 4, column 0
+[1.027s] 
+[1.027s] During handling of the above exception, another exception occurred:
+[1.027s] 
+[1.027s] Traceback (most recent call last):
+[1.027s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[1.027s]     main()
+[1.027s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[1.027s]     raise e
+[1.027s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[1.027s]     package = parse_package_string(
+[1.027s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[1.027s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[1.028s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/aidan/ros2_ws/src/ana/package.xml':
+[1.028s] The manifest contains invalid XML:
+[1.028s] XML or text declaration not at start of entity: line 4, column 0
+[1.036s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.036s]   execute_process(/usr/bin/python3
+[1.036s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.036s]   /home/aidan/ros2_ws/src/ana/package.xml
+[1.036s]   /home/aidan/ros2_ws/build/ana/ament_cmake_core/package.cmake) returned
+[1.036s]   error code 1
+[1.036s] Call Stack (most recent call first):
+[1.036s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.036s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[1.036s]   CMakeLists.txt:43 (ament_lint_auto_find_test_dependencies)
+[1.036s] 
+[1.036s] [0m
+[1.037s] -- Configuring incomplete, errors occurred!
+[1.037s] See also "/home/aidan/ros2_ws/build/ana/CMakeFiles/CMakeOutput.log".
+[1.043s] Invoked command in '/home/aidan/ros2_ws/build/ana' returned '1': /usr/bin/cmake /home/aidan/ros2_ws/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ros2_ws/install/ana

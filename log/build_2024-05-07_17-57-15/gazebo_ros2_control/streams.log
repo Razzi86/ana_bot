@@ -1,0 +1,35 @@
+[0.014s] Invoking command in '/home/aidan/ros2_ws/build/gazebo_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ros2_ws/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ros2_ws/build/gazebo_ros2_control -- -j16 -l16
+[0.061s] [ 50%] Built target gazebo_hardware_plugins
+[0.062s] [100%] Built target gazebo_ros2_control
+[0.230s] Invoked command in '/home/aidan/ros2_ws/build/gazebo_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ros2_ws/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ros2_ws/build/gazebo_ros2_control -- -j16 -l16
+[0.254s] Invoking command in '/home/aidan/ros2_ws/build/gazebo_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ros2_ws/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ros2_ws/build/gazebo_ros2_control
+[0.259s] -- Install configuration: ""
+[0.259s] -- Execute custom install script
+[0.259s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/lib/libgazebo_ros2_control.so
+[0.259s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/lib/libgazebo_hardware_plugins.so
+[0.259s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/environment/library_path.sh
+[0.259s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/environment/library_path.dsv
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/include/gazebo_ros2_control/gazebo_ros2_control_plugin.hpp
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/include/gazebo_ros2_control/gazebo_system.hpp
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/include/gazebo_ros2_control/gazebo_system_interface.hpp
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control//gazebo_hardware_plugins.xml
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/ament_index/resource_index/package_run_dependencies/gazebo_ros2_control
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/ament_index/resource_index/parent_prefix_path/gazebo_ros2_control
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/environment/ament_prefix_path.sh
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/environment/ament_prefix_path.dsv
+[0.260s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/environment/path.sh
+[0.261s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/environment/path.dsv
+[0.261s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/local_setup.bash
+[0.261s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/local_setup.sh
+[0.261s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/local_setup.zsh
+[0.261s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/local_setup.dsv
+[0.261s] -- Symlinking: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/package.dsv
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/ament_index/resource_index/packages/gazebo_ros2_control
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/ament_index/resource_index/gazebo_ros2_control__pluginlib__plugin/gazebo_ros2_control
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/cmake/gazebo_ros2_controlConfig.cmake
+[0.267s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/cmake/gazebo_ros2_controlConfig-version.cmake
+[0.268s] -- Up-to-date symlink: /home/aidan/ros2_ws/install/gazebo_ros2_control/share/gazebo_ros2_control/package.xml
+[0.269s] Invoked command in '/home/aidan/ros2_ws/build/gazebo_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ros2_ws/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ros2_ws/build/gazebo_ros2_control
