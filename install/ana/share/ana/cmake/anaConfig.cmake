@@ -1,1 +1,0 @@
-/home/aidan/ros2_ws/build/ana/ament_cmake_core/anaConfig.cmake
