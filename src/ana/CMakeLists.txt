@@ -51,7 +51,7 @@ install(TARGETS
 
 # Install other directories like launch files, configurations, etc.
 install(
-  DIRECTORY config description launch worlds
+  DIRECTORY config description launch worlds meshes
   DESTINATION share/${PROJECT_NAME}
 )
 

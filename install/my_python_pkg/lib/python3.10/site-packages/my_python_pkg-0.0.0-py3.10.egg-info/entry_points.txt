@@ -1,0 +1,4 @@
+[console_scripts]
+arduino_serial = my_python_pkg.arduino_serial:main
+motor_control = my_python_pkg.my_node:main
+

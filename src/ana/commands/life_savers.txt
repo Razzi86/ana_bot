@@ -1,0 +1,5 @@
+made robot move:
+nano ~/.bashrc
+export ROS_DOMAIN_ID=<your_domain_id>
+export ROS_MASTER_URI=<your_master_uri>
+source ~/.bashrc
