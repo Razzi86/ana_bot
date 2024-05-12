@@ -1,8 +1,0 @@
-[0m** WARNING ** io features related to pcap will be disabled[0m
-[0m** WARNING ** io features related to png will be disabled[0m
-[31mCMake Error at CMakeLists.txt:56 (target_link_libraries):
-  Cannot specify link libraries for target "ana" which is not built by this
-  project.
-
-[0m
-gmake: *** [Makefile:308: cmake_check_build_system] Error 1

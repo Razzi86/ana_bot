@@ -13,7 +13,9 @@
             <geometry>
                 <mesh filename="file:///home/aidan/ana_bot/src/ana/meshes/d435i.stl"/>
             </geometry>
-            <material name="red"/>
+            <material name="grey">
+                <color rgba="0.5 0.5 0.5 1.0"/> <!-- Define grey color in RGBA format -->
+            </material>
         </visual>
     </link>
 

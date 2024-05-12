@@ -23,7 +23,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(OpenCV REQUIRED)
-find_package(PCL REQUIRED COMPONENTS common io)
+find_package(PCL REQUIRED COMPONENTS common io filters segmentation)
 find_package(pcl_conversions REQUIRED)
 
 include_directories(include ${PCL_INCLUDE_DIRS})
@@ -52,7 +52,10 @@ ament_target_dependencies(
   pcl_conversions
 )
 
-target_link_libraries(point_cloud_filter_node ${PCL_LIBRARIES})
+target_link_libraries(point_cloud_filter_node 
+  ${PCL_LIBRARIES} 
+  ${OpenCV_LIBS}
+)
 target_link_libraries(publish_pcd_node
   ${rclcpp_LIBRARIES}
   ${sensor_msgs_LIBRARIES}

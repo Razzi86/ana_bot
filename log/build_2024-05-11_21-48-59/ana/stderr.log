@@ -1,7 +1,0 @@
-[01m[K/home/aidan/ana_bot/src/ana/src/PointCloudFilter.cpp:[m[K In member function ‘[01m[Kvoid PointCloudFilter::callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/aidan/ana_bot/src/ana/src/PointCloudFilter.cpp:42:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<sensor_msgs::msg::PointCloud2_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<sensor_msgs::msg::PointCloud2_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
-   42 |         pub_.[01;31m[Kpublish[m[K(output);
-      |              [01;31m[K^~~~~~~[m[K
-gmake[2]: *** [CMakeFiles/point_cloud_filter_node.dir/build.make:76: CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/point_cloud_filter_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

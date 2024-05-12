@@ -3,6 +3,7 @@
 /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz
 /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz
 /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml
+/home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz
 /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz
 /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml
 /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml

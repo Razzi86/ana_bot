@@ -1463,7 +1463,6 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
   /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
   /usr/include/boost/date_time/compiler_config.hpp \
   /usr/include/boost/date_time/locale_config.hpp \
-  /usr/include/boost/config/auto_link.hpp \
   /usr/include/boost/date_time/c_time.hpp \
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/boost/date_time/time_clock.hpp \
@@ -1538,8 +1537,109 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
   /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
   /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
   /usr/include/x86_64-linux-gnu/sys/fcntl.h \
-  /usr/include/pcl-1.12/pcl/io/lzf.h
+  /usr/include/pcl-1.12/pcl/io/lzf.h \
+  /usr/include/pcl-1.12/pcl/filters/voxel_grid.h \
+  /usr/include/pcl-1.12/pcl/filters/filter.h \
+  /usr/include/pcl-1.12/pcl/pcl_base.h \
+  /usr/include/c++/11/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/pcl-1.12/pcl/filters/passthrough.h \
+  /usr/include/pcl-1.12/pcl/filters/filter_indices.h \
+  /usr/include/pcl-1.12/pcl/filters/random_sample.h \
+  /usr/include/pcl-1.12/pcl/filters/statistical_outlier_removal.h \
+  /usr/include/pcl-1.12/pcl/search/search.h \
+  /usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h \
+  /usr/include/pcl-1.12/pcl/sample_consensus/method_types.h \
+  /usr/include/pcl-1.12/pcl/sample_consensus/sac.h \
+  /usr/include/pcl-1.12/pcl/sample_consensus/sac_model.h \
+  /usr/include/boost/random/mersenne_twister.hpp \
+  /usr/include/boost/integer/integer_mask.hpp \
+  /usr/include/boost/integer_fwd.hpp \
+  /usr/include/boost/integer.hpp \
+  /usr/include/boost/integer_traits.hpp \
+  /usr/include/boost/random/detail/config.hpp \
+  /usr/include/boost/random/detail/ptr_helper.hpp \
+  /usr/include/boost/random/detail/seed.hpp \
+  /usr/include/boost/random/detail/seed_impl.hpp \
+  /usr/include/boost/integer/static_log2.hpp \
+  /usr/include/boost/random/traits.hpp \
+  /usr/include/boost/random/detail/const_mod.hpp \
+  /usr/include/boost/random/detail/large_arithmetic.hpp \
+  /usr/include/boost/random/detail/integer_log2.hpp \
+  /usr/include/boost/integer/integer_log2.hpp \
+  /usr/include/boost/random/detail/disable_warnings.hpp \
+  /usr/include/boost/random/detail/enable_warnings.hpp \
+  /usr/include/boost/random/detail/signed_unsigned_tools.hpp \
+  /usr/include/boost/random/detail/generator_bits.hpp \
+  /usr/include/boost/random/detail/generator_seed_seq.hpp \
+  /usr/include/boost/random/detail/polynomial.hpp \
+  /usr/include/boost/random/uniform_int.hpp \
+  /usr/include/boost/random/uniform_int_distribution.hpp \
+  /usr/include/boost/random/detail/operators.hpp \
+  /usr/include/boost/random/detail/uniform_int_float.hpp \
+  /usr/include/boost/random/variate_generator.hpp \
+  /usr/include/pcl-1.12/pcl/sample_consensus/model_types.h \
+  /usr/include/boost/random/uniform_01.hpp \
+  /usr/include/pcl-1.12/pcl/filters/extract_indices.h
 
+
+/usr/include/pcl-1.12/pcl/filters/extract_indices.h:
+
+/usr/include/boost/random/uniform_01.hpp:
+
+/usr/include/boost/random/detail/uniform_int_float.hpp:
+
+/usr/include/boost/random/uniform_int.hpp:
+
+/usr/include/boost/random/detail/polynomial.hpp:
+
+/usr/include/boost/random/detail/enable_warnings.hpp:
+
+/usr/include/boost/integer/integer_log2.hpp:
+
+/usr/include/boost/random/detail/integer_log2.hpp:
+
+/usr/include/boost/random/detail/large_arithmetic.hpp:
+
+/usr/include/boost/random/detail/const_mod.hpp:
+
+/usr/include/boost/random/traits.hpp:
+
+/usr/include/boost/integer/static_log2.hpp:
+
+/usr/include/boost/random/detail/seed_impl.hpp:
+
+/usr/include/boost/random/detail/seed.hpp:
+
+/usr/include/boost/random/detail/ptr_helper.hpp:
+
+/usr/include/boost/random/detail/config.hpp:
+
+/usr/include/boost/integer_traits.hpp:
+
+/usr/include/boost/integer.hpp:
+
+/usr/include/boost/random/detail/operators.hpp:
+
+/usr/include/boost/integer_fwd.hpp:
+
+/usr/include/boost/random/mersenne_twister.hpp:
+
+/usr/include/pcl-1.12/pcl/sample_consensus/sac_model.h:
+
+/usr/include/pcl-1.12/pcl/sample_consensus/sac.h:
+
+/usr/include/pcl-1.12/pcl/filters/statistical_outlier_removal.h:
+
+/usr/include/pcl-1.12/pcl/filters/random_sample.h:
+
+/usr/include/pcl-1.12/pcl/filters/passthrough.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
+/usr/include/pcl-1.12/pcl/pcl_base.h:
+
+/usr/include/pcl-1.12/pcl/filters/voxel_grid.h:
 
 /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
 
@@ -1767,8 +1867,6 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /usr/include/boost/type_traits/make_unsigned.hpp:
 
-/usr/include/boost/config/auto_link.hpp:
-
 /usr/include/boost/iterator/iterator_concepts.hpp:
 
 /usr/include/boost/concept/detail/concept_undef.hpp:
@@ -1905,6 +2003,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__builder.hpp:
 
+/usr/include/c++/11/cfloat:
+
 /usr/include/boost/type_traits/is_scalar.hpp:
 
 /usr/include/boost/type_traits/is_pod.hpp:
@@ -1997,6 +2097,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /usr/include/boost/noncopyable.hpp:
 
+/usr/include/pcl-1.12/pcl/sample_consensus/model_types.h:
+
 /usr/include/boost/foreach.hpp:
 
 /usr/include/boost/core/addressof.hpp:
@@ -2046,6 +2148,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
+
+/usr/include/pcl-1.12/pcl/filters/filter.h:
 
 /usr/include/boost/date_time/date_iterator.hpp:
 
@@ -2146,6 +2250,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/rate.hpp:
+
+/usr/include/boost/random/detail/signed_unsigned_tools.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/buffer_implementation_base.hpp:
 
@@ -2252,6 +2358,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /usr/include/boost/type_traits/has_minus_assign.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
+
+/usr/include/boost/random/detail/generator_bits.hpp:
 
 /opt/ros/humble/include/rmw/rmw/topic_endpoint_info.h:
 
@@ -2448,6 +2556,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /opt/ros/humble/include/rcutils/rcutils/types/string_array.h:
 
 /opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
+
+/usr/include/boost/integer/integer_mask.hpp:
 
 /usr/include/boost/concept_check.hpp:
 
@@ -2676,6 +2786,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
 /usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
+
+/usr/include/boost/random/uniform_int_distribution.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
@@ -3443,6 +3555,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /opt/ros/humble/include/rmw/rmw/security_options.h:
 
+/usr/include/pcl-1.12/pcl/sample_consensus/method_types.h:
+
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/boost/mpl/aux_/full_lambda.hpp:
@@ -3739,6 +3853,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
 
+/usr/include/pcl-1.12/pcl/search/search.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
@@ -3851,6 +3967,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /usr/include/boost/mpl/assert.hpp:
 
+/usr/include/pcl-1.12/pcl/filters/filter_indices.h:
+
 /usr/include/boost/preprocessor/list/fold_right.hpp:
 
 /usr/include/boost/mpl/not.hpp:
@@ -3940,6 +4058,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /usr/include/boost/mpl/vector/aux_/include_preprocessed.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/usr/include/pcl-1.12/pcl/segmentation/sac_segmentation.h:
 
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
@@ -4177,6 +4297,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /usr/include/boost/mpl/eval_if.hpp:
 
+/usr/include/boost/random/variate_generator.hpp:
+
 /usr/include/boost/utility.hpp:
 
 /opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/model_coefficients__builder.hpp:
@@ -4229,6 +4351,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 
 /usr/include/boost/mpl/vector/aux_/empty.hpp:
 
+/usr/include/boost/random/detail/generator_seed_seq.hpp:
+
 /usr/include/boost/mpl/empty_fwd.hpp:
 
 /usr/include/boost/interprocess/detail/workaround.hpp:
@@ -4270,6 +4394,8 @@ CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o: /home/aidan/ana_bot/src/ana/s
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/boost/random/detail/disable_warnings.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 

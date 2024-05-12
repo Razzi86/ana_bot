@@ -29,7 +29,7 @@ def generate_launch_description():
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        arguments=['-d', '/home/aidan/ana_bot/src/ana/config/ana.rviz'],
+        arguments=['-d', '/home/aidan/ana_bot/src/ana/config/ana_map.rviz'],
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
