@@ -19,39 +19,62 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(image_transport REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(PCL REQUIRED COMPONENTS common io)
+find_package(pcl_conversions REQUIRED)
+
+include_directories(include ${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 
 # Declare a C++ executable for the PID node
-add_executable(pid_node src/PID.cpp)
+add_executable(point_cloud_filter_node src/PointCloudFilter.cpp)
+add_executable(publish_pcd_node src/ply2pcd.cpp)
 
 # Specify libraries to link a library or executable target against
-ament_target_dependencies(pid_node
+ament_target_dependencies(
+  point_cloud_filter_node
   rclcpp
-  std_msgs
+  sensor_msgs
+  image_transport
+  cv_bridge
+  OpenCV
+  pcl_conversions
 )
+
+ament_target_dependencies(
+  publish_pcd_node
+  rclcpp
+  sensor_msgs
+  pcl_conversions
+)
+
+target_link_libraries(point_cloud_filter_node ${PCL_LIBRARIES})
+target_link_libraries(publish_pcd_node
+  ${rclcpp_LIBRARIES}
+  ${sensor_msgs_LIBRARIES}
+  ${PCL_LIBRARIES}
+)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # uncomment the line when a copyright and license is not present in all source files
-  #set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # uncomment the line when this package is not in a git repo
-  #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
 
 # Install executables and/or libraries
 install(TARGETS
-  pid_node
+  point_cloud_filter_node
+  publish_pcd_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
 # Install other directories like launch files, configurations, etc.
 install(
-  DIRECTORY config description launch worlds meshes
+  DIRECTORY config description launch worlds meshes rtab_maps
   DESTINATION share/${PROJECT_NAME}
 )
 

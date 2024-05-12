@@ -1,0 +1,11 @@
+[0.011s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/robot_math:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target point_cloud_filter_node[0m
+[0.059s] [ 50%] [32mBuilding CXX object CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o[0m
+[3.748s] [01m[K/home/aidan/ana_bot/src/ana/src/PointCloudFilter.cpp:[m[K In member function ‘[01m[Kvoid PointCloudFilterNode::pointCloudCallback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.748s] [01m[K/home/aidan/ana_bot/src/ana/src/PointCloudFilter.cpp:46:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<sensor_msgs::msg::PointCloud2_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<sensor_msgs::msg::PointCloud2_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
+[3.748s]    46 |         publisher_.[01;31m[Kpublish[m[K(output);
+[3.748s]       |                    [01;31m[K^~~~~~~[m[K
+[5.976s] gmake[2]: *** [CMakeFiles/point_cloud_filter_node.dir/build.make:76: CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o] Error 1
+[5.977s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/point_cloud_filter_node.dir/all] Error 2
+[5.977s] gmake: *** [Makefile:146: all] Error 2
+[5.978s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/robot_math:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16

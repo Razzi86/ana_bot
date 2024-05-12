@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target publish_pcd_node[0m
+[ 50%] Built target point_cloud_filter_node
+[ 75%] [32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o[0m
+[100%] [32m[1mLinking CXX executable publish_pcd_node[0m

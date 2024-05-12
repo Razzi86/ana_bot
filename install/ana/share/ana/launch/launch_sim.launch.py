@@ -1,14 +1,14 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.substitutions import Command
 
 def generate_launch_description():
     package_name='ana'
-    
+
     xacro_file = os.path.join(get_package_share_directory(package_name), 'description', 'robot.urdf.xacro')
     robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=true sim_mode:=true'])
 
@@ -26,10 +26,17 @@ def generate_launch_description():
         name='joint_state_publisher',
         parameters=[{'use_sim_time': True}]
     )
+
+    point_cloud_filter_node = Node(
+        package='ana',  # Adjust if your package name is different
+        executable='point_cloud_filter_node',  # The executable name as defined in CMakeLists.txt
+        name='point_cloud_filter',  # Optional: Specify a custom node name
+        output='screen',
+        parameters=[{'use_sim_time': True}]
+    )
         
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands
-
-    rsp = IncludeLaunchDescription(
+    rsp_node = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
                 )]), launch_arguments={'use_sim_time': 'true'}.items()
@@ -42,7 +49,6 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]), 
                     launch_arguments={'world': world_file}.items()
-
     )
 
     spawn_entity = Node(
@@ -61,14 +67,35 @@ def generate_launch_description():
         executable="spawner",
         arguments=["joint_broad"],
     )
+
+    rtab_node = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory(package_name),'launch','rtab.launch.py'
+        )]),     
+        launch_arguments={
+            'use_sim_time': 'true',
+            'depth_topic': '/filtered/depth/image_raw'  # Ensure this remapping is correct
+        }.items()
+    )
+
+    pcd_publisher_node = Node(
+        package='ana',  # Replace 'ana' with your package name if different
+        executable='publish_pcd_node',  # The name of your executable
+        name='pcd_publisher',
+        output='screen',
+        parameters=[{'use_sim_time': True}]
+    )
     
     # Launch
     return LaunchDescription([
+        point_cloud_filter_node,
         joint_state_publisher,
-        rsp,
+        rsp_node,
+        rtab_node,
         gazebo,
         spawn_entity,
         diff_drive_spawner,
         joint_broad_spawner,
         node_robot_state_publisher,
+        pcd_publisher_node,
     ])

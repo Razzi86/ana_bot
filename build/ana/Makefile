@@ -198,41 +198,78 @@ ana_uninstall/fast:
 .PHONY : ana_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named pid_node
+# Target rules for targets named point_cloud_filter_node
 
 # Build rule for target.
-pid_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_node
-.PHONY : pid_node
+point_cloud_filter_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_filter_node
+.PHONY : point_cloud_filter_node
 
 # fast build rule for target.
-pid_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_node.dir/build.make CMakeFiles/pid_node.dir/build
-.PHONY : pid_node/fast
+point_cloud_filter_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/build
+.PHONY : point_cloud_filter_node/fast
 
-src/PID.o: src/PID.cpp.o
-.PHONY : src/PID.o
+#=============================================================================
+# Target rules for targets named publish_pcd_node
+
+# Build rule for target.
+publish_pcd_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 publish_pcd_node
+.PHONY : publish_pcd_node
+
+# fast build rule for target.
+publish_pcd_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/build
+.PHONY : publish_pcd_node/fast
+
+src/PointCloudFilter.o: src/PointCloudFilter.cpp.o
+.PHONY : src/PointCloudFilter.o
 
 # target to build an object file
-src/PID.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_node.dir/build.make CMakeFiles/pid_node.dir/src/PID.cpp.o
-.PHONY : src/PID.cpp.o
+src/PointCloudFilter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o
+.PHONY : src/PointCloudFilter.cpp.o
 
-src/PID.i: src/PID.cpp.i
-.PHONY : src/PID.i
+src/PointCloudFilter.i: src/PointCloudFilter.cpp.i
+.PHONY : src/PointCloudFilter.i
 
 # target to preprocess a source file
-src/PID.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_node.dir/build.make CMakeFiles/pid_node.dir/src/PID.cpp.i
-.PHONY : src/PID.cpp.i
+src/PointCloudFilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.i
+.PHONY : src/PointCloudFilter.cpp.i
 
-src/PID.s: src/PID.cpp.s
-.PHONY : src/PID.s
+src/PointCloudFilter.s: src/PointCloudFilter.cpp.s
+.PHONY : src/PointCloudFilter.s
 
 # target to generate assembly for a file
-src/PID.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_node.dir/build.make CMakeFiles/pid_node.dir/src/PID.cpp.s
-.PHONY : src/PID.cpp.s
+src/PointCloudFilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.s
+.PHONY : src/PointCloudFilter.cpp.s
+
+src/ply2pcd.o: src/ply2pcd.cpp.o
+.PHONY : src/ply2pcd.o
+
+# target to build an object file
+src/ply2pcd.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o
+.PHONY : src/ply2pcd.cpp.o
+
+src/ply2pcd.i: src/ply2pcd.cpp.i
+.PHONY : src/ply2pcd.i
+
+# target to preprocess a source file
+src/ply2pcd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.i
+.PHONY : src/ply2pcd.cpp.i
+
+src/ply2pcd.s: src/ply2pcd.cpp.s
+.PHONY : src/ply2pcd.s
+
+# target to generate assembly for a file
+src/ply2pcd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.s
+.PHONY : src/ply2pcd.cpp.s
 
 # Help Target
 help:
@@ -249,10 +286,14 @@ help:
 	@echo "... test"
 	@echo "... ana_uninstall"
 	@echo "... uninstall"
-	@echo "... pid_node"
-	@echo "... src/PID.o"
-	@echo "... src/PID.i"
-	@echo "... src/PID.s"
+	@echo "... point_cloud_filter_node"
+	@echo "... publish_pcd_node"
+	@echo "... src/PointCloudFilter.o"
+	@echo "... src/PointCloudFilter.i"
+	@echo "... src/PointCloudFilter.s"
+	@echo "... src/ply2pcd.o"
+	@echo "... src/ply2pcd.i"
+	@echo "... src/ply2pcd.s"
 .PHONY : help
 
 

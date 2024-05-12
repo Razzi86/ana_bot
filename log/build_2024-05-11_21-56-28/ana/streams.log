@@ -1,0 +1,52 @@
+[0.011s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/robot_math:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[0.042s] [35m[1mConsolidate compiler generated dependencies of target point_cloud_filter_node[0m
+[0.055s] [ 50%] [32mBuilding CXX object CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o[0m
+[3.290s] [100%] [32m[1mLinking CXX executable point_cloud_filter_node[0m
+[3.669s] [100%] Built target point_cloud_filter_node
+[3.676s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/robot_math:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[3.696s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/robot_math:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana
+[3.701s] -- Install configuration: ""
+[3.701s] -- Installing: /home/aidan/ana_bot/install/ana/lib/ana/point_cloud_filter_node
+[3.701s] -- Set runtime path of "/home/aidan/ana_bot/install/ana/lib/ana/point_cloud_filter_node" to ""
+[3.701s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/config
+[3.701s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz
+[3.701s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro
+[3.702s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/launch
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/worlds
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world
+[3.703s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/meshes
+[3.704s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl
+[3.704s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl
+[3.704s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana
+[3.704s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana
+[3.704s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh
+[3.704s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv
+[3.705s] -- Installing: /home/aidan/ana_bot/install/ana/share/ana/package.dsv
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake
+[3.705s] -- Up-to-date: /home/aidan/ana_bot/install/ana/share/ana/package.xml
+[3.706s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/robot_math:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana

@@ -1,0 +1,40 @@
+amcl:
+  use_sim_time: True
+
+costmap_common_params:
+  obstacle_layer:
+    enabled: True
+    voxel_height: 0.05
+    voxel_grid_dimensions:
+      - 20.0
+      - 20.0
+      - 4
+  static_layer:
+    enabled: True
+  inflation_layer:
+    inflation_radius: 0.55
+
+local_costmap:
+  local_costmap:
+    global_frame: odom
+    robot_base_frame: base_link
+    update_frequency: 5.0
+    publish_frequency: 2.0
+    width: 3
+    height: 3
+    resolution: 0.05
+    rolling_window: true
+
+global_costmap:
+  global_costmap:
+    global_frame: map
+    robot_base_frame: base_link
+    update_frequency: 1.0
+    publish_frequency: 1.0
+    width: 20
+    height: 20
+    resolution: 0.05
+    static_map: true
+
+controller_server:
+  controller_frequency: 20.0
