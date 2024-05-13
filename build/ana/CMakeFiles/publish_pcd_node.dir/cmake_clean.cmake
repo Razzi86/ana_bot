@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o"
-  "CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o.d"
+  "CMakeFiles/publish_pcd_node.dir/cmake_device_link.o"
+  "CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o"
+  "CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o.d"
   "publish_pcd_node"
   "publish_pcd_node.pdb"
 )

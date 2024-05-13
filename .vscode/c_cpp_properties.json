@@ -9,7 +9,8 @@
         "/home/aidan/ros2_ws/install/gazebo_ros2_control/include/**",
         "/opt/ros/humble/include/**",
         "/home/aidan/ros2_ws/src/gazebo_ros2_control/gazebo_ros2_control/include/**",
-        "/usr/include/**"
+        "/usr/include/**",
+        "/home/aidan/ana_bot/src/ana/src/cuda/" // add cuda .h files
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",

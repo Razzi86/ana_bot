@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o"
-  "CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o.d"
+  "CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o"
+  "CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.o"
+  "CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.o.d"
   "point_cloud_filter_node"
   "point_cloud_filter_node.pdb"
 )

@@ -34,6 +34,15 @@ def generate_launch_description():
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
+
+    occupancy_grid_subscriber_node = Node(
+        package='ana',  # Make sure 'ana' matches your actual package name
+        executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
+        name='occupancy_grid_subscriber',  # Optional: Specify a custom node name
+        output='screen',
+        parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
+    )
+
         
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands
     rsp_node = IncludeLaunchDescription(
@@ -98,4 +107,5 @@ def generate_launch_description():
         joint_broad_spawner,
         node_robot_state_publisher,
         pcd_publisher_node,
+        occupancy_grid_subscriber_node,
     ])

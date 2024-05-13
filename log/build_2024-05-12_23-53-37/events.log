@@ -1,0 +1,450 @@
+[0.000000] (-) TimerEvent: {}
+[0.000196] (-) JobUnselected: {'identifier': 'my_python_pkg'}
+[0.000249] (ana) JobQueued: {'identifier': 'ana', 'dependencies': OrderedDict()}
+[0.000269] (ana) JobStarted: {'identifier': 'ana'}
+[0.008026] (ana) JobProgress: {'identifier': 'ana', 'progress': 'cmake'}
+[0.008308] (ana) Command: {'cmd': ['/usr/bin/cmake', '/home/aidan/ana_bot/src/ana', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/aidan/ana_bot/install/ana'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan/ana_bot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '4560'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2246,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2246'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9af7b992_c1f6_4e45_a21b_b0cf993852d0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[0.048861] (ana) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.091391] (ana) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.096584] (ana) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099487] (-) TimerEvent: {}
+[0.144008] (ana) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.149543] (ana) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.149749] (ana) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.150016] (ana) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.152077] (ana) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199603] (-) TimerEvent: {}
+[0.208061] (ana) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.214101] (ana) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.214285] (ana) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.214539] (ana) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.216314] (ana) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299706] (-) TimerEvent: {}
+[0.330773] (ana) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.382046] (ana) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.399828] (-) TimerEvent: {}
+[0.403348] (ana) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.438762] (ana) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.442649] (ana) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.449223] (ana) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.460459] (ana) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.476502] (ana) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.499945] (-) TimerEvent: {}
+[0.533595] (ana) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.535645] (ana) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600064] (-) TimerEvent: {}
+[0.610980] (ana) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.634248] (ana) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.673176] (ana) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.681464] (ana) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700176] (-) TimerEvent: {}
+[0.731537] (ana) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.731805] (ana) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.783716] (ana) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.784486] (ana) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800291] (-) TimerEvent: {}
+[0.900569] (-) TimerEvent: {}
+[0.913757] (ana) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.000695] (-) TimerEvent: {}
+[1.020191] (ana) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[1.090399] (ana) StdoutLine: {'line': b'-- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[1.100786] (-) TimerEvent: {}
+[1.128809] (ana) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[1.144287] (ana) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[1.154979] (ana) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[1.165004] (ana) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[1.185043] (ana) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[1.185230] (ana) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.200876] (-) TimerEvent: {}
+[1.201412] (ana) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization \n'}
+[1.243458] (ana) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[1.252492] (ana) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[1.277402] (ana) StdoutLine: {'line': b'-- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  \n'}
+[1.278274] (ana) StdoutLine: {'line': b'-- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") \n'}
+[1.278354] (ana) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.300975] (-) TimerEvent: {}
+[1.317680] (ana) StdoutLine: {'line': b'-- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") \n'}
+[1.317865] (ana) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[1.318025] (ana) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[1.318098] (ana) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to png will be disabled\x1b[0m\n'}
+[1.362269] (ana) StdoutLine: {'line': b'-- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  \n'}
+[1.368657] (ana) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX \n'}
+[1.401064] (-) TimerEvent: {}
+[1.477569] (ana) StdoutLine: {'line': b'-- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") \n'}
+[1.477948] (ana) StdoutLine: {'line': b'-- Found MPI: TRUE (found version "3.1") found components: C \n'}
+[1.480487] (ana) StdoutLine: {'line': b'-- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") \n'}
+[1.492458] (ana) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[1.501140] (-) TimerEvent: {}
+[1.517691] (ana) StdoutLine: {'line': b'-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") \n'}
+[1.529853] (ana) StdoutLine: {'line': b'-- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") \n'}
+[1.591774] (ana) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[1.591962] (ana) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so\n'}
+[1.601250] (-) TimerEvent: {}
+[1.643913] (ana) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found\n'}
+[1.644108] (ana) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[1.693458] (ana) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[1.693688] (ana) StdoutLine: {'line': b'-- Looking for connect\n'}
+[1.701333] (-) TimerEvent: {}
+[1.742105] (ana) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[1.742256] (ana) StdoutLine: {'line': b'-- Looking for remove\n'}
+[1.790373] (ana) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[1.790569] (ana) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[1.801451] (-) TimerEvent: {}
+[1.841921] (ana) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[1.842105] (ana) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[1.890938] (ana) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[1.901563] (-) TimerEvent: {}
+[1.949715] (ana) StdoutLine: {'line': b'-- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") \n'}
+[1.951118] (ana) StdoutLine: {'line': b'-- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  \n'}
+[1.952753] (ana) StdoutLine: {'line': b'-- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") \n'}
+[1.953831] (ana) StdoutLine: {'line': b'-- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") \n'}
+[1.965891] (ana) StdoutLine: {'line': b'-- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") \n'}
+[1.972859] (ana) StdoutLine: {'line': b'-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  \n'}
+[1.977868] (ana) StdoutLine: {'line': b'-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") \n'}
+[1.983362] (ana) StdoutLine: {'line': b'-- Found utf8cpp: /usr/include/utf8cpp  \n'}
+[2.001693] (-) TimerEvent: {}
+[2.010754] (ana) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[2.023447] (ana) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[2.032421] (ana) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[2.058611] (ana) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  \n'}
+[2.058803] (ana) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[2.101745] (-) TimerEvent: {}
+[2.201967] (-) TimerEvent: {}
+[2.276687] (ana) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[2.277632] (ana) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  \n'}
+[2.277793] (ana) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[2.278399] (ana) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  \n'}
+[2.278529] (ana) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[2.279168] (ana) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  \n'}
+[2.279349] (ana) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[2.279996] (ana) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  \n'}
+[2.280146] (ana) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[2.280790] (ana) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  \n'}
+[2.280914] (ana) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[2.281498] (ana) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  \n'}
+[2.281611] (ana) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[2.282259] (ana) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  \n'}
+[2.282430] (ana) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[2.282602] (ana) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.12  \n'}
+[2.282731] (ana) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[2.282901] (ana) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.12  \n'}
+[2.283044] (ana) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[2.283640] (ana) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  \n'}
+[2.283810] (ana) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[2.284420] (ana) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  \n'}
+[2.284556] (ana) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[2.285141] (ana) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  \n'}
+[2.285605] (ana) StdoutLine: {'line': b'-- Found PCL: pcl_common;pcl_octree;pcl_io;pcl_kdtree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_features;pcl_ml;pcl_segmentation;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN  \n'}
+[2.287001] (ana) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[2.302048] (-) TimerEvent: {}
+[2.402260] (-) TimerEvent: {}
+[2.404955] (ana) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda (found version "12.4") \n'}
+[2.407900] (ana) StdoutLine: {'line': b'-- Found nav2_costmap_2d: 1.1.14 (/opt/ros/humble/share/nav2_costmap_2d/cmake)\n'}
+[2.502376] (-) TimerEvent: {}
+[2.602610] (-) TimerEvent: {}
+[2.702853] (-) TimerEvent: {}
+[2.803096] (-) TimerEvent: {}
+[2.903341] (-) TimerEvent: {}
+[3.003581] (-) TimerEvent: {}
+[3.007512] (ana) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[3.007646] (ana) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[3.103695] (-) TimerEvent: {}
+[3.203941] (-) TimerEvent: {}
+[3.304155] (-) TimerEvent: {}
+[3.404395] (-) TimerEvent: {}
+[3.504636] (-) TimerEvent: {}
+[3.604953] (-) TimerEvent: {}
+[3.705383] (-) TimerEvent: {}
+[3.805689] (-) TimerEvent: {}
+[3.906020] (-) TimerEvent: {}
+[4.006442] (-) TimerEvent: {}
+[4.107182] (-) TimerEvent: {}
+[4.207421] (-) TimerEvent: {}
+[4.307650] (-) TimerEvent: {}
+[4.407912] (-) TimerEvent: {}
+[4.476717] (ana) StdoutLine: {'line': b'-- The CUDA compiler identification is NVIDIA 11.5.119\n'}
+[4.480986] (ana) StdoutLine: {'line': b'-- Detecting CUDA compiler ABI info\n'}
+[4.507997] (-) TimerEvent: {}
+[4.608250] (-) TimerEvent: {}
+[4.708486] (-) TimerEvent: {}
+[4.808747] (-) TimerEvent: {}
+[4.909000] (-) TimerEvent: {}
+[5.009290] (-) TimerEvent: {}
+[5.109702] (-) TimerEvent: {}
+[5.183562] (ana) StdoutLine: {'line': b'-- Detecting CUDA compiler ABI info - done\n'}
+[5.203828] (ana) StdoutLine: {'line': b'-- Check for working CUDA compiler: /usr/bin/nvcc - skipped\n'}
+[5.204060] (ana) StdoutLine: {'line': b'-- Detecting CUDA compile features\n'}
+[5.204320] (ana) StdoutLine: {'line': b'-- Detecting CUDA compile features - done\n'}
+[5.209798] (-) TimerEvent: {}
+[5.310031] (-) TimerEvent: {}
+[5.355900] (ana) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[5.410145] (-) TimerEvent: {}
+[5.436735] (ana) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.438520] (ana) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.442334] (ana) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/aidan/ana_bot/src/ana/include;/home/aidan/ana_bot/src/ana/src/cuda\n'}
+[5.442450] (ana) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.443768] (ana) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.443846] (ana) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[5.444165] (ana) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[5.444717] (ana) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.445124] (ana) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[5.446382] (ana) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.446459] (ana) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[5.446787] (ana) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.447617] (ana) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.510240] (-) TimerEvent: {}
+[5.610599] (-) TimerEvent: {}
+[5.710822] (-) TimerEvent: {}
+[5.811072] (-) TimerEvent: {}
+[5.911317] (-) TimerEvent: {}
+[5.973005] (ana) StdoutLine: {'line': b'-- Generating done\n'}
+[5.975461] (ana) StdoutLine: {'line': b'-- Build files have been written to: /home/aidan/ana_bot/build/ana\n'}
+[5.993989] (ana) CommandEnded: {'returncode': 0}
+[5.995879] (ana) JobProgress: {'identifier': 'ana', 'progress': 'build'}
+[5.995907] (ana) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aidan/ana_bot/build/ana', '--', '-j16', '-l16'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan/ana_bot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '4560'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2246,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2246'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9af7b992_c1f6_4e45_a21b_b0cf993852d0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[6.011436] (-) TimerEvent: {}
+[6.028246] (ana) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cuda_operations\x1b[0m\n'}
+[6.036412] (ana) StdoutLine: {'line': b'[ 18%] Built target cuda_operations\n'}
+[6.045387] (ana) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target point_cloud_filter_node\x1b[0m\n'}
+[6.061019] (ana) StdoutLine: {'line': b'[ 45%] Built target point_cloud_filter_node\n'}
+[6.085374] (ana) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target publish_pcd_node\x1b[0m\n'}
+[6.085553] (ana) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target occupancy_grid_subscriber_node\x1b[0m\n'}
+[6.111537] (-) TimerEvent: {}
+[6.143671] (ana) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/occupancy_grid_subscriber_node.dir/src/nodes/occupancy_grid_subcriber.cpp.o\x1b[0m\n'}
+[6.149515] (ana) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o\x1b[0m\n'}
+[6.211649] (-) TimerEvent: {}
+[6.311895] (-) TimerEvent: {}
+[6.412140] (-) TimerEvent: {}
+[6.512396] (-) TimerEvent: {}
+[6.612668] (-) TimerEvent: {}
+[6.712927] (-) TimerEvent: {}
+[6.813251] (-) TimerEvent: {}
+[6.913563] (-) TimerEvent: {}
+[7.013831] (-) TimerEvent: {}
+[7.114092] (-) TimerEvent: {}
+[7.214333] (-) TimerEvent: {}
+[7.314583] (-) TimerEvent: {}
+[7.414835] (-) TimerEvent: {}
+[7.515086] (-) TimerEvent: {}
+[7.615336] (-) TimerEvent: {}
+[7.715592] (-) TimerEvent: {}
+[7.815853] (-) TimerEvent: {}
+[7.916085] (-) TimerEvent: {}
+[8.016320] (-) TimerEvent: {}
+[8.116574] (-) TimerEvent: {}
+[8.216799] (-) TimerEvent: {}
+[8.317024] (-) TimerEvent: {}
+[8.417279] (-) TimerEvent: {}
+[8.517537] (-) TimerEvent: {}
+[8.617774] (-) TimerEvent: {}
+[8.717995] (-) TimerEvent: {}
+[8.818246] (-) TimerEvent: {}
+[8.918515] (-) TimerEvent: {}
+[9.018768] (-) TimerEvent: {}
+[9.119043] (-) TimerEvent: {}
+[9.219327] (-) TimerEvent: {}
+[9.319594] (-) TimerEvent: {}
+[9.419854] (-) TimerEvent: {}
+[9.520133] (-) TimerEvent: {}
+[9.620669] (-) TimerEvent: {}
+[9.721017] (-) TimerEvent: {}
+[9.821274] (-) TimerEvent: {}
+[9.921537] (-) TimerEvent: {}
+[10.021844] (-) TimerEvent: {}
+[10.122228] (-) TimerEvent: {}
+[10.223265] (-) TimerEvent: {}
+[10.323522] (-) TimerEvent: {}
+[10.423817] (-) TimerEvent: {}
+[10.524091] (-) TimerEvent: {}
+[10.624371] (-) TimerEvent: {}
+[10.724635] (-) TimerEvent: {}
+[10.824892] (-) TimerEvent: {}
+[10.925156] (-) TimerEvent: {}
+[11.025436] (-) TimerEvent: {}
+[11.125702] (-) TimerEvent: {}
+[11.226003] (-) TimerEvent: {}
+[11.326231] (-) TimerEvent: {}
+[11.426487] (-) TimerEvent: {}
+[11.526732] (-) TimerEvent: {}
+[11.626969] (-) TimerEvent: {}
+[11.727199] (-) TimerEvent: {}
+[11.827445] (-) TimerEvent: {}
+[11.927685] (-) TimerEvent: {}
+[12.027926] (-) TimerEvent: {}
+[12.128151] (-) TimerEvent: {}
+[12.228447] (-) TimerEvent: {}
+[12.328691] (-) TimerEvent: {}
+[12.428942] (-) TimerEvent: {}
+[12.529180] (-) TimerEvent: {}
+[12.629426] (-) TimerEvent: {}
+[12.729674] (-) TimerEvent: {}
+[12.829886] (-) TimerEvent: {}
+[12.930095] (-) TimerEvent: {}
+[13.030333] (-) TimerEvent: {}
+[13.130573] (-) TimerEvent: {}
+[13.230783] (-) TimerEvent: {}
+[13.330992] (-) TimerEvent: {}
+[13.431202] (-) TimerEvent: {}
+[13.531436] (-) TimerEvent: {}
+[13.631686] (-) TimerEvent: {}
+[13.731932] (-) TimerEvent: {}
+[13.750203] (ana) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o\x1b[0m\n'}
+[13.763274] (ana) StderrLine: {'line': b"nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libdl.a' when searching for -ldl\n"}
+[13.763978] (ana) StderrLine: {'line': b"nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/librt.a' when searching for -lrt\n"}
+[13.764051] (ana) StderrLine: {'line': b"nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libpthread.a' when searching for -lpthread\n"}
+[13.791813] (ana) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable publish_pcd_node\x1b[0m\n'}
+[13.832047] (-) TimerEvent: {}
+[13.932285] (-) TimerEvent: {}
+[14.032532] (-) TimerEvent: {}
+[14.132748] (-) TimerEvent: {}
+[14.232997] (-) TimerEvent: {}
+[14.333239] (-) TimerEvent: {}
+[14.433493] (-) TimerEvent: {}
+[14.533742] (-) TimerEvent: {}
+[14.633974] (-) TimerEvent: {}
+[14.734220] (-) TimerEvent: {}
+[14.834484] (-) TimerEvent: {}
+[14.934742] (-) TimerEvent: {}
+[14.984119] (ana) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/occupancy_grid_subscriber_node.dir/cmake_device_link.o\x1b[0m\n'}
+[14.998439] (ana) StderrLine: {'line': b"nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libdl.a' when searching for -ldl\n"}
+[14.999250] (ana) StderrLine: {'line': b"nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/librt.a' when searching for -lrt\n"}
+[14.999345] (ana) StderrLine: {'line': b"nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libpthread.a' when searching for -lpthread\n"}
+[15.034848] (-) TimerEvent: {}
+[15.042692] (ana) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable occupancy_grid_subscriber_node\x1b[0m\n'}
+[15.134968] (-) TimerEvent: {}
+[15.235231] (-) TimerEvent: {}
+[15.335515] (-) TimerEvent: {}
+[15.435793] (-) TimerEvent: {}
+[15.536075] (-) TimerEvent: {}
+[15.636805] (-) TimerEvent: {}
+[15.737700] (-) TimerEvent: {}
+[15.838090] (-) TimerEvent: {}
+[15.938378] (-) TimerEvent: {}
+[16.038691] (-) TimerEvent: {}
+[16.138965] (-) TimerEvent: {}
+[16.239309] (-) TimerEvent: {}
+[16.339621] (-) TimerEvent: {}
+[16.439918] (-) TimerEvent: {}
+[16.540219] (-) TimerEvent: {}
+[16.640614] (-) TimerEvent: {}
+[16.741004] (-) TimerEvent: {}
+[16.841375] (-) TimerEvent: {}
+[16.941776] (-) TimerEvent: {}
+[17.042090] (-) TimerEvent: {}
+[17.142379] (-) TimerEvent: {}
+[17.242666] (-) TimerEvent: {}
+[17.342964] (-) TimerEvent: {}
+[17.443283] (-) TimerEvent: {}
+[17.543670] (-) TimerEvent: {}
+[17.644026] (-) TimerEvent: {}
+[17.744352] (-) TimerEvent: {}
+[17.844691] (-) TimerEvent: {}
+[17.945059] (-) TimerEvent: {}
+[18.045455] (-) TimerEvent: {}
+[18.145745] (-) TimerEvent: {}
+[18.246070] (-) TimerEvent: {}
+[18.346353] (-) TimerEvent: {}
+[18.446639] (-) TimerEvent: {}
+[18.546918] (-) TimerEvent: {}
+[18.647189] (-) TimerEvent: {}
+[18.747490] (-) TimerEvent: {}
+[18.847799] (-) TimerEvent: {}
+[18.948121] (-) TimerEvent: {}
+[19.048479] (-) TimerEvent: {}
+[19.148781] (-) TimerEvent: {}
+[19.249106] (-) TimerEvent: {}
+[19.349433] (-) TimerEvent: {}
+[19.449751] (-) TimerEvent: {}
+[19.550010] (-) TimerEvent: {}
+[19.650333] (-) TimerEvent: {}
+[19.750692] (-) TimerEvent: {}
+[19.850993] (-) TimerEvent: {}
+[19.951265] (-) TimerEvent: {}
+[20.051581] (-) TimerEvent: {}
+[20.151905] (-) TimerEvent: {}
+[20.252366] (-) TimerEvent: {}
+[20.352876] (-) TimerEvent: {}
+[20.453880] (-) TimerEvent: {}
+[20.554201] (-) TimerEvent: {}
+[20.654480] (-) TimerEvent: {}
+[20.754750] (-) TimerEvent: {}
+[20.855060] (-) TimerEvent: {}
+[20.955341] (-) TimerEvent: {}
+[21.055665] (-) TimerEvent: {}
+[21.156000] (-) TimerEvent: {}
+[21.256288] (-) TimerEvent: {}
+[21.356576] (-) TimerEvent: {}
+[21.456841] (-) TimerEvent: {}
+[21.557076] (-) TimerEvent: {}
+[21.657368] (-) TimerEvent: {}
+[21.757625] (-) TimerEvent: {}
+[21.857899] (-) TimerEvent: {}
+[21.958215] (-) TimerEvent: {}
+[22.058560] (-) TimerEvent: {}
+[22.158865] (-) TimerEvent: {}
+[22.259203] (-) TimerEvent: {}
+[22.359481] (-) TimerEvent: {}
+[22.459781] (-) TimerEvent: {}
+[22.560097] (-) TimerEvent: {}
+[22.660360] (-) TimerEvent: {}
+[22.760619] (-) TimerEvent: {}
+[22.860870] (-) TimerEvent: {}
+[22.961134] (-) TimerEvent: {}
+[23.045550] (ana) StdoutLine: {'line': b'[100%] Built target occupancy_grid_subscriber_node\n'}
+[23.061256] (-) TimerEvent: {}
+[23.161520] (-) TimerEvent: {}
+[23.174160] (ana) StdoutLine: {'line': b'[100%] Built target publish_pcd_node\n'}
+[23.181270] (ana) CommandEnded: {'returncode': 0}
+[23.204279] (ana) JobProgress: {'identifier': 'ana', 'progress': 'install'}
+[23.210579] (ana) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aidan/ana_bot/build/ana'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan/ana_bot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '4560'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2246,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2246'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9af7b992_c1f6_4e45_a21b_b0cf993852d0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[23.215099] (ana) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.215411] (ana) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[23.215745] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/point_cloud_filter_node\n'}
+[23.215893] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node\n'}
+[23.215968] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node\n'}
+[23.216097] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a\n'}
+[23.216276] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz\n'}
+[23.216430] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz\n'}
+[23.216529] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz\n'}
+[23.216607] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml\n'}
+[23.216658] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml\n'}
+[23.216705] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml\n'}
+[23.216765] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz\n'}
+[23.216825] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro\n'}
+[23.216884] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro\n'}
+[23.216932] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro\n'}
+[23.217011] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro\n'}
+[23.217062] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro\n'}
+[23.217131] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro\n'}
+[23.217212] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro\n'}
+[23.217264] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro\n'}
+[23.217350] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py\n'}
+[23.217417] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py\n'}
+[23.217483] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py\n'}
+[23.217549] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py\n'}
+[23.217771] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world\n'}
+[23.217842] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world\n'}
+[23.217905] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world\n'}
+[23.218275] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl\n'}
+[23.218389] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl\n'}
+[23.218500] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/orange_cones_3d.pcd\n'}
+[23.218619] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/orange_cones_3d.ply\n'}
+[23.218845] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana\n'}
+[23.218984] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana\n'}
+[23.219126] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh\n'}
+[23.219285] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv\n'}
+[23.219413] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh\n'}
+[23.219518] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv\n'}
+[23.219617] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash\n'}
+[23.219714] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh\n'}
+[23.219857] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh\n'}
+[23.219954] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv\n'}
+[23.220047] (ana) StdoutLine: {'line': b'-- Symlinking: /home/aidan/ana_bot/install/ana/share/ana/package.dsv\n'}
+[23.226511] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana\n'}
+[23.226647] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake\n'}
+[23.226748] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake\n'}
+[23.226845] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/package.xml\n'}
+[23.227961] (ana) CommandEnded: {'returncode': 0}
+[23.261743] (-) TimerEvent: {}
+[23.263435] (ana) JobEnded: {'identifier': 'ana', 'rc': 0}
+[23.263961] (-) EventReactorShutdown: {}

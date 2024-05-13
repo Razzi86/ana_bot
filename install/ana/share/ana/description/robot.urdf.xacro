@@ -1,15 +1,1 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
-
-    <!-- link -->
-    <xacro:include filename="robot_core.xacro" />
-
-    <!-- <xacro:include filename="gazebo_diff_control.xacro"/> -->
-    <xacro:include filename="gazebo_four_diff_control.xacro"/>
-
-    <!-- <xacro:include filename="ros2_diff_control.xacro"/> -->
-    <!-- <xacro:include filename="camera.xacro"/> -->
-    <xacro:include filename="depth_camera.xacro"/>
-
-    
-</robot>
+/home/aidan/ana_bot/src/ana/description/robot.urdf.xacro

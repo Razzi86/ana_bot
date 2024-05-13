@@ -223,53 +223,127 @@ publish_pcd_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/build
 .PHONY : publish_pcd_node/fast
 
-src/PointCloudFilter.o: src/PointCloudFilter.cpp.o
-.PHONY : src/PointCloudFilter.o
+#=============================================================================
+# Target rules for targets named occupancy_grid_subscriber_node
+
+# Build rule for target.
+occupancy_grid_subscriber_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 occupancy_grid_subscriber_node
+.PHONY : occupancy_grid_subscriber_node
+
+# fast build rule for target.
+occupancy_grid_subscriber_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/occupancy_grid_subscriber_node.dir/build.make CMakeFiles/occupancy_grid_subscriber_node.dir/build
+.PHONY : occupancy_grid_subscriber_node/fast
+
+#=============================================================================
+# Target rules for targets named cuda_operations
+
+# Build rule for target.
+cuda_operations: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cuda_operations
+.PHONY : cuda_operations
+
+# fast build rule for target.
+cuda_operations/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_operations.dir/build.make CMakeFiles/cuda_operations.dir/build
+.PHONY : cuda_operations/fast
+
+src/cuda/pointcloud_processing.o: src/cuda/pointcloud_processing.cu.o
+.PHONY : src/cuda/pointcloud_processing.o
 
 # target to build an object file
-src/PointCloudFilter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.o
-.PHONY : src/PointCloudFilter.cpp.o
+src/cuda/pointcloud_processing.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_operations.dir/build.make CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.o
+.PHONY : src/cuda/pointcloud_processing.cu.o
 
-src/PointCloudFilter.i: src/PointCloudFilter.cpp.i
-.PHONY : src/PointCloudFilter.i
+src/cuda/pointcloud_processing.i: src/cuda/pointcloud_processing.cu.i
+.PHONY : src/cuda/pointcloud_processing.i
 
 # target to preprocess a source file
-src/PointCloudFilter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.i
-.PHONY : src/PointCloudFilter.cpp.i
+src/cuda/pointcloud_processing.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_operations.dir/build.make CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.i
+.PHONY : src/cuda/pointcloud_processing.cu.i
 
-src/PointCloudFilter.s: src/PointCloudFilter.cpp.s
-.PHONY : src/PointCloudFilter.s
+src/cuda/pointcloud_processing.s: src/cuda/pointcloud_processing.cu.s
+.PHONY : src/cuda/pointcloud_processing.s
 
 # target to generate assembly for a file
-src/PointCloudFilter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/PointCloudFilter.cpp.s
-.PHONY : src/PointCloudFilter.cpp.s
+src/cuda/pointcloud_processing.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_operations.dir/build.make CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.s
+.PHONY : src/cuda/pointcloud_processing.cu.s
 
-src/ply2pcd.o: src/ply2pcd.cpp.o
-.PHONY : src/ply2pcd.o
+src/nodes/PointCloudFilter.o: src/nodes/PointCloudFilter.cpp.o
+.PHONY : src/nodes/PointCloudFilter.o
 
 # target to build an object file
-src/ply2pcd.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.o
-.PHONY : src/ply2pcd.cpp.o
+src/nodes/PointCloudFilter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.o
+.PHONY : src/nodes/PointCloudFilter.cpp.o
 
-src/ply2pcd.i: src/ply2pcd.cpp.i
-.PHONY : src/ply2pcd.i
+src/nodes/PointCloudFilter.i: src/nodes/PointCloudFilter.cpp.i
+.PHONY : src/nodes/PointCloudFilter.i
 
 # target to preprocess a source file
-src/ply2pcd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.i
-.PHONY : src/ply2pcd.cpp.i
+src/nodes/PointCloudFilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.i
+.PHONY : src/nodes/PointCloudFilter.cpp.i
 
-src/ply2pcd.s: src/ply2pcd.cpp.s
-.PHONY : src/ply2pcd.s
+src/nodes/PointCloudFilter.s: src/nodes/PointCloudFilter.cpp.s
+.PHONY : src/nodes/PointCloudFilter.s
 
 # target to generate assembly for a file
-src/ply2pcd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/ply2pcd.cpp.s
-.PHONY : src/ply2pcd.cpp.s
+src/nodes/PointCloudFilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.s
+.PHONY : src/nodes/PointCloudFilter.cpp.s
+
+src/nodes/occupancy_grid_subscriber.o: src/nodes/occupancy_grid_subscriber.cpp.o
+.PHONY : src/nodes/occupancy_grid_subscriber.o
+
+# target to build an object file
+src/nodes/occupancy_grid_subscriber.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/occupancy_grid_subscriber_node.dir/build.make CMakeFiles/occupancy_grid_subscriber_node.dir/src/nodes/occupancy_grid_subscriber.cpp.o
+.PHONY : src/nodes/occupancy_grid_subscriber.cpp.o
+
+src/nodes/occupancy_grid_subscriber.i: src/nodes/occupancy_grid_subscriber.cpp.i
+.PHONY : src/nodes/occupancy_grid_subscriber.i
+
+# target to preprocess a source file
+src/nodes/occupancy_grid_subscriber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/occupancy_grid_subscriber_node.dir/build.make CMakeFiles/occupancy_grid_subscriber_node.dir/src/nodes/occupancy_grid_subscriber.cpp.i
+.PHONY : src/nodes/occupancy_grid_subscriber.cpp.i
+
+src/nodes/occupancy_grid_subscriber.s: src/nodes/occupancy_grid_subscriber.cpp.s
+.PHONY : src/nodes/occupancy_grid_subscriber.s
+
+# target to generate assembly for a file
+src/nodes/occupancy_grid_subscriber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/occupancy_grid_subscriber_node.dir/build.make CMakeFiles/occupancy_grid_subscriber_node.dir/src/nodes/occupancy_grid_subscriber.cpp.s
+.PHONY : src/nodes/occupancy_grid_subscriber.cpp.s
+
+src/nodes/ply2pcd.o: src/nodes/ply2pcd.cpp.o
+.PHONY : src/nodes/ply2pcd.o
+
+# target to build an object file
+src/nodes/ply2pcd.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o
+.PHONY : src/nodes/ply2pcd.cpp.o
+
+src/nodes/ply2pcd.i: src/nodes/ply2pcd.cpp.i
+.PHONY : src/nodes/ply2pcd.i
+
+# target to preprocess a source file
+src/nodes/ply2pcd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.i
+.PHONY : src/nodes/ply2pcd.cpp.i
+
+src/nodes/ply2pcd.s: src/nodes/ply2pcd.cpp.s
+.PHONY : src/nodes/ply2pcd.s
+
+# target to generate assembly for a file
+src/nodes/ply2pcd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/publish_pcd_node.dir/build.make CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.s
+.PHONY : src/nodes/ply2pcd.cpp.s
 
 # Help Target
 help:
@@ -286,14 +360,22 @@ help:
 	@echo "... test"
 	@echo "... ana_uninstall"
 	@echo "... uninstall"
+	@echo "... cuda_operations"
+	@echo "... occupancy_grid_subscriber_node"
 	@echo "... point_cloud_filter_node"
 	@echo "... publish_pcd_node"
-	@echo "... src/PointCloudFilter.o"
-	@echo "... src/PointCloudFilter.i"
-	@echo "... src/PointCloudFilter.s"
-	@echo "... src/ply2pcd.o"
-	@echo "... src/ply2pcd.i"
-	@echo "... src/ply2pcd.s"
+	@echo "... src/cuda/pointcloud_processing.o"
+	@echo "... src/cuda/pointcloud_processing.i"
+	@echo "... src/cuda/pointcloud_processing.s"
+	@echo "... src/nodes/PointCloudFilter.o"
+	@echo "... src/nodes/PointCloudFilter.i"
+	@echo "... src/nodes/PointCloudFilter.s"
+	@echo "... src/nodes/occupancy_grid_subscriber.o"
+	@echo "... src/nodes/occupancy_grid_subscriber.i"
+	@echo "... src/nodes/occupancy_grid_subscriber.s"
+	@echo "... src/nodes/ply2pcd.o"
+	@echo "... src/nodes/ply2pcd.i"
+	@echo "... src/nodes/ply2pcd.s"
 .PHONY : help
 
 
