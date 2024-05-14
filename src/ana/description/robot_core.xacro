@@ -23,7 +23,7 @@
     <!-- CHASSIS LINK -->
 
     <link name="base_link">
-
+        <origin xyz="0 0 0"/>
     </link>
 
     <joint name="chassis_joint" type="fixed">

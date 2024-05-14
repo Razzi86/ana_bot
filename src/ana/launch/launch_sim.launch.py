@@ -53,7 +53,7 @@ def generate_launch_description():
     
     # parameter file changes gazebo refresh from 10 to 400hz
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
-    world_file = '/home/aidan/ana_bot/src/ana/worlds/obstacles.world'
+    world_file = '/home/aidan/ana_bot/src/ana/worlds/outside.world'
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]), 

@@ -39,8 +39,8 @@
                 <horizontal_fov>1.501</horizontal_fov>
                 <image>
                     <format>B8G8R8</format>
-                    <width>640</width>
-                    <height>480</height> <!-- Lower resolution for faster processing -->
+                    <width>1280</width>
+                    <height>720</height> <!-- Lower resolution for faster processing -->
 
                 </image>
                 <!-- filter for min max ranges -->

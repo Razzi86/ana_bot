@@ -38,8 +38,13 @@ private:
     void timerCallback() {
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
 
+<<<<<<< HEAD
         if (pcl::io::loadPCDFile<pcl::PointXYZ>("/home/aidan/ana_bot/src/ana/rtab_maps/orange_cones_3d.pcd", *cloud) == -1) {
             RCLCPP_ERROR(this->get_logger(), "Couldn't read the file orange_cones_3d.pcd");
+=======
+        if (pcl::io::loadPCDFile<pcl::PointXYZ>("/home/aidan/ana_bot/src/ana/rtab_maps/settings4.pcd", *cloud) == -1) {
+            RCLCPP_ERROR(this->get_logger(), "Couldn't read the pcd file");
+>>>>>>> 72f5edd (SLAM, Costmap generation)
             return;
         }
 
