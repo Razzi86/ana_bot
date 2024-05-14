@@ -190,13 +190,8 @@ CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linu
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_wechat_qrcode.so.4.5.4d
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.5.4d
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.5.4d
-<<<<<<< HEAD
-CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/local/cuda/lib64/libcudart_static.a
-CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/librt.a
-=======
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libcudart_static.a
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/librt.so
->>>>>>> 72f5edd (SLAM, Costmap generation)
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: libcuda_operations.a
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /opt/ros/humble/lib/libmessage_filters.so
 CMakeFiles/point_cloud_filter_node.dir/cmake_device_link.o: /opt/ros/humble/lib/librclcpp.so
@@ -455,13 +450,8 @@ point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.5.4d
 point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/libopencv_wechat_qrcode.so.4.5.4d
 point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.5.4d
 point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.5.4d
-<<<<<<< HEAD
-point_cloud_filter_node: /usr/local/cuda/lib64/libcudart_static.a
-point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/librt.a
-=======
 point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/libcudart_static.a
 point_cloud_filter_node: /usr/lib/x86_64-linux-gnu/librt.so
->>>>>>> 72f5edd (SLAM, Costmap generation)
 point_cloud_filter_node: libcuda_operations.a
 point_cloud_filter_node: /opt/ros/humble/lib/libmessage_filters.so
 point_cloud_filter_node: /opt/ros/humble/lib/librclcpp.so
