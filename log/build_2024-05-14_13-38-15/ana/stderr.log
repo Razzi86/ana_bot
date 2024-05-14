@@ -1,0 +1,7 @@
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/occupancy_grid_subscriber.cpp:[m[K In member function ‘[01m[Kint GridSubscriber::calculateCostBasedOnHeight(float)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/occupancy_grid_subscriber.cpp:56:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KrobotHeight[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   56 |         float [01;35m[KrobotHeight[m[K = 0.119;
+      |               [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/occupancy_grid_subscriber.cpp:57:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KclearanceHeight[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   57 |         float [01;35m[KclearanceHeight[m[K = 0.150;
+      |               [01;35m[K^~~~~~~~~~~~~~~[m[K

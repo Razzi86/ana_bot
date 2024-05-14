@@ -198,17 +198,17 @@ ana_uninstall/fast:
 .PHONY : ana_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named point_cloud_filter_node
+# Target rules for targets named depth_live_filter_node
 
 # Build rule for target.
-point_cloud_filter_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_filter_node
-.PHONY : point_cloud_filter_node
+depth_live_filter_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_live_filter_node
+.PHONY : depth_live_filter_node
 
 # fast build rule for target.
-point_cloud_filter_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/build
-.PHONY : point_cloud_filter_node/fast
+depth_live_filter_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_live_filter_node.dir/build.make CMakeFiles/depth_live_filter_node.dir/build
+.PHONY : depth_live_filter_node/fast
 
 #=============================================================================
 # Target rules for targets named publish_pcd_node
@@ -273,29 +273,29 @@ src/cuda/pointcloud_processing.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_operations.dir/build.make CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.s
 .PHONY : src/cuda/pointcloud_processing.cu.s
 
-src/nodes/PointCloudFilter.o: src/nodes/PointCloudFilter.cpp.o
-.PHONY : src/nodes/PointCloudFilter.o
+src/nodes/depth_live_filter.o: src/nodes/depth_live_filter.cpp.o
+.PHONY : src/nodes/depth_live_filter.o
 
 # target to build an object file
-src/nodes/PointCloudFilter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.o
-.PHONY : src/nodes/PointCloudFilter.cpp.o
+src/nodes/depth_live_filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_live_filter_node.dir/build.make CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o
+.PHONY : src/nodes/depth_live_filter.cpp.o
 
-src/nodes/PointCloudFilter.i: src/nodes/PointCloudFilter.cpp.i
-.PHONY : src/nodes/PointCloudFilter.i
+src/nodes/depth_live_filter.i: src/nodes/depth_live_filter.cpp.i
+.PHONY : src/nodes/depth_live_filter.i
 
 # target to preprocess a source file
-src/nodes/PointCloudFilter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.i
-.PHONY : src/nodes/PointCloudFilter.cpp.i
+src/nodes/depth_live_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_live_filter_node.dir/build.make CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.i
+.PHONY : src/nodes/depth_live_filter.cpp.i
 
-src/nodes/PointCloudFilter.s: src/nodes/PointCloudFilter.cpp.s
-.PHONY : src/nodes/PointCloudFilter.s
+src/nodes/depth_live_filter.s: src/nodes/depth_live_filter.cpp.s
+.PHONY : src/nodes/depth_live_filter.s
 
 # target to generate assembly for a file
-src/nodes/PointCloudFilter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/src/nodes/PointCloudFilter.cpp.s
-.PHONY : src/nodes/PointCloudFilter.cpp.s
+src/nodes/depth_live_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_live_filter_node.dir/build.make CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.s
+.PHONY : src/nodes/depth_live_filter.cpp.s
 
 src/nodes/occupancy_grid_subscriber.o: src/nodes/occupancy_grid_subscriber.cpp.o
 .PHONY : src/nodes/occupancy_grid_subscriber.o
@@ -361,15 +361,15 @@ help:
 	@echo "... ana_uninstall"
 	@echo "... uninstall"
 	@echo "... cuda_operations"
+	@echo "... depth_live_filter_node"
 	@echo "... occupancy_grid_subscriber_node"
-	@echo "... point_cloud_filter_node"
 	@echo "... publish_pcd_node"
 	@echo "... src/cuda/pointcloud_processing.o"
 	@echo "... src/cuda/pointcloud_processing.i"
 	@echo "... src/cuda/pointcloud_processing.s"
-	@echo "... src/nodes/PointCloudFilter.o"
-	@echo "... src/nodes/PointCloudFilter.i"
-	@echo "... src/nodes/PointCloudFilter.s"
+	@echo "... src/nodes/depth_live_filter.o"
+	@echo "... src/nodes/depth_live_filter.i"
+	@echo "... src/nodes/depth_live_filter.s"
 	@echo "... src/nodes/occupancy_grid_subscriber.o"
 	@echo "... src/nodes/occupancy_grid_subscriber.i"
 	@echo "... src/nodes/occupancy_grid_subscriber.s"

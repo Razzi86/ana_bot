@@ -23,10 +23,10 @@ def generate_launch_description():
     }
 
     remappings=[
-          ('rgb/image', '/camera/image_raw'),
-          ('rgb/camera_info', '/camera/camera_info'),
-          # ('depth/image', '/camera/depth/image_raw')
-          ('depth/image', '/filtered/depth/image_raw')
+          ('rgb/image', '/camera/image_raw'), # RGB images used by RTAB-Map to detect visual features and recognize previously visited areas, crucial for SLAM (Simultaneous Localization and Mapping)
+          ('rgb/camera_info', '/camera/camera_info'), # carries metadata about the camera's calibration and settings, which is essential for accurate image processing and depth estimation in RTAB-Map
+          # ('depth/image', '/camera/depth/image_raw') # Original mapping for depth images if using unfiltered data.
+          ('depth/image', '/filtered/depth/image_raw') # provides filtered depth data, which complements the RGB images by adding 3D structural information to the visual features, enhancing the 3D mapping and feature matching capabilities of RTAB-Map.
           ]
 
     return LaunchDescription([

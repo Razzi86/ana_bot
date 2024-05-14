@@ -1,0 +1,8 @@
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:[m[K In member function ‘[01m[Kvoid DepthLiveFilterNode::callback(const ConstSharedPtr&)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:49:93:[m[K [01;31m[Kerror: [m[K‘[01m[Kreduced[m[K’ was not declared in this scope
+   49 | _cv(cv_ptr->header, sensor_msgs::image_encodings::TYPE_32FC1, [01;31m[Kreduced[m[K);
+      |                                                               [01;31m[K^~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/depth_live_filter_node.dir/build.make:76: CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/depth_live_filter_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

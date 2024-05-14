@@ -27,21 +27,21 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}]
     )
 
-    point_cloud_filter_node = Node(
+    depth_live_filter_node = Node(
         package='ana',  # Adjust if your package name is different
-        executable='point_cloud_filter_node',  # The executable name as defined in CMakeLists.txt
-        name='point_cloud_filter',  # Optional: Specify a custom node name
+        executable='depth_live_filter_node',  # The executable name as defined in CMakeLists.txt
+        name='depth_live_filter',  # Optional: Specify a custom node name
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
 
-    occupancy_grid_subscriber_node = Node(
-        package='ana',  # Make sure 'ana' matches your actual package name
-        executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
-        name='occupancy_grid_subscriber',  # Optional: Specify a custom node name
-        output='screen',
-        parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
-    )
+    # occupancy_grid_subscriber_node = Node(
+    #     package='ana',  # Make sure 'ana' matches your actual package name
+    #     executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
+    #     name='occupancy_grid_subscriber',  # Optional: Specify a custom node name
+    #     output='screen',
+    #     parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
+    # )
 
         
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands
@@ -97,7 +97,7 @@ def generate_launch_description():
     
     # Launch
     return LaunchDescription([
-        point_cloud_filter_node,
+        depth_live_filter_node,
         joint_state_publisher,
         rsp_node,
         rtab_node,
@@ -107,5 +107,5 @@ def generate_launch_description():
         joint_broad_spawner,
         node_robot_state_publisher,
         pcd_publisher_node,
-        occupancy_grid_subscriber_node,
+        # occupancy_grid_subscriber_node,
     ])

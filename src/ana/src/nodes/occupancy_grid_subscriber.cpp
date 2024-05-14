@@ -17,14 +17,14 @@ public:
 private:
     void occupancy_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg) {
         current_occupancy_ = *msg;
-        if (!height_data_.data.empty()) {
+        if (!height_data_.data.empty() && height_data_.data.size() == current_occupancy_.info.width * current_occupancy_.info.height) {
             generate_costmap();
         }
     }
 
     void height_callback(const std_msgs::msg::Float32MultiArray::SharedPtr msg) {
         height_data_ = *msg;
-        if (current_occupancy_.data.size() > 0) {
+        if (current_occupancy_.data.size() > 0 && height_data_.data.size() == current_occupancy_.info.width * current_occupancy_.info.height) {
             generate_costmap();
         }
     }
@@ -52,7 +52,14 @@ private:
     }
 
     int calculateCostBasedOnHeight(float height) {
-        if (height > 0.05) return 100;   // High cost
+
+        // float robotHeight = 0.119;
+        float clearanceHeight = 0.2;
+
+        if (height > 0.03 && height < clearanceHeight) 
+        {
+            return 100;   // High cost
+        }
         return 0;  // Default cost (if height <= 0.01)
     }
 
@@ -68,9 +75,9 @@ private:
                     int nIdx = ny * width + nx;
                     float distance = std::sqrt(dx * dx + dy * dy);
                     int decayedCost = 0;
-                    if (distance <= 3) decayedCost = 66;
-                    else if (distance <= 5) decayedCost = 33;
-                    else if (distance <= 7) decayedCost = 12;
+                    if (distance <= 7) decayedCost = 66;
+                    else if (distance <= 9) decayedCost = 33;
+                    else if (distance <= 11) decayedCost = 12;
 
                     if (costmap.data[nIdx] < decayedCost) {
                         costmap.data[nIdx] = decayedCost;

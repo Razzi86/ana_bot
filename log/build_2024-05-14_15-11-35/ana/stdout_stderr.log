@@ -1,0 +1,13 @@
+[ 18%] Built target cuda_operations
+[35m[1mConsolidate compiler generated dependencies of target depth_live_filter_node[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o[0m
+[ 54%] Built target occupancy_grid_subscriber_node
+[ 81%] Built target publish_pcd_node
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:[m[K In member function ‘[01m[Kvoid DepthLiveFilterNode::callback(const ConstSharedPtr&)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:40:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kround[m[K’ is not a member of ‘[01m[Kcv[m[K’; did you mean ‘[01m[KroundUp[m[K’?
+   40 |         cv_ptr->image = cv::[01;31m[Kround[m[K(cv_ptr->image);
+      |                             [01;31m[K^~~~~[m[K
+      |                             [32m[KroundUp[m[K
+gmake[2]: *** [CMakeFiles/depth_live_filter_node.dir/build.make:76: CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/depth_live_filter_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

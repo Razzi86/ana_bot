@@ -1,0 +1,4 @@
+Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana
+Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana

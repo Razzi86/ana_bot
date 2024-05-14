@@ -54,7 +54,7 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 # Declare a C++ executable for the nodes
-add_executable(point_cloud_filter_node src/nodes/PointCloudFilter.cpp)
+add_executable(depth_live_filter_node src/nodes/depth_live_filter.cpp)
 add_executable(publish_pcd_node src/nodes/ply2pcd.cpp)
 add_executable(occupancy_grid_subscriber_node src/nodes/occupancy_grid_subscriber.cpp)
 
@@ -68,7 +68,7 @@ target_compile_options(cuda_operations PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-Xcomp
 # target_compile_options(cuda_operations PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-Xcompiler -Wno-line>)
 
 # Specify libraries to link a library or executable target against
-ament_target_dependencies(point_cloud_filter_node
+ament_target_dependencies(depth_live_filter_node
   rclcpp
   sensor_msgs
   image_transport
@@ -108,7 +108,7 @@ endif()
 
 # Install executables and/or libraries
 install(TARGETS
-  point_cloud_filter_node
+  depth_live_filter_node
   publish_pcd_node
   occupancy_grid_subscriber_node
   cuda_operations
@@ -126,7 +126,7 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}
 )
 
-target_link_libraries(point_cloud_filter_node 
+target_link_libraries(depth_live_filter_node 
   ${PCL_LIBRARIES} 
   ${OpenCV_LIBS}
   ${CUDA_LIBRARIES}  # Link CUDA libraries

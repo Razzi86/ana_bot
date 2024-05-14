@@ -1,0 +1,271 @@
+[0.013s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[0.045s] [35m[1mConsolidate compiler generated dependencies of target cuda_operations[0m
+[0.054s] [  9%] [32mBuilding CUDA object CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.o[0m
+[0.401s] [01m[K/tmp/tmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.cpp:1:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.401s]     1 | # [01;35m[K1[m[K "/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu"
+[0.401s]       |   [01;35m[K^[m[K
+[0.401s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.401s]     2 | #i[01;35m[Kn[m[Kclude <device_launch_parameters.h>
+[0.401s]       |   [01;35m[K^[m[K
+[0.401s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.401s]     2 | #i[01;35m[Kn[m[Kclude <device_launch_parameters.h>
+[0.401s]       |   [01;35m[K^[m[K
+[0.401s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.401s]     2 | #i[01;35m[Kn[m[Kclude <device_launch_parameters.h>
+[0.401s]       |   [01;35m[K^[m[K
+[0.402s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.402s]     2 | #i[01;35m[Kn[m[Kclude <device_launch_parameters.h>
+[0.402s]       |   [01;35m[K^[m[K
+[0.402s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.402s]     2 | #i[01;35m[Kn[m[Kclude <device_launch_parameters.h>
+[0.402s]       |   [01;35m[K^[m[K
+[0.402s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.402s]     2 | #i[01;35m[Kn[m[Kclude <device_launch_parameters.h>
+[0.402s]       |   [01;35m[K^[m[K
+[0.402s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:3:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.402s]     3 | #i[01;35m[Kn[m[Kclude <stdio.h>  // For error logging
+[0.402s]       |   [01;35m[K^[m[K
+[0.402s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:6:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.402s]     6 | //[01;35m[K [m[KDefine constants for filter sizes and other parameters
+[0.402s]       |   [01;35m[K^[m[K
+[0.402s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:1:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.402s]     1 | #i[01;35m[Knc[m[Klude <cuda_runtime.h>
+[0.402s]       |   [01;35m[K^~[m[K
+[0.414s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:36:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.414s]    36 |   [01;35m[K  [m[Kfor (int ky = -FILTER_SIZE / 2; ky <= FILTER_SIZE / 2; ++ky) {
+[0.414s]       |   [01;35m[K^[m[K 
+[0.414s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:66:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.414s]    66 |   [01;35m[K  [m[K// Apply smoothing
+[0.415s]       |   [01;35m[K^[m[K 
+[0.415s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:52:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.415s]    52 |   [01;35m[K  [m[Kfloat* devImage;
+[0.415s]       |   [01;35m[K^[m[K 
+[0.415s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:53:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.415s]    53 |   [01;35m[K  [m[Ksize_t imageSize = width * height * sizeof(float);
+[0.415s]       |   [01;35m[K^[m[K 
+[0.415s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:54:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.415s]    54 |   [01;35m[K  [m[Kfloat* smoothedDepth;
+[0.415s]       |   [01;35m[K^[m[K 
+[0.415s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:55:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.415s]    55 | 
+[0.415s]       |   [01;35m[K^[m[K 
+[0.415s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:57:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.415s]    57 |   [01;35m[K  [m[KcudaMalloc((void**)&smoothedDepth, imageSize);
+[0.416s]       |   [01;35m[K^[m[K 
+[0.416s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:58:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.416s]    58 |   [01;35m[K  [m[KcudaMemcpy(devImage, hostImage, imageSize, cudaMemcpyHostToDevice);
+[0.416s]       |   [01;35m[K^[m[K 
+[0.416s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:59:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.416s]    59 | 
+[0.416s]       |   [01;35m[K^[m[K 
+[0.416s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:61:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.416s]    61 |   [01;35m[K  [m[Kdim3 dimGrid((width + BLOCK_SIZE - 1) / BLOCK_SIZE, (height + BLOCK_SIZE - 1) / BLOCK_SIZE);
+[0.416s]       |   [01;35m[K^[m[K 
+[0.416s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:62:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.416s]    62 | 
+[0.416s]       |   [01;35m[K^[m[K 
+[0.417s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:65:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.417s]    65 | 
+[0.417s]       |   [01;35m[K^[m[K 
+[0.417s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:68:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.417s]    68 | 
+[0.417s]       |   [01;35m[K^[m[K 
+[0.417s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:70:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.417s]    70 | 
+[0.417s]       |   [01;35m[K^[m[K 
+[0.417s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:72:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.417s]    72 |   [01;35m[K  [m[KcudaFree(smoothedDepth);
+[0.417s]       |   [01;35m[K^[m[K 
+[0.417s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:73:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.418s]    73 | }
+[0.418s]       |   [01;35m[K^[m[K 
+[0.418s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:74:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.418s]    74 | 
+[0.418s]       |   [01;35m[K^[m[K 
+[0.418s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:76:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.418s]    76 |   [01;35m[K  [m[Kfloat x, y, z;
+[0.418s]       |   [01;35m[K^[m[K 
+[0.418s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:77:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.418s]    77 | };
+[0.419s]       |   [01;35m[K^[m[K 
+[0.419s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:78:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.419s]    78 | 
+[0.419s]       |   [01;35m[K^[m[K 
+[0.419s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:108:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.419s]   108 | 
+[0.419s]       |   [01;35m[K^[m[K 
+[0.419s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:97:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.419s]    97 |   [01;35m[K  [m[KPointXYZ *devPoints, *devReducedPoints;
+[0.419s]       |   [01;35m[K^[m[K 
+[0.419s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:98:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.419s]    98 |   [01;35m[K  [m[Kint *minIndexGrid;
+[0.420s]       |   [01;35m[K^[m[K 
+[0.420s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:99:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.420s]    99 |   [01;35m[K  [m[Kint gridDimensions = ceil(10.0 / voxelSize);  // Assuming a 10x10x10m space for example
+[0.420s]       |   [01;35m[K^[m[K 
+[0.420s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:100:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.420s]   100 |   [01;35m[K  i[m[Knt gridSize = gridDimensions * gridDimensions * gridDimensions;
+[0.420s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.420s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:101:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.420s]   101 | 
+[0.420s]       |   [01;35m[K^[m[K  
+[0.420s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:103:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.420s]   103 |   [01;35m[K  c[m[KudaMalloc(&devReducedPoints, gridSize * sizeof(PointXYZ));
+[0.421s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.421s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:104:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.421s]   104 |   [01;35m[K  c[m[KudaMalloc(&minIndexGrid, gridSize * sizeof(int));
+[0.421s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.421s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:105:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.421s]   105 |   [01;35m[K  c[m[KudaMemset(minIndexGrid, INT_MAX, gridSize * sizeof(int));
+[0.421s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.421s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:106:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.421s]   106 | 
+[0.421s]       |   [01;35m[K^[m[K  
+[0.421s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:108:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.421s]   108 | 
+[0.421s]       |   [01;35m[K^[m[K  
+[0.422s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:110:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.422s]   110 |   [01;35m[K  d[m[Kim3 grid((numPoints + block.x - 1) / block.x);
+[0.422s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.422s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:111:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.422s]   111 |   [01;35m[K  v[m[KoxelGridDownsample<<<grid, block>>>(devPoints, devReducedPoints, numPoints, voxelSize, minIndexGrid, gridDimensions);
+[0.422s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.422s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:112:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.422s]   112 | 
+[0.422s]       |   [01;35m[K^[m[K  
+[0.422s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:114:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.422s]   114 | 
+[0.422s]       |   [01;35m[K^[m[K  
+[0.422s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:116:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s]   116 |   [01;35m[K  c[m[KudaFree(devReducedPoints);
+[0.423s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.423s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:117:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s]   117 |   [01;35m[K  c[m[KudaFree(minIndexGrid);
+[0.423s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.423s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:118:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s]   118 | }
+[0.423s]       |   [01;35m[K^[m[K  
+[0.423s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:120:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s] [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:4:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.423s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:12:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s]    12 |   [01;35m[K  [m[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;
+[0.423s]       |   [01;35m[K^[m[K 
+[0.423s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.423s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:12:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.423s]    12 |   [01;35m[K  [m[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;
+[0.423s]       |   [01;35m[K^[m[K 
+[0.423s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.423s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:23:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.424s]    23 | 
+[0.424s]       |   [01;35m[K^[m[K
+[0.424s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.424s] [01m[K/tmp/tmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.424s]     2 | #p[01;35m[Kra[m[Kgma GCC diagnostic ignored "-Wunused-function"
+[0.424s]       |   [01;35m[K^~[m[K
+[0.424s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.424s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:26:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.424s]    26 |   [01;35m[K  [m[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;
+[0.424s]       |   [01;35m[K^[m[K 
+[0.424s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.424s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:26:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.424s]    26 |   [01;35m[K  [m[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;
+[0.424s]       |   [01;35m[K^[m[K 
+[0.424s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.424s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:49:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.424s]    49 | 
+[0.424s]       |   [01;35m[K^[m[K
+[0.424s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.424s] [01m[K/tmp/tmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.425s]     2 | #p[01;35m[Kra[m[Kgma GCC diagnostic ignored "-Wunused-function"
+[0.425s]       |   [01;35m[K^~[m[K
+[0.425s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.425s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:80:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.425s]    80 |   [01;35m[K  [m[Kint idx = threadIdx.x + blockIdx.x * blockDim.x;
+[0.425s]       |   [01;35m[K^[m[K 
+[0.425s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.425s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:80:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.425s]    80 |   [01;35m[K  [m[Kint idx = threadIdx.x + blockIdx.x * blockDim.x;
+[0.425s]       |   [01;35m[K^[m[K 
+[0.425s] In file included from [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:1[m[K:
+[0.425s] [01m[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:95:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.425s]    95 | 
+[0.425s]       |   [01;35m[K^[m[K
+[0.425s] [01m[Ktmpxft_0000f0b2_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.480s] [01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kunrecognized command-line option ‘[01m[K-Wno-line[m[K’ may have been intended to silence earlier diagnostics
+[0.492s] [ 18%] [32m[1mLinking CUDA static library libcuda_operations.a[0m
+[0.514s] [ 18%] Built target cuda_operations
+[0.535s] [ 27%] [32mBuilding CXX object CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o[0m
+[0.627s] [ 36%] [32m[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o[0m
+[0.635s] [ 45%] [32m[1mLinking CUDA device code CMakeFiles/occupancy_grid_subscriber_node.dir/cmake_device_link.o[0m
+[0.674s] [ 54%] [32m[1mLinking CXX executable publish_pcd_node[0m
+[0.688s] [ 63%] [32m[1mLinking CXX executable occupancy_grid_subscriber_node[0m
+[5.552s] [ 72%] [32m[1mLinking CUDA device code CMakeFiles/depth_live_filter_node.dir/cmake_device_link.o[0m
+[5.602s] [ 81%] [32m[1mLinking CXX executable depth_live_filter_node[0m
+[6.342s] [ 81%] Built target depth_live_filter_node
+[11.469s] [ 90%] Built target occupancy_grid_subscriber_node
+[12.224s] [100%] Built target publish_pcd_node
+[12.233s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[12.262s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana
+[12.267s] -- Install configuration: ""
+[12.267s] -- Execute custom install script
+[12.267s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node
+[12.267s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node
+[12.267s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node
+[12.267s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a
+[12.267s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro
+[12.268s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py
+[12.269s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/bedroom.world
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.pcd
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.ply
+[12.270s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings1.pcd
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings1.ply
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings2.pcd
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings2.ply
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings3.pcd
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings3.ply
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.pcd
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.ply
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot1.png
+[12.271s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot2.png
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_toLoad.ini
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh
+[12.272s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv
+[12.273s] -- Symlinking: /home/aidan/ana_bot/install/ana/share/ana/package.dsv
+[12.278s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana
+[12.278s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake
+[12.278s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake
+[12.278s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/package.xml
+[12.279s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana

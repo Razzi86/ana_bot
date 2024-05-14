@@ -1,0 +1,46 @@
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:[m[K In member function ‘[01m[Kvoid PCDPublisher::removeIsolatedHighCostPoints(nav_msgs::msg::OccupancyGrid&, int, int)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:195:45:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kvector<[01;32m[Ksigned char[m[K,allocator<[01;32m[Ksigned char[m[K>>[m[K’ to non-scalar type ‘[01m[Kvector<[01;32m[Kint[m[K,allocator<[01;32m[Kint[m[K>>[m[K’ requested
+  195 |         std::vector<int> new_data = [01;31m[Kcostmap.data[m[K;  // Create a copy of the original data for modification
+      |                                     [01;31m[K~~~~~~~~^~~~[m[K
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:228:24:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Knav_msgs::msg::OccupancyGrid_<std::allocator<void> >::_data_type[m[K’ {aka ‘[01m[Kstd::vector<signed char, std::allocator<signed char> >[m[K’} and ‘[01m[Kstd::vector<int>[m[K’)
+  228 |         costmap.data = [01;31m[Knew_data[m[K;  // Update the costmap data with the modified values
+      |                        [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:72[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/vector.tcc:198:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = signed char; _Alloc = std::allocator<signed char>][m[K’
+  198 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/vector.tcc:199:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<int>[m[K’ to ‘[01m[Kconst std::vector<signed char, std::allocator<signed char> >&[m[K’
+  199 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:709:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = signed char; _Alloc = std::allocator<signed char>][m[K’
+  709 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:709:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<int>[m[K’ to ‘[01m[Kstd::vector<signed char, std::allocator<signed char> >&&[m[K’
+  709 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:730:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = signed char; _Alloc = std::allocator<signed char>][m[K’
+  730 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:730:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<int>[m[K’ to ‘[01m[Kstd::initializer_list<signed char>[m[K’
+  730 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/publish_pcd_node.dir/build.make:76: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/publish_pcd_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,7 @@
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:[m[K In member function ‘[01m[Knav_msgs::msg::OccupancyGrid PCDPublisher::createOccupancyGrid(const Ptr&, float)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:213:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  213 |             if (x >= 0 && [01;35m[Kx < width[m[K && y >= 0 && y < height) {
+      |                           [01;35m[K~~^~~~~~~[m[K
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:213:52:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  213 |             if (x >= 0 && x < width && y >= 0 && [01;35m[Ky < height[m[K) {
+      |                                                  [01;35m[K~~^~~~~~~~[m[K

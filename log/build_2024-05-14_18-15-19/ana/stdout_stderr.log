@@ -1,0 +1,8 @@
+[ 18%] Built target cuda_operations
+[ 45%] Built target depth_live_filter_node
+[35m[1mConsolidate compiler generated dependencies of target publish_pcd_node[0m
+[ 72%] Built target occupancy_grid_subscriber_node
+[ 81%] [32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o[0m
+gmake[2]: *** [CMakeFiles/publish_pcd_node.dir/build.make:76: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/publish_pcd_node.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

@@ -1,0 +1,440 @@
+[0.000000] (-) TimerEvent: {}
+[0.000158] (ana) JobQueued: {'identifier': 'ana', 'dependencies': OrderedDict()}
+[0.000197] (my_python_pkg) JobQueued: {'identifier': 'my_python_pkg', 'dependencies': OrderedDict()}
+[0.000232] (ana) JobStarted: {'identifier': 'ana'}
+[0.004864] (my_python_pkg) JobStarted: {'identifier': 'my_python_pkg'}
+[0.010055] (ana) JobProgress: {'identifier': 'ana', 'progress': 'cmake'}
+[0.011571] (ana) JobProgress: {'identifier': 'ana', 'progress': 'build'}
+[0.011708] (ana) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aidan/ana_bot/build/ana', '--', '-j16', '-l16'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2311'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2287,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2287'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aa5d7c96_dc79_4541_a4de_6109d66b70cf'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[0.052346] (ana) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CUDA object CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.o\x1b[0m\n'}
+[0.099352] (-) TimerEvent: {}
+[0.199568] (-) TimerEvent: {}
+[0.299822] (-) TimerEvent: {}
+[0.400169] (-) TimerEvent: {}
+[0.500423] (-) TimerEvent: {}
+[0.523855] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/tmp/tmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.cpp:1:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.524123] (ana) StderrLine: {'line': b'    1 | # \x1b[01;35m\x1b[K1\x1b[m\x1b[K "/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu"\n'}
+[0.524209] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.524299] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.524366] (ana) StderrLine: {'line': b'    2 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <device_launch_parameters.h>\n'}
+[0.524414] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.524469] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.524545] (ana) StderrLine: {'line': b'    2 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <device_launch_parameters.h>\n'}
+[0.524617] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.524692] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.524769] (ana) StderrLine: {'line': b'    2 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <device_launch_parameters.h>\n'}
+[0.524848] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.524923] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.524998] (ana) StderrLine: {'line': b'    2 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <device_launch_parameters.h>\n'}
+[0.525073] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.525147] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.525223] (ana) StderrLine: {'line': b'    2 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <device_launch_parameters.h>\n'}
+[0.525299] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.525375] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.525449] (ana) StderrLine: {'line': b'    2 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <device_launch_parameters.h>\n'}
+[0.525522] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.525593] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:3:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.525679] (ana) StderrLine: {'line': b'    3 | #i\x1b[01;35m\x1b[Kn\x1b[m\x1b[Kclude <stdio.h>  // For error logging\n'}
+[0.525753] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.525826] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:6:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.525900] (ana) StderrLine: {'line': b'    6 | //\x1b[01;35m\x1b[K \x1b[m\x1b[KDefine constants for filter sizes and other parameters\n'}
+[0.525974] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.526047] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:1:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.526121] (ana) StderrLine: {'line': b'    1 | #i\x1b[01;35m\x1b[Knc\x1b[m\x1b[Klude <cuda_runtime.h>\n'}
+[0.526194] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[0.528722] (my_python_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_python_pkg', 'build', '--build-base', '/home/aidan/ana_bot/build/my_python_pkg/build', 'install', '--record', '/home/aidan/ana_bot/build/my_python_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/aidan/ana_bot/src/my_python_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aidan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/aidan', 'OLDPWD': '/home/aidan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2311', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/aidan/ana_bot/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'aidan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aidan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2287,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2287', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/aa5d7c96_dc79_4541_a4de_6109d66b70cf', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.121', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aidan/ana_bot/build/my_python_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aidan/ana_bot/build/my_python_pkg/prefix_override:/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/aidan/ana_bot/install/ana'}, 'shell': False}
+[0.537865] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:36:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.538086] (ana) StderrLine: {'line': b'   36 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.538421] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.538506] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:45:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.538586] (ana) StderrLine: {'line': b'   45 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[K// Apply a simple mean filter\n'}
+[0.538664] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.538735] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:76:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.538809] (ana) StderrLine: {'line': b'   76 | //\x1b[01;35m\x1b[K  \x1b[m\x1b[K   // Apply smoothing\n'}
+[0.538886] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[0.538964] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:86:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.539044] (ana) StderrLine: {'line': b'   86 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[K// Calculate new dimensions\n'}
+[0.539143] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.539215] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:88:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.539287] (ana) StderrLine: {'line': b'   88 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint newHeight = height / 5;\n'}
+[0.539355] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.539424] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:89:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.539495] (ana) StderrLine: {'line': b'   89 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Ksize_t newImageSize = newWidth * newHeight * sizeof(float);\n'}
+[0.539572] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.539640] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:90:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.539718] (ana) StderrLine: {'line': b'   90 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Ksize_t oldImageSize = width * height * sizeof(float);\n'}
+[0.539796] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.539864] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:91:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.539935] (ana) StderrLine: {'line': b'   91 | \n'}
+[0.540004] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.540071] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:93:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.540141] (ana) StderrLine: {'line': b'   93 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kfloat* devOutputImage;\n'}
+[0.540210] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.540291] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:94:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.540364] (ana) StderrLine: {'line': b'   94 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[KcudaMalloc((void**)&devInputImage, oldImageSize);\n'}
+[0.540434] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.540501] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:95:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.540571] (ana) StderrLine: {'line': b'   95 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[KcudaMalloc((void**)&devOutputImage, newImageSize);\n'}
+[0.540638] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.540706] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:96:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.540778] (ana) StderrLine: {'line': b'   96 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[KcudaMemcpy(devInputImage, hostImage, oldImageSize, cudaMemcpyHostToDevice);\n'}
+[0.540850] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.540900] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:97:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.540947] (ana) StderrLine: {'line': b'   97 | \n'}
+[0.541018] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.541089] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:99:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.541160] (ana) StderrLine: {'line': b'   99 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kdim3 dimGrid((newWidth + BLOCK_SIZE - 1) / BLOCK_SIZE, (newHeight + BLOCK_SIZE - 1) / BLOCK_SIZE);\n'}
+[0.541240] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.541309] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:100:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.541381] (ana) StderrLine: {'line': b'  100 | \n'}
+[0.541451] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.541520] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:103:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.541597] (ana) StderrLine: {'line': b'  103 | \n'}
+[0.541667] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.541737] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:105:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.541811] (ana) StderrLine: {'line': b'  105 | \n'}
+[0.541883] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.541955] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:107:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.542028] (ana) StderrLine: {'line': b'  107 |   \x1b[01;35m\x1b[K  c\x1b[m\x1b[KudaFree(devOutputImage);\n'}
+[0.542101] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.542164] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:108:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.542210] (ana) StderrLine: {'line': b'  108 | }\n'}
+[0.542267] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.542340] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:109:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.542421] (ana) StderrLine: {'line': b'  109 | \n'}
+[0.542492] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.542561] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:112:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.542631] (ana) StderrLine: {'line': b'  112 |   \x1b[01;35m\x1b[K  f\x1b[m\x1b[Kloat x, y, z;\n'}
+[0.542700] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.542768] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:113:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.542838] (ana) StderrLine: {'line': b'  113 | };\n'}
+[0.542909] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.542977] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:114:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.543047] (ana) StderrLine: {'line': b'  114 | \n'}
+[0.543115] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.543185] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:144:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.543264] (ana) StderrLine: {'line': b'  144 | \n'}
+[0.543342] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.543421] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:133:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.543508] (ana) StderrLine: {'line': b'  133 |   \x1b[01;35m\x1b[K  P\x1b[m\x1b[KointXYZ *devPoints, *devReducedPoints;\n'}
+[0.543594] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.543671] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:134:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.543750] (ana) StderrLine: {'line': b'  134 |   \x1b[01;35m\x1b[K  i\x1b[m\x1b[Knt *minIndexGrid;\n'}
+[0.543827] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.543908] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:135:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.543987] (ana) StderrLine: {'line': b'  135 |   \x1b[01;35m\x1b[K  i\x1b[m\x1b[Knt gridDimensions = ceil(10.0 / voxelSize);  // Assuming a 10x10x10m space for example\n'}
+[0.544063] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.544135] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:136:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.544210] (ana) StderrLine: {'line': b'  136 |   \x1b[01;35m\x1b[K  i\x1b[m\x1b[Knt gridSize = gridDimensions * gridDimensions * gridDimensions;\n'}
+[0.544290] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.544366] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:137:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.544443] (ana) StderrLine: {'line': b'  137 | \n'}
+[0.544527] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.544711] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:139:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.544797] (ana) StderrLine: {'line': b'  139 |   \x1b[01;35m\x1b[K  c\x1b[m\x1b[KudaMalloc(&devReducedPoints, gridSize * sizeof(PointXYZ));\n'}
+[0.544930] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.545009] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:140:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.545088] (ana) StderrLine: {'line': b'  140 |   \x1b[01;35m\x1b[K  c\x1b[m\x1b[KudaMalloc(&minIndexGrid, gridSize * sizeof(int));\n'}
+[0.545167] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.545248] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:141:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.545332] (ana) StderrLine: {'line': b'  141 |   \x1b[01;35m\x1b[K  c\x1b[m\x1b[KudaMemset(minIndexGrid, INT_MAX, gridSize * sizeof(int));\n'}
+[0.545414] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.545496] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:142:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.545580] (ana) StderrLine: {'line': b'  142 | \n'}
+[0.545663] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.545743] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:144:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.545823] (ana) StderrLine: {'line': b'  144 | \n'}
+[0.545904] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.545983] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:146:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.546068] (ana) StderrLine: {'line': b'  146 |   \x1b[01;35m\x1b[K  d\x1b[m\x1b[Kim3 grid((numPoints + block.x - 1) / block.x);\n'}
+[0.546157] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.546238] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:147:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.546322] (ana) StderrLine: {'line': b'  147 |   \x1b[01;35m\x1b[K  v\x1b[m\x1b[KoxelGridDownsample<<<grid, block>>>(devPoints, devReducedPoints, numPoints, voxelSize, minIndexGrid, gridDimensions);\n'}
+[0.546396] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.546474] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:148:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.546558] (ana) StderrLine: {'line': b'  148 | \n'}
+[0.546639] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.546721] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:150:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.546803] (ana) StderrLine: {'line': b'  150 | \n'}
+[0.546882] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.546963] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:152:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.547044] (ana) StderrLine: {'line': b'  152 |   \x1b[01;35m\x1b[K  c\x1b[m\x1b[KudaFree(devReducedPoints);\n'}
+[0.547124] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.547196] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:153:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.547269] (ana) StderrLine: {'line': b'  153 |   \x1b[01;35m\x1b[K  c\x1b[m\x1b[KudaFree(minIndexGrid);\n'}
+[0.547349] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.547431] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:154:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.547521] (ana) StderrLine: {'line': b'  154 | }\n'}
+[0.547603] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K  \n'}
+[0.547678] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:156:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.547764] (ana) StderrLine: {'line': b'\x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:4:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.547848] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.547932] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:12:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.548016] (ana) StderrLine: {'line': b'   12 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.548100] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.548183] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.548274] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:12:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.548359] (ana) StderrLine: {'line': b'   12 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.548441] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.548532] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.548614] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:23:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.548697] (ana) StderrLine: {'line': b'   23 | \n'}
+[0.548778] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.548857] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.548937] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/tmp/tmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.549017] (ana) StderrLine: {'line': b'    2 | #p\x1b[01;35m\x1b[Kra\x1b[m\x1b[Kgma GCC diagnostic ignored "-Wunused-function"\n'}
+[0.549099] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[0.549183] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.549264] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:25:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.549345] (ana) StderrLine: {'line': b'   25 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.549426] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.549508] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.549590] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:25:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.549844] (ana) StderrLine: {'line': b'   25 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.549936] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.550020] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.550102] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:33:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.550185] (ana) StderrLine: {'line': b'   33 | \n'}
+[0.550265] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.550341] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.550424] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/tmp/tmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.550506] (ana) StderrLine: {'line': b'    2 | #p\x1b[01;35m\x1b[Kra\x1b[m\x1b[Kgma GCC diagnostic ignored "-Wunused-function"\n'}
+[0.550587] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[0.550666] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.550747] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:36:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.550829] (ana) StderrLine: {'line': b'   36 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.550909] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.550989] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.551078] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:36:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.551157] (ana) StderrLine: {'line': b'   36 |   \x1b[01;35m\x1b[K  \x1b[m\x1b[Kint idx = blockIdx.x * blockDim.x + threadIdx.x;\n'}
+[0.551237] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \n'}
+[0.551315] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.551394] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:59:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.551481] (ana) StderrLine: {'line': b'   59 | \n'}
+[0.551560] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.551639] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.551727] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/tmp/tmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.551814] (ana) StderrLine: {'line': b'    2 | #p\x1b[01;35m\x1b[Krag\x1b[m\x1b[Kma GCC diagnostic ignored "-Wunused-function"\n'}
+[0.551901] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.551983] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.552069] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:116:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.552156] (ana) StderrLine: {'line': b'  116 |   \x1b[01;35m\x1b[K  i\x1b[m\x1b[Knt idx = threadIdx.x + blockIdx.x * blockDim.x;\n'}
+[0.552243] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.552341] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.552429] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:116:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.552516] (ana) StderrLine: {'line': b'  116 |   \x1b[01;35m\x1b[K  i\x1b[m\x1b[Knt idx = threadIdx.x + blockIdx.x * blockDim.x;\n'}
+[0.552603] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K \x1b[01;35m\x1b[K~\x1b[m\x1b[K\n'}
+[0.552690] (ana) StderrLine: {'line': b'In file included from \x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:1\x1b[m\x1b[K:\n'}
+[0.552777] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:131:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.552863] (ana) StderrLine: {'line': b'  131 | \n'}
+[0.552949] (ana) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.553036] (ana) StderrLine: {'line': b'\x1b[01m\x1b[Ktmpxft_0000e714_00000000-6_pointcloud_processing.cudafe1.stub.c:2:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstyle of line directive is a GCC extension\n'}
+[0.592637] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid processDepthImage(float*, int, int, float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.592813] (ana) StderrLine: {'line': b'\x1b[01m\x1b[K/home/aidan/ana_bot/src/ana/src/cuda/pointcloud_processing.cu:85:82:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[KmaxDepth\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.592932] (ana) StderrLine: {'line': b'   85 | ssDepthImage(float* hostImage, int width, int height, \x1b[01;35m\x1b[Kfloat maxDepth\x1b[m\x1b[K) {\n'}
+[0.593023] (ana) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[0.593111] (ana) StderrLine: {'line': b'\n'}
+[0.600510] (-) TimerEvent: {}
+[0.616144] (ana) StderrLine: {'line': b'At global scope:\n'}
+[0.616281] (ana) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1plus:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kunrecognized command-line option \xe2\x80\x98\x1b[01m\x1b[K-Wno-line\x1b[m\x1b[K\xe2\x80\x99 may have been intended to silence earlier diagnostics\n'}
+[0.628224] (ana) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking CUDA static library libcuda_operations.a\x1b[0m\n'}
+[0.650175] (ana) StdoutLine: {'line': b'[ 18%] Built target cuda_operations\n'}
+[0.660647] (ana) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target depth_live_filter_node\x1b[0m\n'}
+[0.674898] (ana) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/depth_live_filter_node.dir/cmake_device_link.o\x1b[0m\n'}
+[0.700603] (-) TimerEvent: {}
+[0.714944] (ana) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX executable depth_live_filter_node\x1b[0m\n'}
+[0.731681] (my_python_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.732416] (my_python_pkg) StdoutLine: {'line': b'writing ../../build/my_python_pkg/my_python_pkg.egg-info/PKG-INFO\n'}
+[0.732581] (my_python_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/my_python_pkg/my_python_pkg.egg-info/dependency_links.txt\n'}
+[0.732704] (my_python_pkg) StdoutLine: {'line': b'writing entry points to ../../build/my_python_pkg/my_python_pkg.egg-info/entry_points.txt\n'}
+[0.732818] (my_python_pkg) StdoutLine: {'line': b'writing requirements to ../../build/my_python_pkg/my_python_pkg.egg-info/requires.txt\n'}
+[0.732933] (my_python_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/my_python_pkg/my_python_pkg.egg-info/top_level.txt\n'}
+[0.734236] (my_python_pkg) StdoutLine: {'line': b"reading manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.734824] (my_python_pkg) StdoutLine: {'line': b"writing manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.734972] (my_python_pkg) StdoutLine: {'line': b'running build\n'}
+[0.735078] (my_python_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.735179] (my_python_pkg) StdoutLine: {'line': b'running install\n'}
+[0.735326] (my_python_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.736233] (my_python_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.736361] (my_python_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.737571] (my_python_pkg) StdoutLine: {'line': b"removing '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.737751] (my_python_pkg) StdoutLine: {'line': b'Copying ../../build/my_python_pkg/my_python_pkg.egg-info to /home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info\n'}
+[0.738464] (my_python_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.754581] (my_python_pkg) StdoutLine: {'line': b'Installing arduino_serial script to /home/aidan/ana_bot/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.754806] (my_python_pkg) StdoutLine: {'line': b'Installing motor_control script to /home/aidan/ana_bot/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.755147] (my_python_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/aidan/ana_bot/build/my_python_pkg/install.log'\n"}
+[0.760151] (ana) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/occupancy_grid_subscriber_node.dir/cmake_device_link.o\x1b[0m\n'}
+[0.765687] (ana) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o\x1b[0m\n'}
+[0.786447] (my_python_pkg) CommandEnded: {'returncode': 0}
+[0.794538] (my_python_pkg) JobEnded: {'identifier': 'my_python_pkg', 'rc': 0}
+[0.800730] (-) TimerEvent: {}
+[0.811995] (ana) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX executable occupancy_grid_subscriber_node\x1b[0m\n'}
+[0.812211] (ana) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX executable publish_pcd_node\x1b[0m\n'}
+[0.900824] (-) TimerEvent: {}
+[1.001188] (-) TimerEvent: {}
+[1.101649] (-) TimerEvent: {}
+[1.202036] (-) TimerEvent: {}
+[1.302437] (-) TimerEvent: {}
+[1.379529] (ana) StdoutLine: {'line': b'[ 81%] Built target depth_live_filter_node\n'}
+[1.402572] (-) TimerEvent: {}
+[1.502956] (-) TimerEvent: {}
+[1.603293] (-) TimerEvent: {}
+[1.703596] (-) TimerEvent: {}
+[1.803888] (-) TimerEvent: {}
+[1.904160] (-) TimerEvent: {}
+[2.004413] (-) TimerEvent: {}
+[2.104685] (-) TimerEvent: {}
+[2.205001] (-) TimerEvent: {}
+[2.305317] (-) TimerEvent: {}
+[2.405627] (-) TimerEvent: {}
+[2.505923] (-) TimerEvent: {}
+[2.606295] (-) TimerEvent: {}
+[2.706643] (-) TimerEvent: {}
+[2.806922] (-) TimerEvent: {}
+[2.907202] (-) TimerEvent: {}
+[3.007472] (-) TimerEvent: {}
+[3.107961] (-) TimerEvent: {}
+[3.208410] (-) TimerEvent: {}
+[3.309600] (-) TimerEvent: {}
+[3.409972] (-) TimerEvent: {}
+[3.510286] (-) TimerEvent: {}
+[3.610645] (-) TimerEvent: {}
+[3.711021] (-) TimerEvent: {}
+[3.811411] (-) TimerEvent: {}
+[3.911766] (-) TimerEvent: {}
+[4.012065] (-) TimerEvent: {}
+[4.112340] (-) TimerEvent: {}
+[4.212704] (-) TimerEvent: {}
+[4.313100] (-) TimerEvent: {}
+[4.413396] (-) TimerEvent: {}
+[4.513682] (-) TimerEvent: {}
+[4.614007] (-) TimerEvent: {}
+[4.714331] (-) TimerEvent: {}
+[4.814709] (-) TimerEvent: {}
+[4.915001] (-) TimerEvent: {}
+[5.015322] (-) TimerEvent: {}
+[5.115780] (-) TimerEvent: {}
+[5.216118] (-) TimerEvent: {}
+[5.316420] (-) TimerEvent: {}
+[5.416749] (-) TimerEvent: {}
+[5.517095] (-) TimerEvent: {}
+[5.617470] (-) TimerEvent: {}
+[5.717863] (-) TimerEvent: {}
+[5.818132] (-) TimerEvent: {}
+[5.918459] (-) TimerEvent: {}
+[6.018919] (-) TimerEvent: {}
+[6.119351] (-) TimerEvent: {}
+[6.219778] (-) TimerEvent: {}
+[6.320121] (-) TimerEvent: {}
+[6.420506] (-) TimerEvent: {}
+[6.520847] (-) TimerEvent: {}
+[6.621169] (-) TimerEvent: {}
+[6.721525] (-) TimerEvent: {}
+[6.821811] (-) TimerEvent: {}
+[6.922192] (-) TimerEvent: {}
+[7.022522] (-) TimerEvent: {}
+[7.122828] (-) TimerEvent: {}
+[7.223170] (-) TimerEvent: {}
+[7.323498] (-) TimerEvent: {}
+[7.423771] (-) TimerEvent: {}
+[7.524060] (-) TimerEvent: {}
+[7.624410] (-) TimerEvent: {}
+[7.724740] (-) TimerEvent: {}
+[7.825068] (-) TimerEvent: {}
+[7.925383] (-) TimerEvent: {}
+[8.025718] (-) TimerEvent: {}
+[8.126150] (-) TimerEvent: {}
+[8.226511] (-) TimerEvent: {}
+[8.326850] (-) TimerEvent: {}
+[8.427135] (-) TimerEvent: {}
+[8.527468] (-) TimerEvent: {}
+[8.627893] (-) TimerEvent: {}
+[8.728214] (-) TimerEvent: {}
+[8.828488] (-) TimerEvent: {}
+[8.928770] (-) TimerEvent: {}
+[9.029072] (-) TimerEvent: {}
+[9.129405] (-) TimerEvent: {}
+[9.229689] (-) TimerEvent: {}
+[9.329947] (-) TimerEvent: {}
+[9.430227] (-) TimerEvent: {}
+[9.530502] (-) TimerEvent: {}
+[9.630816] (-) TimerEvent: {}
+[9.731126] (-) TimerEvent: {}
+[9.823143] (ana) StdoutLine: {'line': b'[ 90%] Built target occupancy_grid_subscriber_node\n'}
+[9.831246] (-) TimerEvent: {}
+[9.931556] (-) TimerEvent: {}
+[10.031865] (-) TimerEvent: {}
+[10.132149] (-) TimerEvent: {}
+[10.232391] (-) TimerEvent: {}
+[10.332630] (-) TimerEvent: {}
+[10.432879] (-) TimerEvent: {}
+[10.533138] (-) TimerEvent: {}
+[10.621842] (ana) StdoutLine: {'line': b'[100%] Built target publish_pcd_node\n'}
+[10.633254] (-) TimerEvent: {}
+[10.639026] (ana) CommandEnded: {'returncode': 0}
+[10.661492] (ana) JobProgress: {'identifier': 'ana', 'progress': 'install'}
+[10.668177] (ana) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aidan/ana_bot/build/ana'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2311'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2287,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2287'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aa5d7c96_dc79_4541_a4de_6109d66b70cf'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[10.673306] (ana) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.673582] (ana) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[10.673787] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node\n'}
+[10.673900] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node\n'}
+[10.673982] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node\n'}
+[10.674085] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a\n'}
+[10.674280] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz\n'}
+[10.674420] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz\n'}
+[10.674510] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz\n'}
+[10.674586] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml\n'}
+[10.674658] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml\n'}
+[10.674715] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml\n'}
+[10.674761] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz\n'}
+[10.674821] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro\n'}
+[10.674881] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro\n'}
+[10.674945] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro\n'}
+[10.675024] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro\n'}
+[10.675084] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro\n'}
+[10.675140] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro\n'}
+[10.675206] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro\n'}
+[10.675270] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro\n'}
+[10.675371] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py\n'}
+[10.675439] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py\n'}
+[10.675502] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py\n'}
+[10.675593] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py\n'}
+[10.675716] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/bedroom.world\n'}
+[10.675807] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world\n'}
+[10.675866] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world\n'}
+[10.675922] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world\n'}
+[10.675984] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world\n'}
+[10.676109] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl\n'}
+[10.676179] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl\n'}
+[10.676415] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.pcd\n'}
+[10.676512] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.ply\n'}
+[10.676560] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config\n'}
+[10.676618] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings1.pcd\n'}
+[10.676672] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings1.ply\n'}
+[10.676729] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings2.pcd\n'}
+[10.676786] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings2.ply\n'}
+[10.676853] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings3.pcd\n'}
+[10.676922] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings3.ply\n'}
+[10.676982] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.pcd\n'}
+[10.677052] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.ply\n'}
+[10.677109] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot1.png\n'}
+[10.677164] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot2.png\n'}
+[10.677220] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_toLoad.ini\n'}
+[10.677319] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana\n'}
+[10.677428] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana\n'}
+[10.677535] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh\n'}
+[10.677638] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv\n'}
+[10.677734] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh\n'}
+[10.677829] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv\n'}
+[10.677924] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash\n'}
+[10.678018] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh\n'}
+[10.678111] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh\n'}
+[10.678205] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv\n'}
+[10.678278] (ana) StdoutLine: {'line': b'-- Symlinking: /home/aidan/ana_bot/install/ana/share/ana/package.dsv\n'}
+[10.684720] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana\n'}
+[10.684844] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake\n'}
+[10.684952] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake\n'}
+[10.685020] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/package.xml\n'}
+[10.686396] (ana) CommandEnded: {'returncode': 0}
+[10.717087] (ana) JobEnded: {'identifier': 'ana', 'rc': 0}
+[10.717919] (-) EventReactorShutdown: {}

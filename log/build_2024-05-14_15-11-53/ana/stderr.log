@@ -1,0 +1,19 @@
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:[m[K In member function ‘[01m[Kvoid DepthLiveFilterNode::callback(const ConstSharedPtr&)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:40:36:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KroundUp(cv::Mat&)[m[K’
+   40 |         cv_ptr->image = [01;31m[Kcv::roundUp(cv_ptr->image)[m[K;
+      |                         [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:3307[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/depth_live_filter.cpp:4[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/utility.hpp:499:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint cv::roundUp(int, unsigned int)[m[K’
+  499 | static inline int [01;36m[KroundUp[m[K(int a, unsigned int b)
+      |                   [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/utility.hpp:499:19:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/opencv4/opencv2/core/utility.hpp:505:22:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ksize_t cv::roundUp(size_t, unsigned int)[m[K’
+  505 | static inline size_t [01;36m[KroundUp[m[K(size_t a, unsigned int b)
+      |                      [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/utility.hpp:505:22:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+gmake[2]: *** [CMakeFiles/depth_live_filter_node.dir/build.make:76: CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/depth_live_filter_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

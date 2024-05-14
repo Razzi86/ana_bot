@@ -18,7 +18,11 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <std_msgs/msg/float32_multi_array.hpp>
 
-
+// FILTERS .PCD FROM RTAB MAP
+// PUBLISHES
+//  - mapped_point_cloud
+//  - occupancy
+//  - height_map
 
 // cuda kernels
 extern "C" void processPointCloudVoxelGrid(PointXYZ *hostPoints, int numPoints, float voxelSize);
@@ -27,7 +31,7 @@ class PCDPublisher : public rclcpp::Node {
 public:
     PCDPublisher() : Node("pcd_publisher") {
         publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("mapped_point_cloud", 10);
-        grid_publisher_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("occupancy", 10);
+        grid_publisher_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("costmap_new", 10);
         height_publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("height_map", 10);  // Height publisher
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(5000),
@@ -75,71 +79,41 @@ private:
             // Apply Voxel Grid Downsampling to planes
             pcl::VoxelGrid<pcl::PointXYZ> voxelFilterPlane;
             voxelFilterPlane.setInputCloud(plane_cloud);
-            voxelFilterPlane.setLeafSize(0.02f, 0.02f, 0.02f); // Increase these values to make the plane less dense
+            voxelFilterPlane.setLeafSize(0.05f, 0.05f, 0.05f); // Increase these values to make the plane less dense
             voxelFilterPlane.filter(*plane_cloud);
 
             // Apply Voxel Grid Downsampling to non-planes - PCL GPU
             pcl::VoxelGrid<pcl::PointXYZ> voxelFilter;
             voxelFilter.setInputCloud(non_plane_cloud);
-            voxelFilter.setLeafSize(0.01f, 0.01f, 0.01f); // Increase these values to make the floor less dense
+            voxelFilter.setLeafSize(0.02f, 0.02f, 0.02f); // Increase these values to make the non-floor less dense
             voxelFilter.filter(*non_plane_cloud);
-        
-            // // Convert plane_cloud to CUDA and perform voxel grid downsampling
-            // std::vector<PointXYZ> planePoints(plane_cloud->points.size());
-            // for (size_t i = 0; i < plane_cloud->points.size(); ++i) {
-            //     planePoints[i].x = plane_cloud->points[i].x;
-            //     planePoints[i].y = plane_cloud->points[i].y;
-            //     planePoints[i].z = plane_cloud->points[i].z;
-            // }
-            // processPointCloudVoxelGrid(planePoints.data(), planePoints.size(), 0.02f);
-            // // Reconstruct the clouds from the processed points
-            // plane_cloud->points.resize(planePoints.size());
-            // for (size_t i = 0; i < planePoints.size(); ++i) {
-            //     plane_cloud->points[i].x = planePoints[i].x;
-            //     plane_cloud->points[i].y = planePoints[i].y;
-            //     plane_cloud->points[i].z = planePoints[i].z;
-            // }
-
-            // // Convert non_plane_cloud to CUDA and perform voxel grid downsampling
-            // std::vector<PointXYZ> nonPlanePoints(non_plane_cloud->points.size());
-            // for (size_t i = 0; i < non_plane_cloud->points.size(); ++i) {
-            //     nonPlanePoints[i].x = non_plane_cloud->points[i].x;
-            //     nonPlanePoints[i].y = non_plane_cloud->points[i].y;
-            //     nonPlanePoints[i].z = non_plane_cloud->points[i].z;
-            // }
-            // processPointCloudVoxelGrid(nonPlanePoints.data(), nonPlanePoints.size(), 0.01f);
-            // non_plane_cloud->points.resize(nonPlanePoints.size());
-            // // Reconstruct the clouds from the processed points
-            // for (size_t i = 0; i < nonPlanePoints.size(); ++i) {
-            //     non_plane_cloud->points[i].x = nonPlanePoints[i].x;
-            //     non_plane_cloud->points[i].y = nonPlanePoints[i].y;
-            //     non_plane_cloud->points[i].z = nonPlanePoints[i].z;
-            // }
+    
         }
+        // *non_plane_cloud += *plane_cloud;
 
         // Combine the plane and non-plane points
-        *non_plane_cloud += *plane_cloud;
+
         cloud.swap(non_plane_cloud); // Now cloud contains both sparsely sampled plane and other points
 
-        // Apply PassThrough Filter to remove floor - CUDA
-        pcl::PassThrough<pcl::PointXYZ> pass;
-        pass.setInputCloud(cloud);
-        pass.setFilterFieldName("z");
-        pass.setFilterLimits(0.0, 5.0); // Only keep points that are between these heights.
-        pass.filter(*cloud);
+        // // Apply PassThrough Filter to remove extremes - CUDA
+        // pcl::PassThrough<pcl::PointXYZ> pass;
+        // pass.setInputCloud(cloud);
+        // pass.setFilterFieldName("z");
+        // pass.setFilterLimits(0.0, 11.0); // Only keep points that are between these heights.
+        // pass.filter(*cloud);
 
-        // Apply Random Sampling - CUDA
-        pcl::RandomSample<pcl::PointXYZ> randomSample;
-        randomSample.setInputCloud(cloud);
-        randomSample.setSample(cloud->size() / 2); // Keep 50% of points, change to keep more/less.
-        randomSample.filter(*cloud);
+        // // Apply Random Sampling - CUDA
+        // pcl::RandomSample<pcl::PointXYZ> randomSample;
+        // randomSample.setInputCloud(cloud);
+        // randomSample.setSample(cloud->size() / 8); // Keep / N of points, change to keep more/less.
+        // randomSample.filter(*cloud);
 
-        // Apply Statistical Outlier Removal - CUDA
-        pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
-        sor.setInputCloud(cloud);
-        sor.setMeanK(50); // Number of neighbors to analyze for each point.
-        sor.setStddevMulThresh(1.0); // Distance multiplier for determining which points are outliers.
-        sor.filter(*cloud);
+        // // Apply Statistical Outlier Removal - CUDA
+        // pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
+        // sor.setInputCloud(cloud);
+        // sor.setMeanK(200); // Number of neighbors to analyze for each point.
+        // sor.setStddevMulThresh(0.4); // Distance multiplier for determining which points are outliers.
+        // sor.filter(*cloud);
 
         sensor_msgs::msg::PointCloud2 output;
         pcl::toROSMsg(*cloud, output);
@@ -147,24 +121,118 @@ private:
         output.header.stamp = this->now();
 
         // Convert cloud to an occupancy grid
-        auto grid = createOccupancyGrid(cloud, 0.05f);  // Example: 5cm grid cell size
-        grid_publisher_->publish(grid);
 
-        // Publish height data
+        // Convert cloud to an occupancy grid and publish height data
+        auto grid = createOccupancyGrid(cloud, 0.005f);  // Example: 5cm grid cell size
         std_msgs::msg::Float32MultiArray height_data;
         height_data.data.resize(grid.info.width * grid.info.height, -1.0); // Initialize with -1.0 (unknown height)
-        for (const auto& point : non_plane_cloud->points) {
+
+        // Populate height data and calculate cost based on heights
+        for (const auto& point : cloud->points) {
             int x = static_cast<int>((point.x - grid.info.origin.position.x) / grid.info.resolution);
             int y = static_cast<int>((point.y - grid.info.origin.position.y) / grid.info.resolution);
             if (x >= 0 && x < static_cast<int>(grid.info.width) && y >= 0 && y < static_cast<int>(grid.info.height)) {
-                height_data.data[y * grid.info.width + x] = point.z;  // Store height data
+                int index = y * grid.info.width + x;
+                height_data.data[index] = point.z;  // Store height data
+                grid.data[index] = calculateCostBasedOnHeight(point.z); // Calculate cost based on height
             }
         }
-        height_publisher_->publish(height_data);
 
+        removeIsolatedHighCostPoints(grid, grid.info.width, grid.info.height);
+
+        // Apply gradient costs to neighbors
+        for (size_t idx = 0; idx < grid.data.size(); idx++) {
+            if (grid.data[idx] == 100) {
+                int x = idx % grid.info.width;
+                int y = idx / grid.info.width;
+                applyGradientCosts(x, y, grid, grid.info.width, grid.info.height);
+            }
+        }
+
+        height_publisher_->publish(height_data);
+        grid_publisher_->publish(grid);
         publisher_->publish(output);
         RCLCPP_INFO(this->get_logger(), "Published filtered point cloud");
     }
+
+    int calculateCostBasedOnHeight(float height) {
+        float clearanceHeight = 0.2; // example clearance height
+        if (height > 0.0 && height < clearanceHeight) {
+            return 100;  // High cost
+        }
+        return 0;  // Default cost (if height <= 0.01)
+    }
+
+    void applyGradientCosts(int x, int y, nav_msgs::msg::OccupancyGrid& costmap, int width, int height) {
+        const int range = 52;
+        // const int distance3 = 5 * 5;  // Squared distance
+        const int distanceA = 27 * 27;
+        const int distanceB = 40 * 40;
+        const int distanceC = 48 * 48;
+        const int distanceD = 52 * 52;
+
+        for (int dx = -range; dx <= range; dx++) {
+            for (int dy = -range; dy <= range; dy++) {
+                if (dx == 0 && dy == 0) continue;
+                int nx = x + dx;
+                int ny = y + dy;
+                if (nx >= 0 && ny >= 0 && nx < width && ny < height) {
+                    int nIdx = ny * width + nx;
+                    int squaredDistance = dx * dx + dy * dy;  // No need for sqrt
+                    int decayedCost = 0;
+                    if (squaredDistance <= distanceA) decayedCost = 99;
+                    else if (squaredDistance <= distanceB) decayedCost = 65;
+                    else if (squaredDistance <= distanceC) decayedCost = 32;
+                    else if (squaredDistance <= distanceD) decayedCost = 11;
+
+                    if (costmap.data[nIdx] < decayedCost) {
+                        costmap.data[nIdx] = decayedCost;
+                    }
+                }
+            }
+        }
+    }
+
+    void removeIsolatedHighCostPoints(nav_msgs::msg::OccupancyGrid& costmap, int width, int height) {
+        std::vector<signed char> new_data = costmap.data;  // Use the same data type as the original
+
+        const int check_range = 6;  // Define the range around each cell to check for neighboring high-cost points
+        const int required_neighbors = 1;  // Minimum number of high-cost neighbors
+
+        for (int y = 0; y < height; ++y) {
+            for (int x = 0; x < width; ++x) {
+                int idx = y * width + x;
+                if (costmap.data[idx] == 100) {  // Check only high-cost cells
+                    int neighbor_count = 0;
+
+                    // Check surrounding cells
+                    for (int ny = -check_range; ny <= check_range; ++ny) {
+                        for (int nx = -check_range; nx <= check_range; ++nx) {
+                            if (nx == 0 && ny == 0) continue;  // Skip the center cell
+                            int nX = x + nx;
+                            int nY = y + ny;
+                            if (nX >= 0 && nX < width && nY >= 0 && nY < height) {
+                                int nIdx = nY * width + nX;
+                                if (costmap.data[nIdx] == 100) {
+                                    neighbor_count++;
+                                }
+                            }
+                        }
+                    }
+
+                    // If insufficient high-cost neighbors, reset the cost
+                    if (neighbor_count < required_neighbors) {
+                        new_data[idx] = 0;  // Reset to zero or another appropriate value
+                    }
+                }
+            }
+        }
+
+        costmap.data = new_data;  // Update the costmap data with the modified values
+    }
+
+
+
 
     nav_msgs::msg::OccupancyGrid createOccupancyGrid(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud, float resolution) {
         nav_msgs::msg::OccupancyGrid grid;
