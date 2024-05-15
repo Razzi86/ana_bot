@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node
+=======
+/home/aidan/ana_bot/install/ana/lib/ana/point_cloud_filter_node
+>>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node
 /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node
 /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a
@@ -28,8 +32,11 @@
 /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world
 /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl
 /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl
+<<<<<<< HEAD
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/day2_1.pcd
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/day2_1.ply
+=======
+>>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.pcd
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.ply
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config

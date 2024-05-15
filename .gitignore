@@ -1,7 +1,2 @@
-# .gitignore
-src/ana/rtab_maps/settings4.pcd
-src/ana/rtab_maps/settings4.ply
-
-
 *.pcd
 *.ply

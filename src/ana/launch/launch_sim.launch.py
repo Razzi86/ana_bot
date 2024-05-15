@@ -27,14 +27,22 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}]
     )
 
+<<<<<<< HEAD
     depth_live_filter_node = Node(
         package='ana',  # Adjust if your package name is different
         executable='depth_live_filter_node',  # The executable name as defined in CMakeLists.txt
         name='depth_live_filter',  # Optional: Specify a custom node name
+=======
+    point_cloud_filter_node = Node(
+        package='ana',  # Adjust if your package name is different
+        executable='point_cloud_filter_node',  # The executable name as defined in CMakeLists.txt
+        name='point_cloud_filter',  # Optional: Specify a custom node name
+>>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
 
+<<<<<<< HEAD
     # occupancy_grid_subscriber_node = Node(
     #     package='ana',  # Make sure 'ana' matches your actual package name
     #     executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
@@ -42,6 +50,15 @@ def generate_launch_description():
     #     output='screen',
     #     parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
     # )
+=======
+    occupancy_grid_subscriber_node = Node(
+        package='ana',  # Make sure 'ana' matches your actual package name
+        executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
+        name='occupancy_grid_subscriber',  # Optional: Specify a custom node name
+        output='screen',
+        parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
+    )
+>>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 
         
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands

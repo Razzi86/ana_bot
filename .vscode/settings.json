@@ -84,7 +84,6 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp",
-        "__nullptr": "cpp"
+        "variant": "cpp"
     }
 }
