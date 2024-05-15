@@ -1,3 +1,0 @@
-gmake[2]: *** [CMakeFiles/publish_pcd_node.dir/build.make:76: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/publish_pcd_node.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

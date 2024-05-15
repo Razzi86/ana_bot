@@ -1,5 +1,0 @@
-[ 18%] Built target cuda_operations
-[35m[1mConsolidate compiler generated dependencies of target depth_live_filter_node[0m
-[ 27%] [32mBuilding CXX object CMakeFiles/depth_live_filter_node.dir/src/nodes/depth_live_filter.cpp.o[0m
-[ 54%] Built target occupancy_grid_subscriber_node
-[ 81%] Built target publish_pcd_node
