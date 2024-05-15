@@ -1,0 +1,133 @@
+[0.012s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/aidan/ana_bot/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ana_bot/install/ana
+[0.027s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.114s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.128s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.160s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.163s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.169s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.180s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.195s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.248s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.250s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.346s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.482s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.585s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.650s] -- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)
+[0.680s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.703s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.721s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.725s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.725s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.725s] [0m** WARNING ** io features related to png will be disabled[0m
+[0.884s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[0.973s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.988s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.191s] -- looking for PCL_COMMON
+[1.191s] -- looking for PCL_OCTREE
+[1.191s] -- looking for PCL_IO
+[1.192s] -- looking for PCL_KDTREE
+[1.192s] -- looking for PCL_SEARCH
+[1.192s] -- looking for PCL_SAMPLE_CONSENSUS
+[1.192s] -- looking for PCL_FILTERS
+[1.193s] -- looking for PCL_GEOMETRY
+[1.193s] -- looking for PCL_2D
+[1.193s] -- looking for PCL_FEATURES
+[1.194s] -- looking for PCL_ML
+[1.194s] -- looking for PCL_SEGMENTATION
+[1.195s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[1.303s] -- Found nav2_costmap_2d: 1.1.14 (/opt/ros/humble/share/nav2_costmap_2d/cmake)
+[1.846s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.846s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.722s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.797s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.799s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.803s] -- Configured cppcheck include dirs: /home/aidan/ana_bot/src/ana/include;/home/aidan/ana_bot/src/ana/src/cuda
+[2.803s] -- Configured cppcheck exclude dirs and/or files: 
+[2.805s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.805s] -- Configured cpplint exclude dirs and/or files: 
+[2.805s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.806s] -- Added test 'lint_cmake' to check CMake code style
+[2.806s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.808s] -- Added test 'uncrustify' to check C / C++ code style
+[2.808s] -- Configured uncrustify additional arguments: 
+[2.808s] -- Added test 'xmllint' to check XML markup files
+[2.809s] -- Configuring done
+[3.360s] -- Generating done
+[3.362s] -- Build files have been written to: /home/aidan/ana_bot/build/ana
+[3.376s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/aidan/ana_bot/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ana_bot/install/ana
+[3.378s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[3.404s] [35m[1mConsolidate compiler generated dependencies of target cuda_operations[0m
+[3.411s] [ 18%] Built target cuda_operations
+[3.418s] [35m[1mConsolidate compiler generated dependencies of target depth_live_filter_node[0m
+[3.431s] [ 27%] [32m[1mLinking CUDA device code CMakeFiles/depth_live_filter_node.dir/cmake_device_link.o[0m
+[3.459s] [35m[1mConsolidate compiler generated dependencies of target publish_pcd_node[0m
+[3.461s] [35m[1mConsolidate compiler generated dependencies of target occupancy_grid_subscriber_node[0m
+[3.498s] [ 36%] [32m[1mLinking CXX executable depth_live_filter_node[0m
+[3.515s] [ 45%] [32m[1mLinking CUDA device code CMakeFiles/occupancy_grid_subscriber_node.dir/cmake_device_link.o[0m
+[3.519s] [ 54%] [32m[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o[0m
+[3.555s] [ 63%] [32m[1mLinking CXX executable occupancy_grid_subscriber_node[0m
+[3.557s] [ 72%] [32m[1mLinking CXX executable publish_pcd_node[0m
+[4.355s] [ 81%] Built target depth_live_filter_node
+[11.290s] [ 90%] Built target occupancy_grid_subscriber_node
+[12.253s] [100%] Built target publish_pcd_node
+[12.261s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[12.288s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana
+[12.292s] -- Install configuration: ""
+[12.292s] -- Execute custom install script
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/amcl_params.yaml
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz
+[12.293s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/custom_navigator.xml
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro
+[12.294s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/bedroom.world
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl
+[12.295s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/mapped_point_cloud.pcd
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.pgm
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.yaml
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.pcd
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.ply
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot1.png
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot2.png
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_toLoad.ini
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh
+[12.296s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv
+[12.297s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh
+[12.297s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv
+[12.297s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash
+[12.297s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh
+[12.297s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh
+[12.297s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv
+[12.297s] -- Symlinking: /home/aidan/ana_bot/install/ana/share/ana/package.dsv
+[12.303s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana
+[12.303s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake
+[12.303s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake
+[12.303s] -- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/package.xml
+[12.304s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/aidan/ana_bot/build/ana

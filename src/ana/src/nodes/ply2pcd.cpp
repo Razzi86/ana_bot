@@ -17,6 +17,11 @@
 #include "cuda_operations.h"
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <std_msgs/msg/float32_multi_array.hpp>
+#include <chrono>
+#include <fstream>
+#include <nav_msgs/msg/occupancy_grid.hpp>
+#include <algorithm>  // Make sure to include this header for std::min and std::max
+
 
 // FILTERS .PCD FROM RTAB MAP
 // PUBLISHES
@@ -30,9 +35,14 @@ extern "C" void processPointCloudVoxelGrid(PointXYZ *hostPoints, int numPoints, 
 class PCDPublisher : public rclcpp::Node {
 public:
     PCDPublisher() : Node("pcd_publisher") {
-        publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("mapped_point_cloud", 10);
-        grid_publisher_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("costmap_new", 10);
-        height_publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("height_map", 10);  // Height publisher
+        auto qos_default = rclcpp::QoS(rclcpp::KeepLast(10));
+        publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("mapped_point_cloud", qos_default);
+        
+        auto qos_grid = rclcpp::QoS(rclcpp::KeepLast(10)).transient_local().reliable();
+        grid_publisher_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("costmap_new", qos_grid);
+        
+        auto qos_height = rclcpp::QoS(rclcpp::KeepLast(10));
+        height_publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("height_map", qos_height);
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(5000),
             std::bind(&PCDPublisher::timerCallback, this));
@@ -140,6 +150,11 @@ private:
 
         removeIsolatedHighCostPoints(grid, grid.info.width, grid.info.height);
 
+        // // Initialize the entire costmap to 0
+        // for (size_t idx = 0; idx < grid.data.size(); idx++) {
+        //     grid.data[idx] = 0;
+        // }
+
         // Apply gradient costs to neighbors
         for (size_t idx = 0; idx < grid.data.size(); idx++) {
             if (grid.data[idx] == 100) {
@@ -149,10 +164,49 @@ private:
             }
         }
 
+        // Set unset spots to 0
+        for (size_t idx = 0; idx < grid.data.size(); idx++) {
+            if (grid.data[idx] == -1) {
+                grid.data[idx] = 0;
+            }
+        }
+
         height_publisher_->publish(height_data);
         grid_publisher_->publish(grid);
+
+        // Save the occupancy grid as a .pgm file
+        std::string pgm_file_path = "/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.pgm";
+        std::ofstream pgm_file(pgm_file_path, std::ios::out | std::ios::binary);
+        pgm_file << "P5\n" << grid.info.width << " " << grid.info.height << "\n255\n";
+        for (unsigned int y = 0; y < grid.info.height; y++) {
+            for (unsigned int x = 0; x < grid.info.width; x++) {
+                int index = x + (grid.info.height - y - 1) * grid.info.width;
+                int8_t value = grid.data[index];
+                unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, std::min(254, static_cast<int>(value))));
+                pgm_file.write(reinterpret_cast<char*>(&val), sizeof(val));
+            }
+        }
+        pgm_file.close();
+
+        // Save the corresponding .yaml file
+        std::ofstream yaml_file("/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.yaml");
+        yaml_file << "image: ./occupancy_grid.pgm\n";
+        yaml_file << "resolution: " << grid.info.resolution << "\n";
+        yaml_file << "origin: [" 
+                  << grid.info.origin.position.x << ", " 
+                  << grid.info.origin.position.y << ", " 
+                  << grid.info.origin.position.z << "]\n";
+        yaml_file << "negate: 0\n";
+        yaml_file << "occupied_thresh: 0.65\n";
+        yaml_file << "free_thresh: 0.196\n";
+        yaml_file.close();
+
         publisher_->publish(output);
-        RCLCPP_INFO(this->get_logger(), "Published filtered point cloud");
+        pcl::io::savePCDFileBinary("/home/aidan/ana_bot/src/ana/rtab_maps/mapped_point_cloud.pcd", *cloud); // Save the point cloud
+
+        RCLCPP_INFO(this->get_logger(), "Published filtered point cloud and saved occupancy grid");
+
+        timer_->cancel(); // Cancel timer
     }
 
     int calculateCostBasedOnHeight(float height) {
@@ -164,12 +218,14 @@ private:
     }
 
     void applyGradientCosts(int x, int y, nav_msgs::msg::OccupancyGrid& costmap, int width, int height) {
-        const int range = 52;
+        
+        // RESOLUTION == 0.005
+        const int range = 80;
         // const int distance3 = 5 * 5;  // Squared distance
-        const int distanceA = 27 * 27;
-        const int distanceB = 40 * 40;
-        const int distanceC = 48 * 48;
-        const int distanceD = 52 * 52;
+        const int distanceA = 20 * 20;
+        const int distanceB = 28 * 28;
+        const int distanceC = 32 * 32;
+        const int distanceD = 34 * 34;
 
         for (int dx = -range; dx <= range; dx++) {
             for (int dy = -range; dy <= range; dy++) {
@@ -189,8 +245,42 @@ private:
                         costmap.data[nIdx] = decayedCost;
                     }
                 }
+                // else {
+                //     // Set points outside the range to a cost of 0
+                //     int nIdx = ny * width + nx;
+                //     costmap.data[nIdx] = 0;
+                // }
             }
         }
+
+        // // RESOLUTION == 0.05
+        // const int range = 10;
+        // // const int distance3 = 5 * 5;  // Squared distance
+        // const int distanceA = 4 * 4;
+        // const int distanceB = 7 * 7;
+        // const int distanceC = 9 * 9;
+        // const int distanceD = 10 * 10;
+
+        // for (int dx = -range; dx <= range; dx++) {
+        //     for (int dy = -range; dy <= range; dy++) {
+        //         if (dx == 0 && dy == 0) continue;
+        //         int nx = x + dx;
+        //         int ny = y + dy;
+        //         if (nx >= 0 && ny >= 0 && nx < width && ny < height) {
+        //             int nIdx = ny * width + nx;
+        //             int squaredDistance = dx * dx + dy * dy;  // No need for sqrt
+        //             int decayedCost = 0;
+        //             if (squaredDistance <= distanceA) decayedCost = 99;
+        //             else if (squaredDistance <= distanceB) decayedCost = 65;
+        //             else if (squaredDistance <= distanceC) decayedCost = 32;
+        //             else if (squaredDistance <= distanceD) decayedCost = 11;
+
+        //             if (costmap.data[nIdx] < decayedCost) {
+        //                 costmap.data[nIdx] = decayedCost;
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     void removeIsolatedHighCostPoints(nav_msgs::msg::OccupancyGrid& costmap, int width, int height) {

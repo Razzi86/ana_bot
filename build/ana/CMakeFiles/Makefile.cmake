@@ -1336,11 +1336,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/ana_uninstall.dir/DependInfo.cmake"
-<<<<<<< HEAD
   "CMakeFiles/depth_live_filter_node.dir/DependInfo.cmake"
-=======
-  "CMakeFiles/point_cloud_filter_node.dir/DependInfo.cmake"
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
   "CMakeFiles/publish_pcd_node.dir/DependInfo.cmake"
   "CMakeFiles/occupancy_grid_subscriber_node.dir/DependInfo.cmake"
   "CMakeFiles/cuda_operations.dir/DependInfo.cmake"

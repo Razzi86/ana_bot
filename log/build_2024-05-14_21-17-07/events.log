@@ -1,0 +1,203 @@
+[0.000000] (-) TimerEvent: {}
+[0.000148] (ana) JobQueued: {'identifier': 'ana', 'dependencies': OrderedDict()}
+[0.000225] (my_python_pkg) JobQueued: {'identifier': 'my_python_pkg', 'dependencies': OrderedDict()}
+[0.000243] (ana) JobStarted: {'identifier': 'ana'}
+[0.004262] (my_python_pkg) JobStarted: {'identifier': 'my_python_pkg'}
+[0.008508] (ana) JobProgress: {'identifier': 'ana', 'progress': 'cmake'}
+[0.009496] (ana) JobProgress: {'identifier': 'ana', 'progress': 'build'}
+[0.010270] (ana) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aidan/ana_bot/build/ana', '--', '-j16', '-l16'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2311'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2287,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2287'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/aa5d7c96_dc79_4541_a4de_6109d66b70cf'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[0.049963] (ana) StdoutLine: {'line': b'[ 18%] Built target cuda_operations\n'}
+[0.069890] (ana) StdoutLine: {'line': b'[ 45%] Built target depth_live_filter_node\n'}
+[0.099499] (-) TimerEvent: {}
+[0.151702] (ana) StdoutLine: {'line': b'[ 72%] Built target occupancy_grid_subscriber_node\n'}
+[0.154347] (ana) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o\x1b[0m\n'}
+[0.199586] (-) TimerEvent: {}
+[0.299851] (-) TimerEvent: {}
+[0.400111] (-) TimerEvent: {}
+[0.500616] (-) TimerEvent: {}
+[0.555253] (my_python_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_python_pkg', 'build', '--build-base', '/home/aidan/ana_bot/build/my_python_pkg/build', 'install', '--record', '/home/aidan/ana_bot/build/my_python_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/aidan/ana_bot/src/my_python_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aidan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/aidan', 'OLDPWD': '/home/aidan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2311', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/aidan/ana_bot/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'aidan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aidan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2287,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2287', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/aa5d7c96_dc79_4541_a4de_6109d66b70cf', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.121', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aidan/ana_bot/build/my_python_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aidan/ana_bot/build/my_python_pkg/prefix_override:/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/aidan/ana_bot/install/ana'}, 'shell': False}
+[0.600725] (-) TimerEvent: {}
+[0.700981] (-) TimerEvent: {}
+[0.748840] (my_python_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.749326] (my_python_pkg) StdoutLine: {'line': b'writing ../../build/my_python_pkg/my_python_pkg.egg-info/PKG-INFO\n'}
+[0.749467] (my_python_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/my_python_pkg/my_python_pkg.egg-info/dependency_links.txt\n'}
+[0.749595] (my_python_pkg) StdoutLine: {'line': b'writing entry points to ../../build/my_python_pkg/my_python_pkg.egg-info/entry_points.txt\n'}
+[0.749669] (my_python_pkg) StdoutLine: {'line': b'writing requirements to ../../build/my_python_pkg/my_python_pkg.egg-info/requires.txt\n'}
+[0.749798] (my_python_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/my_python_pkg/my_python_pkg.egg-info/top_level.txt\n'}
+[0.750926] (my_python_pkg) StdoutLine: {'line': b"reading manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.751482] (my_python_pkg) StdoutLine: {'line': b"writing manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.751548] (my_python_pkg) StdoutLine: {'line': b'running build\n'}
+[0.751596] (my_python_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.751809] (my_python_pkg) StdoutLine: {'line': b'running install\n'}
+[0.752049] (my_python_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.752902] (my_python_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.753031] (my_python_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.754120] (my_python_pkg) StdoutLine: {'line': b"removing '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.754314] (my_python_pkg) StdoutLine: {'line': b'Copying ../../build/my_python_pkg/my_python_pkg.egg-info to /home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info\n'}
+[0.754847] (my_python_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.769288] (my_python_pkg) StdoutLine: {'line': b'Installing arduino_serial script to /home/aidan/ana_bot/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.769465] (my_python_pkg) StdoutLine: {'line': b'Installing motor_control script to /home/aidan/ana_bot/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.769659] (my_python_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/aidan/ana_bot/build/my_python_pkg/install.log'\n"}
+[0.786735] (my_python_pkg) CommandEnded: {'returncode': 0}
+[0.794032] (my_python_pkg) JobEnded: {'identifier': 'my_python_pkg', 'rc': 0}
+[0.801098] (-) TimerEvent: {}
+[0.901335] (-) TimerEvent: {}
+[1.001585] (-) TimerEvent: {}
+[1.101837] (-) TimerEvent: {}
+[1.202106] (-) TimerEvent: {}
+[1.302379] (-) TimerEvent: {}
+[1.402594] (-) TimerEvent: {}
+[1.502862] (-) TimerEvent: {}
+[1.603112] (-) TimerEvent: {}
+[1.703356] (-) TimerEvent: {}
+[1.803573] (-) TimerEvent: {}
+[1.903828] (-) TimerEvent: {}
+[2.004073] (-) TimerEvent: {}
+[2.104324] (-) TimerEvent: {}
+[2.204578] (-) TimerEvent: {}
+[2.304826] (-) TimerEvent: {}
+[2.405074] (-) TimerEvent: {}
+[2.505325] (-) TimerEvent: {}
+[2.605572] (-) TimerEvent: {}
+[2.705818] (-) TimerEvent: {}
+[2.806062] (-) TimerEvent: {}
+[2.906334] (-) TimerEvent: {}
+[3.006598] (-) TimerEvent: {}
+[3.106854] (-) TimerEvent: {}
+[3.207072] (-) TimerEvent: {}
+[3.307332] (-) TimerEvent: {}
+[3.407576] (-) TimerEvent: {}
+[3.507811] (-) TimerEvent: {}
+[3.608057] (-) TimerEvent: {}
+[3.708297] (-) TimerEvent: {}
+[3.808545] (-) TimerEvent: {}
+[3.908793] (-) TimerEvent: {}
+[4.009029] (-) TimerEvent: {}
+[4.109305] (-) TimerEvent: {}
+[4.209556] (-) TimerEvent: {}
+[4.309770] (-) TimerEvent: {}
+[4.410015] (-) TimerEvent: {}
+[4.510255] (-) TimerEvent: {}
+[4.610498] (-) TimerEvent: {}
+[4.710740] (-) TimerEvent: {}
+[4.810964] (-) TimerEvent: {}
+[4.911212] (-) TimerEvent: {}
+[5.011483] (-) TimerEvent: {}
+[5.111719] (-) TimerEvent: {}
+[5.211964] (-) TimerEvent: {}
+[5.312225] (-) TimerEvent: {}
+[5.412484] (-) TimerEvent: {}
+[5.512741] (-) TimerEvent: {}
+[5.613007] (-) TimerEvent: {}
+[5.713267] (-) TimerEvent: {}
+[5.813515] (-) TimerEvent: {}
+[5.913766] (-) TimerEvent: {}
+[6.014056] (-) TimerEvent: {}
+[6.114311] (-) TimerEvent: {}
+[6.214555] (-) TimerEvent: {}
+[6.314893] (-) TimerEvent: {}
+[6.415143] (-) TimerEvent: {}
+[6.515377] (-) TimerEvent: {}
+[6.615681] (-) TimerEvent: {}
+[6.715919] (-) TimerEvent: {}
+[6.816158] (-) TimerEvent: {}
+[6.916443] (-) TimerEvent: {}
+[7.016668] (-) TimerEvent: {}
+[7.116929] (-) TimerEvent: {}
+[7.217171] (-) TimerEvent: {}
+[7.317430] (-) TimerEvent: {}
+[7.417698] (-) TimerEvent: {}
+[7.462604] (ana) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o\x1b[0m\n'}
+[7.502178] (ana) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable publish_pcd_node\x1b[0m\n'}
+[7.517791] (-) TimerEvent: {}
+[7.617980] (-) TimerEvent: {}
+[7.718261] (-) TimerEvent: {}
+[7.818513] (-) TimerEvent: {}
+[7.918801] (-) TimerEvent: {}
+[8.019030] (-) TimerEvent: {}
+[8.119277] (-) TimerEvent: {}
+[8.219517] (-) TimerEvent: {}
+[8.319759] (-) TimerEvent: {}
+[8.420008] (-) TimerEvent: {}
+[8.520247] (-) TimerEvent: {}
+[8.620489] (-) TimerEvent: {}
+[8.720733] (-) TimerEvent: {}
+[8.820976] (-) TimerEvent: {}
+[8.921221] (-) TimerEvent: {}
+[9.021433] (-) TimerEvent: {}
+[9.121696] (-) TimerEvent: {}
+[9.221943] (-) TimerEvent: {}
+[9.322192] (-) TimerEvent: {}
+[9.422458] (-) TimerEvent: {}
+[9.522782] (-) TimerEvent: {}
+[9.623088] (-) TimerEvent: {}
+[9.723368] (-) TimerEvent: {}
+[9.823620] (-) TimerEvent: {}
+[9.923881] (-) TimerEvent: {}
+[10.024148] (-) TimerEvent: {}
+[10.124407] (-) TimerEvent: {}
+[10.224681] (-) TimerEvent: {}
+[10.324914] (-) TimerEvent: {}
+[10.425202] (-) TimerEvent: {}
+[10.525469] (-) TimerEvent: {}
+[10.625726] (-) TimerEvent: {}
+[10.725994] (-) TimerEvent: {}
+[10.826254] (-) TimerEvent: {}
+[10.926510] (-) TimerEvent: {}
+[11.026778] (-) TimerEvent: {}
+[11.127012] (-) TimerEvent: {}
+[11.227270] (-) TimerEvent: {}
+[11.327536] (-) TimerEvent: {}
+[11.427820] (-) TimerEvent: {}
+[11.528102] (-) TimerEvent: {}
+[11.628392] (-) TimerEvent: {}
+[11.728645] (-) TimerEvent: {}
+[11.828880] (-) TimerEvent: {}
+[11.929104] (-) TimerEvent: {}
+[12.029342] (-) TimerEvent: {}
+[12.129592] (-) TimerEvent: {}
+[12.229852] (-) TimerEvent: {}
+[12.330141] (-) TimerEvent: {}
+[12.430455] (-) TimerEvent: {}
+[12.530725] (-) TimerEvent: {}
+[12.631018] (-) TimerEvent: {}
+[12.731273] (-) TimerEvent: {}
+[12.831532] (-) TimerEvent: {}
+[12.931805] (-) TimerEvent: {}
+[12.965509] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::operator<<(YAML::ostream_wrapper&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[12.965753] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAMLlsERNS_15ostream_wrapperERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAMLlsERNS_15ostream_wrapperERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x23): undefined reference to `YAML::ostream_wrapper::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[12.965843] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `void YAML::Emitter::SetStreamablePrecision<float>(std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&)':\n"}
+[12.965922] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAML7Emitter22SetStreamablePrecisionIfEEvRNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE[_ZN4YAML7Emitter22SetStreamablePrecisionIfEEvRNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE]+0x36): undefined reference to `YAML::Emitter::GetFloatPrecision() const'\n"}
+[12.966079] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::operator<<(YAML::Emitter&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':\n"}
+[12.966133] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAMLlsERNS_7EmitterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAMLlsERNS_7EmitterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x23): undefined reference to `YAML::Emitter::Write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[12.966197] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::operator<<(YAML::Emitter&, char const*)':\n"}
+[12.966304] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAMLlsERNS_7EmitterEPKc[_ZN4YAMLlsERNS_7EmitterEPKc]+0x56): undefined reference to `YAML::Emitter::Write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[12.966349] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::operator<<(YAML::Emitter&, YAML::EMITTER_MANIP)':\n"}
+[12.966407] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAMLlsERNS_7EmitterENS_13EMITTER_MANIPE[_ZN4YAMLlsERNS_7EmitterENS_13EMITTER_MANIPE]+0x20): undefined reference to `YAML::Emitter::SetLocalValue(YAML::EMITTER_MANIP)'\n"}
+[12.966463] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `PCDPublisher::saveOccupancyGridToFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, nav_msgs::msg::OccupancyGrid_<std::allocator<void> > const&)':\n"}
+[12.966538] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE[_ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE]+0x20f): undefined reference to `YAML::Emitter::Emitter()'\n"}
+[12.966605] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE[_ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE]+0x492): undefined reference to `YAML::Emitter::c_str() const'\n"}
+[12.966650] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE[_ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE]+0x692): undefined reference to `YAML::Emitter::~Emitter()'\n"}
+[12.966705] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE[_ZN12PCDPublisher23saveOccupancyGridToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8nav_msgs3msg14OccupancyGrid_ISaIvEEE]+0x737): undefined reference to `YAML::Emitter::~Emitter()'\n"}
+[12.966952] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::Emitter& YAML::Emitter::WriteIntegralType<int>(int)':\n"}
+[12.967035] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_]+0x37): undefined reference to `YAML::Emitter::good() const'\n"}
+[12.967137] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_]+0x5e): undefined reference to `YAML::Emitter::PrepareNode(YAML::EmitterNodeType::value)'\n"}
+[12.967200] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_]+0x86): undefined reference to `YAML::Emitter::PrepareIntegralStream(std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) const'\n"}
+[12.967299] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIiEERS0_T_]+0xf5): undefined reference to `YAML::Emitter::StartedScalar()'\n"}
+[12.967408] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::Emitter& YAML::Emitter::WriteIntegralType<unsigned int>(unsigned int)':\n"}
+[12.967453] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_]+0x37): undefined reference to `YAML::Emitter::good() const'\n"}
+[12.967512] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_]+0x5e): undefined reference to `YAML::Emitter::PrepareNode(YAML::EmitterNodeType::value)'\n"}
+[12.967585] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_]+0x86): undefined reference to `YAML::Emitter::PrepareIntegralStream(std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) const'\n"}
+[12.967706] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_[_ZN4YAML7Emitter17WriteIntegralTypeIjEERS0_T_]+0xf5): undefined reference to `YAML::Emitter::StartedScalar()'\n"}
+[12.967870] (ana) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o: in function `YAML::Emitter& YAML::Emitter::WriteStreamable<float>(float)':\n"}
+[12.967943] (ana) StderrLine: {'line': b"ply2pcd.cpp:(.text._ZN4YAML7Emitter15WriteStreamableIfEERS0_T_[_ZN4YAML7Emitter15WriteStreamableIfEERS0_T_]+0x39): undefined reference to `YAML::Emitter::good() const'\n"}
+[12.968008] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter15WriteStreamableIfEERS0_T_[_ZN4YAML7Emitter15WriteStreamableIfEERS0_T_]+0x60): undefined reference to `YAML::Emitter::PrepareNode(YAML::EmitterNodeType::value)'\n"}
+[12.968122] (ana) StderrLine: {'line': b"/usr/bin/ld: ply2pcd.cpp:(.text._ZN4YAML7Emitter15WriteStreamableIfEERS0_T_[_ZN4YAML7Emitter15WriteStreamableIfEERS0_T_]+0x1b0): undefined reference to `YAML::Emitter::StartedScalar()'\n"}
+[13.019843] (ana) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[13.021487] (ana) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/publish_pcd_node.dir/build.make:8255: publish_pcd_node] Error 1\n'}
+[13.021739] (ana) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/publish_pcd_node.dir/all] Error 2\n'}
+[13.022016] (ana) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[13.023630] (ana) CommandEnded: {'returncode': 2}
+[13.031864] (-) TimerEvent: {}
+[13.049429] (ana) JobEnded: {'identifier': 'ana', 'rc': 2}
+[13.059843] (-) EventReactorShutdown: {}

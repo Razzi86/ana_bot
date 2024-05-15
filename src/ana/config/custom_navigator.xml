@@ -1,0 +1,28 @@
+<root main_tree_to_execute="NavigateWithRecovery">
+  <BehaviorTree ID="NavigateWithRecovery">
+    <Fallback name="NavigateWithRecoveryFallback">
+      <Sequence name="NavigateToPose">
+        <GoalUpdated/>
+        <ComputePathToPose goal="${goal_pose}" path="${path}"/>
+        <FollowPath path="${path}"/>
+      </Sequence>
+      <ReactiveFallback name="RecoveryFallback">
+        <Sequence name="ClearCostmapRecovery">
+          <ClearEntireCostmap/>
+          <ComputePathToPose goal="${goal_pose}" path="${path}"/>
+          <FollowPath path="${path}"/>
+        </Sequence>
+        <Sequence name="SpinRecovery">
+          <Spin/>
+          <ComputePathToPose goal="${goal_pose}" path="${path}"/>
+          <FollowPath path="${path}"/>
+        </Sequence>
+        <Sequence name="BackUpRecovery">
+          <BackUp/>
+          <ComputePathToPose goal="${goal_pose}" path="${path}"/>
+          <FollowPath path="${path}"/>
+        </Sequence>
+      </ReactiveFallback>
+    </Fallback>
+  </BehaviorTree>
+</root>

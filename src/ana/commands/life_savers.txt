@@ -11,3 +11,7 @@ PLY to PCD: pcl_ply2pcd orange_cones_3d.ply orange_cones_3d.pcd
 view PCD: pcl_viewer /home/aidan/ana_bot/src/ana/rtab_maps/orange_cones_3d.pcd
 
 fresh: colcon build --symlink-install --packages-select ana --cmake-clean-cache
+
+nav2:
+ros2 run twist_mux twist_mux --ros-args --params-file ./src/ana/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true

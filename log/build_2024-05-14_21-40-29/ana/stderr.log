@@ -1,0 +1,57 @@
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:[m[K In member function ‘[01m[Kvoid PCDPublisher::saveMap(const OccupancyGrid&)[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:203:102:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmin(int, signed char&)[m[K’
+  203 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;31m[Kstd::min(254, value)[m[K));
+      |                                                                                              [01;31m[K~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/11/ios:40[m[K,
+                 from [01m[K/usr/include/c++/11/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:230:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr const _Tp& std::min(const _Tp&, const _Tp&)[m[K’
+  230 |     [01;36m[Kmin[m[K(const _Tp& __a, const _Tp& __b)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:230:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:203:102:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kint[m[K’ and ‘[01m[Ksigned char[m[K’)
+  203 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+      |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/11/ios:40[m[K,
+                 from [01m[K/usr/include/c++/11/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:278:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr const _Tp& std::min(const _Tp&, const _Tp&, _Compare)[m[K’
+  278 |     [01;36m[Kmin[m[K(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:278:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:203:102:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kint[m[K’ and ‘[01m[Ksigned char[m[K’)
+  203 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+      |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3449:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr _Tp std::min(std::initializer_list<_Tp>)[m[K’
+ 3449 |     [01;36m[Kmin[m[K(initializer_list<_Tp> __l)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3449:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:203:102:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  203 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+      |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:4[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3455:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr _Tp std::min(std::initializer_list<_Tp>, _Compare)[m[K’
+ 3455 |     [01;36m[Kmin[m[K(initializer_list<_Tp> __l, _Compare __comp)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algo.h:3455:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:203:102:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  203 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+      |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/publish_pcd_node.dir/build.make:76: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/publish_pcd_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

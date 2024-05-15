@@ -63,11 +63,7 @@ CMAKE_BINARY_DIR = /home/aidan/ana_bot/build/ana
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-<<<<<<< HEAD
 all: CMakeFiles/depth_live_filter_node.dir/all
-=======
-all: CMakeFiles/point_cloud_filter_node.dir/all
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 all: CMakeFiles/publish_pcd_node.dir/all
 all: CMakeFiles/occupancy_grid_subscriber_node.dir/all
 all: CMakeFiles/cuda_operations.dir/all
@@ -80,11 +76,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/ana_uninstall.dir/clean
-<<<<<<< HEAD
 clean: CMakeFiles/depth_live_filter_node.dir/clean
-=======
-clean: CMakeFiles/point_cloud_filter_node.dir/clean
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 clean: CMakeFiles/publish_pcd_node.dir/clean
 clean: CMakeFiles/occupancy_grid_subscriber_node.dir/clean
 clean: CMakeFiles/cuda_operations.dir/clean
@@ -143,7 +135,6 @@ CMakeFiles/ana_uninstall.dir/clean:
 .PHONY : CMakeFiles/ana_uninstall.dir/clean
 
 #=============================================================================
-<<<<<<< HEAD
 # Target rules for target CMakeFiles/depth_live_filter_node.dir
 
 # All Build rule for target.
@@ -168,32 +159,6 @@ depth_live_filter_node: CMakeFiles/depth_live_filter_node.dir/rule
 CMakeFiles/depth_live_filter_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/depth_live_filter_node.dir/build.make CMakeFiles/depth_live_filter_node.dir/clean
 .PHONY : CMakeFiles/depth_live_filter_node.dir/clean
-=======
-# Target rules for target CMakeFiles/point_cloud_filter_node.dir
-
-# All Build rule for target.
-CMakeFiles/point_cloud_filter_node.dir/all: CMakeFiles/cuda_operations.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aidan/ana_bot/build/ana/CMakeFiles --progress-num=6,7,8 "Built target point_cloud_filter_node"
-.PHONY : CMakeFiles/point_cloud_filter_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/point_cloud_filter_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidan/ana_bot/build/ana/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/point_cloud_filter_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aidan/ana_bot/build/ana/CMakeFiles 0
-.PHONY : CMakeFiles/point_cloud_filter_node.dir/rule
-
-# Convenience name for target.
-point_cloud_filter_node: CMakeFiles/point_cloud_filter_node.dir/rule
-.PHONY : point_cloud_filter_node
-
-# clean rule for target.
-CMakeFiles/point_cloud_filter_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/point_cloud_filter_node.dir/build.make CMakeFiles/point_cloud_filter_node.dir/clean
-.PHONY : CMakeFiles/point_cloud_filter_node.dir/clean
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 
 #=============================================================================
 # Target rules for target CMakeFiles/publish_pcd_node.dir
@@ -228,11 +193,7 @@ CMakeFiles/publish_pcd_node.dir/clean:
 CMakeFiles/occupancy_grid_subscriber_node.dir/all: CMakeFiles/cuda_operations.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/occupancy_grid_subscriber_node.dir/build.make CMakeFiles/occupancy_grid_subscriber_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/occupancy_grid_subscriber_node.dir/build.make CMakeFiles/occupancy_grid_subscriber_node.dir/build
-<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aidan/ana_bot/build/ana/CMakeFiles --progress-num=6,7,8 "Built target occupancy_grid_subscriber_node"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aidan/ana_bot/build/ana/CMakeFiles --progress-num=3,4,5 "Built target occupancy_grid_subscriber_node"
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 .PHONY : CMakeFiles/occupancy_grid_subscriber_node.dir/all
 
 # Build rule for subdir invocation for target.

@@ -1,0 +1,6 @@
+[ 18%] Built target cuda_operations
+[ 45%] Built target depth_live_filter_node
+[ 72%] Built target occupancy_grid_subscriber_node
+[ 81%] [32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o[0m
+[ 90%] [32m[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o[0m
+[100%] [32m[1mLinking CXX executable publish_pcd_node[0m

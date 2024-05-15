@@ -1,18 +1,18 @@
-<<<<<<< HEAD
 /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node
-=======
-/home/aidan/ana_bot/install/ana/lib/ana/point_cloud_filter_node
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node
 /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node
 /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a
+/home/aidan/ana_bot/install/ana/share/ana/config/amcl_params.yaml
 /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz
 /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz
+/home/aidan/ana_bot/install/ana/share/ana/config/custom_navigator.xml
 /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz
 /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml
+/home/aidan/ana_bot/install/ana/share/ana/config/mapper_params_online_async.yaml
 /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml
 /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml
 /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz
+/home/aidan/ana_bot/install/ana/share/ana/config/twist_mux.yaml
 /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro
 /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro
 /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro
@@ -22,7 +22,10 @@
 /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro
 /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro
 /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py
+/home/aidan/ana_bot/install/ana/share/ana/launch/localization_launch.py
 /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py
+/home/aidan/ana_bot/install/ana/share/ana/launch/navigation_launch.py
+/home/aidan/ana_bot/install/ana/share/ana/launch/online_async_launch.py
 /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py
 /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py
 /home/aidan/ana_bot/install/ana/share/ana/worlds/bedroom.world
@@ -32,20 +35,10 @@
 /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world
 /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl
 /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl
-<<<<<<< HEAD
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/day2_1.pcd
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/day2_1.ply
-=======
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.pcd
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/playground_organized.ply
+/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/mapped_point_cloud.pcd
+/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.pgm
+/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.yaml
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings1.pcd
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings1.ply
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings2.pcd
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings2.ply
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings3.pcd
-/home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings3.ply
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.pcd
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.ply
 /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot1.png

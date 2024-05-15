@@ -27,22 +27,22 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}]
     )
 
-<<<<<<< HEAD
     depth_live_filter_node = Node(
         package='ana',  # Adjust if your package name is different
         executable='depth_live_filter_node',  # The executable name as defined in CMakeLists.txt
         name='depth_live_filter',  # Optional: Specify a custom node name
-=======
-    point_cloud_filter_node = Node(
-        package='ana',  # Adjust if your package name is different
-        executable='point_cloud_filter_node',  # The executable name as defined in CMakeLists.txt
-        name='point_cloud_filter',  # Optional: Specify a custom node name
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
 
-<<<<<<< HEAD
+    twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+    twist_mux = Node(
+        package="twist_mux",
+        executable="twist_mux",
+        parameters=[twist_mux_params, {'use_sim_time': True}],
+        remappings=[('/cmd_vel_out', '/diff_cont/cmd_vel_unstamped')]
+    )
+
     # occupancy_grid_subscriber_node = Node(
     #     package='ana',  # Make sure 'ana' matches your actual package name
     #     executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
@@ -50,15 +50,6 @@ def generate_launch_description():
     #     output='screen',
     #     parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
     # )
-=======
-    occupancy_grid_subscriber_node = Node(
-        package='ana',  # Make sure 'ana' matches your actual package name
-        executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
-        name='occupancy_grid_subscriber',  # Optional: Specify a custom node name
-        output='screen',
-        parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
-    )
->>>>>>> 480d413ef8289ad07ae198b16647090001e4ae43
 
         
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands
@@ -66,6 +57,12 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
                 )]), launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+    nav2_node = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(
+                get_package_share_directory(package_name),'launch','navigation_launch.py'
+            )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
     
     # parameter file changes gazebo refresh from 10 to 400hz
@@ -124,5 +121,7 @@ def generate_launch_description():
         joint_broad_spawner,
         node_robot_state_publisher,
         pcd_publisher_node,
+        nav2_node,
+        twist_mux,
         # occupancy_grid_subscriber_node,
     ])

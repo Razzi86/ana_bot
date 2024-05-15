@@ -1,2 +1,8 @@
+# Ignore specific file formats
 *.pcd
 *.ply
+
+# Ignore build directories
+/ana_bot/build/
+/ana_bot/install/
+/ana_bot/log/

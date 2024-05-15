@@ -1,0 +1,64 @@
+[0.012s] Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16
+[0.049s] [ 18%] Built target cuda_operations
+[0.069s] [ 45%] Built target depth_live_filter_node
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target publish_pcd_node[0m
+[0.154s] [ 72%] Built target occupancy_grid_subscriber_node
+[0.169s] [ 81%] [32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o[0m
+[4.088s] [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:[m[K In member function ‘[01m[Kvoid PCDPublisher::saveMap(const OccupancyGrid&)[m[K’:
+[4.088s] [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:191:102:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmin(int, signed char&)[m[K’
+[4.088s]   191 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;31m[Kstd::min(254, value)[m[K));
+[4.088s]       |                                                                                              [01;31m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[4.088s] In file included from [01m[K/usr/include/c++/11/bits/char_traits.h:39[m[K,
+[4.089s]                  from [01m[K/usr/include/c++/11/ios:40[m[K,
+[4.089s]                  from [01m[K/usr/include/c++/11/ostream:38[m[K,
+[4.089s]                  from [01m[K/usr/include/c++/11/iostream:39[m[K,
+[4.089s]                  from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:1[m[K:
+[4.089s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:230:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr const _Tp& std::min(const _Tp&, const _Tp&)[m[K’
+[4.089s]   230 |     [01;36m[Kmin[m[K(const _Tp& __a, const _Tp& __b)
+[4.089s]       |     [01;36m[K^~~[m[K
+[4.089s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:230:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.089s] [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:191:102:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kint[m[K’ and ‘[01m[Ksigned char[m[K’)
+[4.089s]   191 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+[4.089s]       |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[4.090s] In file included from [01m[K/usr/include/c++/11/bits/char_traits.h:39[m[K,
+[4.090s]                  from [01m[K/usr/include/c++/11/ios:40[m[K,
+[4.090s]                  from [01m[K/usr/include/c++/11/ostream:38[m[K,
+[4.090s]                  from [01m[K/usr/include/c++/11/iostream:39[m[K,
+[4.090s]                  from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:1[m[K:
+[4.090s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:278:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr const _Tp& std::min(const _Tp&, const _Tp&, _Compare)[m[K’
+[4.090s]   278 |     [01;36m[Kmin[m[K(const _Tp& __a, const _Tp& __b, _Compare __comp)
+[4.090s]       |     [01;36m[K^~~[m[K
+[4.090s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:278:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.090s] [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:191:102:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kint[m[K’ and ‘[01m[Ksigned char[m[K’)
+[4.090s]   191 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+[4.090s]       |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[4.091s] In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+[4.091s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[4.091s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.091s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.091s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.091s]                  from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:4[m[K:
+[4.091s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3449:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr _Tp std::min(std::initializer_list<_Tp>)[m[K’
+[4.091s]  3449 |     [01;36m[Kmin[m[K(initializer_list<_Tp> __l)
+[4.091s]       |     [01;36m[K^~~[m[K
+[4.091s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3449:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.091s] [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:191:102:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+[4.091s]   191 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+[4.092s]       |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[4.092s] In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+[4.092s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[4.092s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.092s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.092s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.092s]                  from [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:4[m[K:
+[4.092s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3455:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr _Tp std::min(std::initializer_list<_Tp>, _Compare)[m[K’
+[4.092s]  3455 |     [01;36m[Kmin[m[K(initializer_list<_Tp> __l, _Compare __comp)
+[4.092s]       |     [01;36m[K^~~[m[K
+[4.092s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3455:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.092s] [01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:191:102:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+[4.093s]   191 |             unsigned char val = (value == -1) ? 255 : static_cast<unsigned char>(std::max(0, [01;36m[Kstd::min(254, value)[m[K));
+[4.093s]       |                                                                                              [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[5.255s] gmake[2]: *** [CMakeFiles/publish_pcd_node.dir/build.make:76: CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o] Error 1
+[5.256s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/publish_pcd_node.dir/all] Error 2
+[5.256s] gmake: *** [Makefile:146: all] Error 2
+[5.258s] Invoked command in '/home/aidan/ana_bot/build/ana' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ana_bot/build/ana -- -j16 -l16

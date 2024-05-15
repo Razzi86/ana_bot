@@ -1,0 +1,77 @@
+[ 18%] Built target cuda_operations
+[ 45%] Built target depth_live_filter_node
+[ 72%] Built target occupancy_grid_subscriber_node
+[ 81%] [32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o[0m
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:[m[K In constructor ‘[01m[KPCDPublisher::PCDPublisher()[m[K’:
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:38:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kqos_default[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   38 |         auto [01;35m[Kqos_default[m[K = rclcpp::QoS(rclcpp::KeepLast(10));
+      |              [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/aidan/ana_bot/src/ana/src/nodes/ply2pcd.cpp:45:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kqos_height[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   45 |         auto [01;35m[Kqos_height[m[K = rclcpp::QoS(rclcpp::KeepLast(10));
+      |              [01;35m[K^~~~~~~~~~[m[K
+[ 90%] [32m[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o[0m
+[100%] [32m[1mLinking CXX executable publish_pcd_node[0m
+[100%] Built target publish_pcd_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/amcl_params.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/custom_navigator.xml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/mapper_params_online_async.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/twist_mux.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/localization_launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/navigation_launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/online_async_launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/bedroom.world
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/mapped_point_cloud.pcd
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.pgm
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.yaml
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.pcd
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.ply
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot1.png
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot2.png
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_toLoad.ini
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv
+-- Symlinking: /home/aidan/ana_bot/install/ana/share/ana/package.dsv
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake
+-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/package.xml

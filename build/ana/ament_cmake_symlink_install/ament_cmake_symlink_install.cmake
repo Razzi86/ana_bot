@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "point_cloud_filter_node" "publish_pcd_node" "occupancy_grid_subscriber_node" "cuda_operations" "DESTINATION" "lib/ana")
+# install("TARGETS" "depth_live_filter_node" "publish_pcd_node" "occupancy_grid_subscriber_node" "cuda_operations" "DESTINATION" "lib/ana")
 include("/home/aidan/ana_bot/build/ana/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "config" "description" "launch" "worlds" "meshes" "rtab_maps" "DESTINATION" "share/ana")

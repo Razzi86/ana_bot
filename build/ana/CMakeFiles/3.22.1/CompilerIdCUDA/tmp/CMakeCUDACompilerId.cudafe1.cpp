@@ -16,12 +16,7 @@ static char __nv_inited_managed_rt = 0; static void **__nv_fatbinhandle_for_mana
 # 1
 #define __nv_is_extended_device_lambda_closure_type(X) false
 #define __nv_is_extended_host_device_lambda_closure_type(X) false
-<<<<<<< HEAD
-#define __nv_is_extended_device_lambda_with_preserved_return_type(X) false
-#if defined(__nv_is_extended_device_lambda_closure_type) && defined(__nv_is_extended_host_device_lambda_closure_type)&& defined(__nv_is_extended_device_lambda_with_preserved_return_type)
-=======
 #if defined(__nv_is_extended_device_lambda_closure_type) && defined(__nv_is_extended_host_device_lambda_closure_type)
->>>>>>> 72f5edd (SLAM, Costmap generation)
 #endif
 
 # 1
@@ -5576,19 +5571,11 @@ __syscall_slong_t stbcnt;
 # 78
 int tai; 
 # 81
-<<<<<<< HEAD
-int: 32; int: 32; int: 32; int: 32; 
-# 82
-int: 32; int: 32; int: 32; int: 32; 
-# 83
-int: 32; int: 32; int: 32; 
-=======
 int:32; int:32; int:32; int:32; 
 # 82
 int:32; int:32; int:32; int:32; 
 # 83
 int:32; int:32; int:32; 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 85
 }; 
 # 75 "/usr/include/x86_64-linux-gnu/bits/time.h" 3
@@ -6706,11 +6693,7 @@ inline bool __is_null_pointer(std::nullptr_t)
 # 163
 { return true; } 
 # 168
-<<<<<<< HEAD
-template< class _Tp, bool  = std::template __is_integer< _Tp> ::__value> 
-=======
 template< class _Tp, bool  = std::__is_integer< _Tp> ::__value> 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 169
 struct __promote { 
 # 170
@@ -11190,15 +11173,6 @@ template< class _Value>
 # 156
 struct __numeric_traits_floating { 
 # 159
-<<<<<<< HEAD
-static const int __max_digits10 = ((2) + ((((std::template __are_same< _Value, float> ::__value) ? 24 : ((std::template __are_same< _Value, double> ::__value) ? 53 : 64)) * 643L) / (2136))); 
-# 162
-static const bool __is_signed = true; 
-# 163
-static const int __digits10 = ((std::template __are_same< _Value, float> ::__value) ? 6 : ((std::template __are_same< _Value, double> ::__value) ? 15 : 18)); 
-# 164
-static const int __max_exponent10 = ((std::template __are_same< _Value, float> ::__value) ? 38 : ((std::template __are_same< _Value, double> ::__value) ? 308 : 4932)); 
-=======
 static const int __max_digits10 = ((2) + ((((std::__are_same< _Value, float> ::__value) ? 24 : ((std::__are_same< _Value, double> ::__value) ? 53 : 64)) * 643L) / (2136))); 
 # 162
 static const bool __is_signed = true; 
@@ -11206,7 +11180,6 @@ static const bool __is_signed = true;
 static const int __digits10 = ((std::__are_same< _Value, float> ::__value) ? 6 : ((std::__are_same< _Value, double> ::__value) ? 15 : 18)); 
 # 164
 static const int __max_exponent10 = ((std::__are_same< _Value, float> ::__value) ? 38 : ((std::__are_same< _Value, double> ::__value) ? 308 : 4932)); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 165
 }; 
 # 167
@@ -11344,19 +11317,11 @@ struct __not_ : public __bool_constant< !((bool)_Pp::value)>  {
 # 164
 }; 
 # 170
-<<<<<<< HEAD
-template< class ..._Bn> constexpr inline bool 
-# 171
-__or_v = (__or_< _Bn...> ::value); 
-# 172
-template< class ..._Bn> constexpr inline bool 
-=======
 template< class ..._Bn> constexpr bool 
 # 171
 __or_v = (__or_< _Bn...> ::value); 
 # 172
 template< class ..._Bn> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 173
 __and_v = (__and_< _Bn...> ::value); 
 # 178
@@ -11378,17 +11343,6 @@ struct negation : public __not_< _Pp>  {
 # 191
 }; 
 # 196
-<<<<<<< HEAD
-template< class ..._Bn> constexpr inline bool 
-# 197
-conjunction_v = (conjunction< _Bn...> ::value); 
-# 199
-template< class ..._Bn> constexpr inline bool 
-# 200
-disjunction_v = (disjunction< _Bn...> ::value); 
-# 202
-template< class _Pp> constexpr inline bool 
-=======
 template< class ..._Bn> constexpr bool 
 # 197
 conjunction_v = (conjunction< _Bn...> ::value); 
@@ -11398,7 +11352,6 @@ template< class ..._Bn> constexpr bool
 disjunction_v = (disjunction< _Bn...> ::value); 
 # 202
 template< class _Pp> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 203
 negation_v = (negation< _Pp> ::value); 
 # 209
@@ -11698,11 +11651,7 @@ struct __is_null_pointer_helper : public false_type {
 # 534
 }; 
 # 537
-<<<<<<< HEAD
-template<> struct __is_null_pointer_helper< __decltype((nullptr))>  : public true_type { 
-=======
 template<> struct __is_null_pointer_helper< nullptr_t>  : public true_type { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 538
 }; 
 # 541
@@ -12102,11 +12051,7 @@ template< class _Tp, class ..._Args> using __is_nothrow_constructible_impl = __b
 # 1021
 template< class _Tp, class ..._Args> 
 # 1022
-<<<<<<< HEAD
-struct is_nothrow_constructible : public __is_nothrow_constructible_impl< _Tp, _Args...> ::type { 
-=======
 struct is_nothrow_constructible : public integral_constant< bool, __is_nothrow_constructible(_Tp, _Args...)> ::type { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 1025
 static_assert((std::__is_complete_or_unbounded(__type_identity< _Tp> {})), "template argument must be a complete class or an unbounded array");
 # 1027
@@ -13498,11 +13443,7 @@ _Args> using __detected_or = __detector< _Default, void, _Op, _Args...> ;
 # 2630
 template< class _Default, template< class ...>  class _Op, class ...
 # 2631
-<<<<<<< HEAD
-_Args> using __detected_or_t = typename __detected_or< _Default, _Op, _Args...> ::type; 
-=======
 _Args> using __detected_or_t = typename __detector< _Default, void, _Op, _Args...> ::type; 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 2649 "/usr/include/c++/11/type_traits" 3
 template< class _Tp> struct __is_swappable; 
 # 2652
@@ -13600,19 +13541,11 @@ static_assert((std::__is_complete_or_unbounded(__type_identity< _Tp> {})), "temp
 # 2759
 }; 
 # 2763
-<<<<<<< HEAD
-template< class _Tp> constexpr inline bool 
-# 2764
-is_swappable_v = (is_swappable< _Tp> ::value); 
-# 2768
-template< class _Tp> constexpr inline bool 
-=======
 template< class _Tp> constexpr bool 
 # 2764
 is_swappable_v = (is_swappable< _Tp> ::value); 
 # 2768
 template< class _Tp> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 2769
 is_nothrow_swappable_v = (is_nothrow_swappable< _Tp> ::value); 
 # 2774
@@ -13696,19 +13629,11 @@ static_assert((std::__is_complete_or_unbounded(__type_identity< _Up> {})), "seco
 # 2855
 }; 
 # 2859
-<<<<<<< HEAD
-template< class _Tp, class _Up> constexpr inline bool 
-# 2860
-is_swappable_with_v = (is_swappable_with< _Tp, _Up> ::value); 
-# 2864
-template< class _Tp, class _Up> constexpr inline bool 
-=======
 template< class _Tp, class _Up> constexpr bool 
 # 2860
 is_swappable_with_v = (is_swappable_with< _Tp, _Up> ::value); 
 # 2864
 template< class _Tp, class _Up> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 2865
 is_nothrow_swappable_with_v = (is_nothrow_swappable_with< _Tp, _Up> ::value); 
 # 2876 "/usr/include/c++/11/type_traits" 3
@@ -13905,109 +13830,6 @@ static_assert((std::__is_complete_or_unbounded(__type_identity< _Ret> {})), "_Re
 # 3076
 }; 
 # 3094 "/usr/include/c++/11/type_traits" 3
-<<<<<<< HEAD
-template< class _Tp> constexpr inline bool 
-# 3095
-is_void_v = (is_void< _Tp> ::value); 
-# 3096
-template< class _Tp> constexpr inline bool 
-# 3097
-is_null_pointer_v = (is_null_pointer< _Tp> ::value); 
-# 3098
-template< class _Tp> constexpr inline bool 
-# 3099
-is_integral_v = (is_integral< _Tp> ::value); 
-# 3100
-template< class _Tp> constexpr inline bool 
-# 3101
-is_floating_point_v = (is_floating_point< _Tp> ::value); 
-# 3102
-template< class _Tp> constexpr inline bool 
-# 3103
-is_array_v = (is_array< _Tp> ::value); 
-# 3104
-template< class _Tp> constexpr inline bool 
-# 3105
-is_pointer_v = (is_pointer< _Tp> ::value); 
-# 3106
-template< class _Tp> constexpr inline bool 
-# 3107
-is_lvalue_reference_v = (is_lvalue_reference< _Tp> ::value); 
-# 3109
-template< class _Tp> constexpr inline bool 
-# 3110
-is_rvalue_reference_v = (is_rvalue_reference< _Tp> ::value); 
-# 3112
-template< class _Tp> constexpr inline bool 
-# 3113
-is_member_object_pointer_v = (is_member_object_pointer< _Tp> ::value); 
-# 3115
-template< class _Tp> constexpr inline bool 
-# 3116
-is_member_function_pointer_v = (is_member_function_pointer< _Tp> ::value); 
-# 3118
-template< class _Tp> constexpr inline bool 
-# 3119
-is_enum_v = (is_enum< _Tp> ::value); 
-# 3120
-template< class _Tp> constexpr inline bool 
-# 3121
-is_union_v = (is_union< _Tp> ::value); 
-# 3122
-template< class _Tp> constexpr inline bool 
-# 3123
-is_class_v = (is_class< _Tp> ::value); 
-# 3124
-template< class _Tp> constexpr inline bool 
-# 3125
-is_function_v = (is_function< _Tp> ::value); 
-# 3126
-template< class _Tp> constexpr inline bool 
-# 3127
-is_reference_v = (is_reference< _Tp> ::value); 
-# 3128
-template< class _Tp> constexpr inline bool 
-# 3129
-is_arithmetic_v = (is_arithmetic< _Tp> ::value); 
-# 3130
-template< class _Tp> constexpr inline bool 
-# 3131
-is_fundamental_v = (is_fundamental< _Tp> ::value); 
-# 3132
-template< class _Tp> constexpr inline bool 
-# 3133
-is_object_v = (is_object< _Tp> ::value); 
-# 3134
-template< class _Tp> constexpr inline bool 
-# 3135
-is_scalar_v = (is_scalar< _Tp> ::value); 
-# 3136
-template< class _Tp> constexpr inline bool 
-# 3137
-is_compound_v = (is_compound< _Tp> ::value); 
-# 3138
-template< class _Tp> constexpr inline bool 
-# 3139
-is_member_pointer_v = (is_member_pointer< _Tp> ::value); 
-# 3140
-template< class _Tp> constexpr inline bool 
-# 3141
-is_const_v = (is_const< _Tp> ::value); 
-# 3142
-template< class _Tp> constexpr inline bool 
-# 3143
-is_volatile_v = (is_volatile< _Tp> ::value); 
-# 3144
-template< class _Tp> constexpr inline bool 
-# 3145
-is_trivial_v = (is_trivial< _Tp> ::value); 
-# 3146
-template< class _Tp> constexpr inline bool 
-# 3147
-is_trivially_copyable_v = (is_trivially_copyable< _Tp> ::value); 
-# 3149
-template< class _Tp> constexpr inline bool 
-=======
 template< class _Tp> constexpr bool 
 # 3095
 is_void_v = (is_void< _Tp> ::value); 
@@ -14109,188 +13931,16 @@ template< class _Tp> constexpr bool
 is_trivially_copyable_v = (is_trivially_copyable< _Tp> ::value); 
 # 3149
 template< class _Tp> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 3150
 is_standard_layout_v = (is_standard_layout< _Tp> ::value); 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-<<<<<<< HEAD
-template< class _Tp> constexpr inline bool 
-=======
 template< class _Tp> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 3155
 is_pod_v = (is_pod< _Tp> ::value); 
 # 3156
 template< class _Tp> 
 # 3157
-<<<<<<< HEAD
-[[__deprecated__]] constexpr inline bool 
-# 3158
-is_literal_type_v = (is_literal_type< _Tp> ::value); 
-#pragma GCC diagnostic pop
-template< class _Tp> constexpr inline bool 
-# 3161
-is_empty_v = (is_empty< _Tp> ::value); 
-# 3162
-template< class _Tp> constexpr inline bool 
-# 3163
-is_polymorphic_v = (is_polymorphic< _Tp> ::value); 
-# 3164
-template< class _Tp> constexpr inline bool 
-# 3165
-is_abstract_v = (is_abstract< _Tp> ::value); 
-# 3166
-template< class _Tp> constexpr inline bool 
-# 3167
-is_final_v = (is_final< _Tp> ::value); 
-# 3168
-template< class _Tp> constexpr inline bool 
-# 3169
-is_signed_v = (is_signed< _Tp> ::value); 
-# 3170
-template< class _Tp> constexpr inline bool 
-# 3171
-is_unsigned_v = (is_unsigned< _Tp> ::value); 
-# 3172
-template< class _Tp, class ..._Args> constexpr inline bool 
-# 3173
-is_constructible_v = (is_constructible< _Tp, _Args...> ::value); 
-# 3175
-template< class _Tp> constexpr inline bool 
-# 3176
-is_default_constructible_v = (is_default_constructible< _Tp> ::value); 
-# 3178
-template< class _Tp> constexpr inline bool 
-# 3179
-is_copy_constructible_v = (is_copy_constructible< _Tp> ::value); 
-# 3181
-template< class _Tp> constexpr inline bool 
-# 3182
-is_move_constructible_v = (is_move_constructible< _Tp> ::value); 
-# 3184
-template< class _Tp, class _Up> constexpr inline bool 
-# 3185
-is_assignable_v = (is_assignable< _Tp, _Up> ::value); 
-# 3186
-template< class _Tp> constexpr inline bool 
-# 3187
-is_copy_assignable_v = (is_copy_assignable< _Tp> ::value); 
-# 3188
-template< class _Tp> constexpr inline bool 
-# 3189
-is_move_assignable_v = (is_move_assignable< _Tp> ::value); 
-# 3190
-template< class _Tp> constexpr inline bool 
-# 3191
-is_destructible_v = (is_destructible< _Tp> ::value); 
-# 3192
-template< class _Tp, class ..._Args> constexpr inline bool 
-# 3193
-is_trivially_constructible_v = (is_trivially_constructible< _Tp, _Args...> ::value); 
-# 3195
-template< class _Tp> constexpr inline bool 
-# 3196
-is_trivially_default_constructible_v = (is_trivially_default_constructible< _Tp> ::value); 
-# 3198
-template< class _Tp> constexpr inline bool 
-# 3199
-is_trivially_copy_constructible_v = (is_trivially_copy_constructible< _Tp> ::value); 
-# 3201
-template< class _Tp> constexpr inline bool 
-# 3202
-is_trivially_move_constructible_v = (is_trivially_move_constructible< _Tp> ::value); 
-# 3204
-template< class _Tp, class _Up> constexpr inline bool 
-# 3205
-is_trivially_assignable_v = (is_trivially_assignable< _Tp, _Up> ::value); 
-# 3207
-template< class _Tp> constexpr inline bool 
-# 3208
-is_trivially_copy_assignable_v = (is_trivially_copy_assignable< _Tp> ::value); 
-# 3210
-template< class _Tp> constexpr inline bool 
-# 3211
-is_trivially_move_assignable_v = (is_trivially_move_assignable< _Tp> ::value); 
-# 3213
-template< class _Tp> constexpr inline bool 
-# 3214
-is_trivially_destructible_v = (is_trivially_destructible< _Tp> ::value); 
-# 3216
-template< class _Tp, class ..._Args> constexpr inline bool 
-# 3217
-is_nothrow_constructible_v = (is_nothrow_constructible< _Tp, _Args...> ::value); 
-# 3219
-template< class _Tp> constexpr inline bool 
-# 3220
-is_nothrow_default_constructible_v = (is_nothrow_default_constructible< _Tp> ::value); 
-# 3222
-template< class _Tp> constexpr inline bool 
-# 3223
-is_nothrow_copy_constructible_v = (is_nothrow_copy_constructible< _Tp> ::value); 
-# 3225
-template< class _Tp> constexpr inline bool 
-# 3226
-is_nothrow_move_constructible_v = (is_nothrow_move_constructible< _Tp> ::value); 
-# 3228
-template< class _Tp, class _Up> constexpr inline bool 
-# 3229
-is_nothrow_assignable_v = (is_nothrow_assignable< _Tp, _Up> ::value); 
-# 3231
-template< class _Tp> constexpr inline bool 
-# 3232
-is_nothrow_copy_assignable_v = (is_nothrow_copy_assignable< _Tp> ::value); 
-# 3234
-template< class _Tp> constexpr inline bool 
-# 3235
-is_nothrow_move_assignable_v = (is_nothrow_move_assignable< _Tp> ::value); 
-# 3237
-template< class _Tp> constexpr inline bool 
-# 3238
-is_nothrow_destructible_v = (is_nothrow_destructible< _Tp> ::value); 
-# 3240
-template< class _Tp> constexpr inline bool 
-# 3241
-has_virtual_destructor_v = (has_virtual_destructor< _Tp> ::value); 
-# 3243
-template< class _Tp> constexpr inline size_t 
-# 3244
-alignment_of_v = (alignment_of< _Tp> ::value); 
-# 3245
-template< class _Tp> constexpr inline size_t 
-# 3246
-rank_v = (rank< _Tp> ::value); 
-# 3247
-template< class _Tp, unsigned _Idx = 0U> constexpr inline size_t 
-# 3248
-extent_v = (extent< _Tp, _Idx> ::value); 
-# 3250
-template< class _Tp, class _Up> constexpr inline bool 
-# 3251
-is_same_v = __is_same(_Tp, _Up); 
-# 3256
-template< class _Base, class _Derived> constexpr inline bool 
-# 3257
-is_base_of_v = (is_base_of< _Base, _Derived> ::value); 
-# 3258
-template< class _From, class _To> constexpr inline bool 
-# 3259
-is_convertible_v = (is_convertible< _From, _To> ::value); 
-# 3260
-template< class _Fn, class ..._Args> constexpr inline bool 
-# 3261
-is_invocable_v = (is_invocable< _Fn, _Args...> ::value); 
-# 3262
-template< class _Fn, class ..._Args> constexpr inline bool 
-# 3263
-is_nothrow_invocable_v = (is_nothrow_invocable< _Fn, _Args...> ::value); 
-# 3265
-template< class _Ret, class _Fn, class ..._Args> constexpr inline bool 
-# 3266
-is_invocable_r_v = (is_invocable_r< _Ret, _Fn, _Args...> ::value); 
-# 3268
-template< class _Ret, class _Fn, class ..._Args> constexpr inline bool 
-=======
 [[__deprecated__]] constexpr bool 
 # 3158
 is_literal_type_v = (is_literal_type< _Tp> ::value); 
@@ -14456,7 +14106,6 @@ template< class _Ret, class _Fn, class ..._Args> constexpr bool
 is_invocable_r_v = (is_invocable_r< _Ret, _Fn, _Args...> ::value); 
 # 3268
 template< class _Ret, class _Fn, class ..._Args> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 3269
 is_nothrow_invocable_r_v = (is_nothrow_invocable_r< _Ret, _Fn, _Args...> ::value); 
 # 3276
@@ -14468,11 +14117,7 @@ static_assert((std::__is_complete_or_unbounded(__type_identity< _Tp> {})), "temp
 # 3284
 }; 
 # 3287
-<<<<<<< HEAD
-template< class _Tp> constexpr inline bool 
-=======
 template< class _Tp> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 3288
 has_unique_object_representations_v = (has_unique_object_representations< _Tp> ::value); 
 # 3295
@@ -14482,11 +14127,7 @@ struct is_aggregate : public bool_constant< __is_aggregate(remove_cv_t< _Tp> )> 
 # 3298
 }; 
 # 3301
-<<<<<<< HEAD
-template< class _Tp> constexpr inline bool 
-=======
 template< class _Tp> constexpr bool 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 3302
 is_aggregate_v = (is_aggregate< _Tp> ::value); 
 # 3599 "/usr/include/c++/11/type_traits" 3
@@ -14510,11 +14151,7 @@ forward(typename remove_reference< _Tp> ::type &&__t) noexcept
 # 90
 { 
 # 91
-<<<<<<< HEAD
-static_assert((!std::template is_lvalue_reference< _Tp> ::value), "std::forward must not be used to convert an rvalue to an lvalue");
-=======
 static_assert((!std::is_lvalue_reference< _Tp> ::value), "std::forward must not be used to convert an rvalue to an lvalue");
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 93
 return static_cast< _Tp &&>(__t); 
 # 94
@@ -14795,11 +14432,7 @@ template< class _U1, class _U2, typename enable_if< _PCC< (!is_same< _T1, _U1> :
 # 299
  = true> constexpr 
 # 300
-<<<<<<< HEAD
-pair(const pair< _U1, _U2>  &__p) : first((__p.first)), second((__p.second)) 
-=======
 pair(const std::pair< _U1, _U2>  &__p) : first((__p.first)), second((__p.second)) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 301
 { } 
 # 303
@@ -14807,11 +14440,7 @@ template< class _U1, class _U2, typename enable_if< _PCC< (!is_same< _T1, _U1> :
 # 308
  = false> constexpr explicit 
 # 309
-<<<<<<< HEAD
-pair(const pair< _U1, _U2>  &__p) : first((__p.first)), second((__p.second)) 
-=======
 pair(const std::pair< _U1, _U2>  &__p) : first((__p.first)), second((__p.second)) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 310
 { } 
 # 314
@@ -14871,11 +14500,7 @@ template< class _U1, class _U2, typename enable_if< _PCC< (!is_same< _T1, _U1> :
 # 370
  = true> constexpr 
 # 371
-<<<<<<< HEAD
-pair(pair< _U1, _U2>  &&__p) : first(std::forward< _U1> ((__p.first))), second(std::forward< _U2> ((__p.second))) 
-=======
 pair(std::pair< _U1, _U2>  &&__p) : first(std::forward< _U1> ((__p.first))), second(std::forward< _U2> ((__p.second))) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 373
 { } 
 # 375
@@ -14883,11 +14508,7 @@ template< class _U1, class _U2, typename enable_if< _PCC< (!is_same< _T1, _U1> :
 # 380
  = false> constexpr explicit 
 # 381
-<<<<<<< HEAD
-pair(pair< _U1, _U2>  &&__p) : first(std::forward< _U1> ((__p.first))), second(std::forward< _U2> ((__p.second))) 
-=======
 pair(std::pair< _U1, _U2>  &&__p) : first(std::forward< _U1> ((__p.first))), second(std::forward< _U2> ((__p.second))) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 383
 { } 
 # 385
@@ -14923,11 +14544,7 @@ return *this;
 # 413
 template< class _U1, class _U2> typename enable_if< __and_< is_assignable< _T1 &, const _U1 &> , is_assignable< _T2 &, const _U2 &> > ::value, pair &> ::type 
 # 418
-<<<<<<< HEAD
-operator=(const pair< _U1, _U2>  &__p) 
-=======
 operator=(const std::pair< _U1, _U2>  &__p) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 419
 { 
 # 420
@@ -14941,11 +14558,7 @@ return *this;
 # 425
 template< class _U1, class _U2> typename enable_if< __and_< is_assignable< _T1 &, _U1 &&> , is_assignable< _T2 &, _U2 &&> > ::value, pair &> ::type 
 # 430
-<<<<<<< HEAD
-operator=(pair< _U1, _U2>  &&__p) 
-=======
 operator=(std::pair< _U1, _U2>  &&__p) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 431
 { 
 # 432
@@ -15028,29 +14641,17 @@ template < typename _T1, typename _T2 >
           __is_swappable < _T2 > > :: value > :: type
     swap ( pair < _T1, _T2 > &, pair < _T1, _T2 > & ) = delete;
 # 564 "/usr/include/c++/11/bits/stl_pair.h" 3
-<<<<<<< HEAD
-template< class _T1, class _T2> constexpr pair< typename __decay_and_strip< _T1> ::__type, typename __decay_and_strip< _T2> ::__type>  
-=======
 template< class _T1, class _T2> constexpr pair< typename __strip_reference_wrapper< __decay_t< _T1> > ::__type, typename __strip_reference_wrapper< __decay_t< _T2> > ::__type>  
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 567
 make_pair(_T1 &&__x, _T2 &&__y) 
 # 568
 { 
 # 569
-<<<<<<< HEAD
-typedef typename __decay_and_strip< _T1> ::__type __ds_type1; 
-# 570
-typedef typename __decay_and_strip< _T2> ::__type __ds_type2; 
-# 571
-typedef pair< typename __decay_and_strip< _T1> ::__type, typename __decay_and_strip< _T2> ::__type>  __pair_type; 
-=======
 typedef typename __strip_reference_wrapper< __decay_t< _T1> > ::__type __ds_type1; 
 # 570
 typedef typename __strip_reference_wrapper< __decay_t< _T2> > ::__type __ds_type2; 
 # 571
 typedef pair< typename __strip_reference_wrapper< __decay_t< _T1> > ::__type, typename __strip_reference_wrapper< __decay_t< _T2> > ::__type>  __pair_type; 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 572
 return __pair_type(std::forward< _T1> (__x), std::forward< _T2> (__y)); 
 # 573
@@ -15430,11 +15031,7 @@ __to_address(_Tp *__ptr) noexcept
 # 160
 { 
 # 161
-<<<<<<< HEAD
-static_assert((!std::template is_function< _Tp> ::value), "not a function pointer");
-=======
 static_assert((!std::is_function< _Tp> ::value), "not a function pointer");
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 162
 return __ptr; 
 # 163
@@ -16148,11 +15745,7 @@ namespace std __attribute((__visibility__("default"))) {
 # 1288
 template< class _Iterator, class _Container> _Iterator 
 # 1291
-<<<<<<< HEAD
-__niter_base(__gnu_cxx::__normal_iterator< _Iterator, _Container>  __it) noexcept(std::template is_nothrow_copy_constructible< _Iterator> ::value) 
-=======
 __niter_base(__gnu_cxx::__normal_iterator< _Iterator, _Container>  __it) noexcept(std::is_nothrow_copy_constructible< _Iterator> ::value) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 1293
 { return __it.base(); } 
 # 1342 "/usr/include/c++/11/bits/stl_iterator.h" 3
@@ -16930,11 +16523,7 @@ return __a;
 # 310
 template< class _Iterator> inline _Iterator 
 # 313
-<<<<<<< HEAD
-__niter_base(_Iterator __it) noexcept(std::template is_nothrow_copy_constructible< _Iterator> ::value) 
-=======
 __niter_base(_Iterator __it) noexcept(std::is_nothrow_copy_constructible< _Iterator> ::value) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 315
 { return __it; } 
 # 317
@@ -17100,11 +16689,7 @@ __copy_move_a2(_II __first, _II __last, _OI __result)
 # 488
 typedef typename iterator_traits< _II> ::iterator_category _Category; 
 # 494
-<<<<<<< HEAD
-return std::template __copy_move< _IsMove, __memcpyable< _OI, _II> ::__value, typename iterator_traits< _II> ::iterator_category> ::__copy_m(__first, __last, __result); 
-=======
 return std::__copy_move< _IsMove, __memcpyable< _OI, _II> ::__value, typename iterator_traits< _II> ::iterator_category> ::__copy_m(__first, __last, __result); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 496
 } 
 # 498
@@ -17332,11 +16917,7 @@ __copy_move_backward_a2(_BI1 __first, _BI1 __last, _BI2 __result)
 # 752
 typedef typename iterator_traits< _BI1> ::iterator_category _Category; 
 # 758
-<<<<<<< HEAD
-return std::template __copy_move_backward< _IsMove, __memcpyable< _BI2, _BI1> ::__value, typename iterator_traits< _BI1> ::iterator_category> ::__copy_move_b(__first, __last, __result); 
-=======
 return std::__copy_move_backward< _IsMove, __memcpyable< _BI2, _BI1> ::__value, typename iterator_traits< _BI1> ::iterator_category> ::__copy_move_b(__first, __last, __result); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 763
 } 
 # 765
@@ -17664,11 +17245,7 @@ typedef typename iterator_traits< _II1> ::value_type _ValueType1;
 # 1208
 const bool __simple = ((__is_integer< typename iterator_traits< _II1> ::value_type> ::__value || __is_pointer< typename iterator_traits< _II1> ::value_type> ::__value) && __memcmpable< _II1, _II2> ::__value); 
 # 1211
-<<<<<<< HEAD
-return std::template __equal< __simple> ::equal(__first1, __last1, __first2); 
-=======
 return std::__equal< __simple> ::equal(__first1, __last1, __first2); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 1212
 } 
 # 1214
@@ -17870,11 +17447,7 @@ typedef typename iterator_traits< _II2> ::value_type _ValueType2;
 # 1370
 const bool __simple = (__is_memcmp_ordered_with< typename iterator_traits< _II1> ::value_type, typename iterator_traits< _II2> ::value_type> ::__value && __is_pointer< _II1> ::__value && __is_pointer< _II2> ::__value); 
 # 1383
-<<<<<<< HEAD
-return std::template __lexicographical_compare< __simple> ::__lc(__first1, __last1, __first2, __last2); 
-=======
 return std::__lexicographical_compare< __simple> ::__lc(__first1, __last1, __first2, __last2); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 1385
 } 
 # 1387
@@ -19998,11 +19571,7 @@ for (unsigned __i = (1); __i < (1000); ++__i)
 # 123
 _Tp __term = std::pow((_Tp)__i, -((_Tp)__n)); 
 # 124
-<<<<<<< HEAD
-if (__term < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (__term < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 125
 break; }  
 # 126
@@ -20134,11 +19703,7 @@ __log_bincoef(unsigned __n, unsigned __k)
 # 286
 { 
 # 288
-<<<<<<< HEAD
-static const _Tp __max_bincoeff = (std::template numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
-=======
 static const _Tp __max_bincoeff = (std::numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 292
 _Tp __coeff = (std::lgamma((_Tp)((1) + __n)) - std::lgamma((_Tp)((1) + __k))) - std::lgamma((_Tp)(((1) + __n) - __k)); 
 # 300
@@ -20150,21 +19715,13 @@ __bincoef(unsigned __n, unsigned __k)
 # 317
 { 
 # 319
-<<<<<<< HEAD
-static const _Tp __max_bincoeff = (std::template numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
-=======
 static const _Tp __max_bincoeff = (std::numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 323
 const _Tp __log_coeff = __log_bincoef< _Tp> (__n, __k); 
 # 324
 if (__log_coeff > __max_bincoeff) { 
 # 325
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 327
 return std::exp(__log_coeff); }  
 # 328
@@ -20194,11 +19751,7 @@ const _Tp __term = __x / (__k * (__k + __x));
 # 365
 __sum += __term; 
 # 366
-<<<<<<< HEAD
-if (std::abs(__term / __sum) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (std::abs(__term / __sum) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 367
 break; }  
 # 368
@@ -20230,11 +19783,7 @@ const _Tp __term = __bernoulli< _Tp> ((2) * __k) / (((2) * __k) * __xp);
 # 397
 __sum -= __term; 
 # 398
-<<<<<<< HEAD
-if (std::abs(__term / __sum) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (std::abs(__term / __sum) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 399
 break; }  
 # 400
@@ -20254,19 +19803,11 @@ __psi(_Tp __x)
 # 421
 const int __n = static_cast< int>(__x + (0.5L)); 
 # 422
-<<<<<<< HEAD
-const _Tp __eps = ((_Tp)4) * std::template numeric_limits< _Tp> ::epsilon(); 
-# 423
-if ((__n <= 0) && (std::abs(__x - ((_Tp)__n)) < __eps)) { 
-# 424
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 const _Tp __eps = ((_Tp)4) * std::numeric_limits< _Tp> ::epsilon(); 
 # 423
 if ((__n <= 0) && (std::abs(__x - ((_Tp)__n)) < __eps)) { 
 # 424
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 425
 if (__x < ((_Tp)0)) 
 # 426
@@ -20338,11 +19879,7 @@ __gampl = (((_Tp)1) / std::tgamma(((_Tp)1) + __mu));
 # 105
 __gammi = (((_Tp)1) / std::tgamma(((_Tp)1) - __mu)); 
 # 111
-<<<<<<< HEAD
-if (std::abs(__mu) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (std::abs(__mu) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 112
 __gam1 = (-((_Tp)__numeric_constants< _Tp> ::__gamma_e())); } else { 
 # 114
@@ -20392,29 +19929,17 @@ __Jpnu = ((_Tp)0);
 # 157
 }  }  
 # 158
-<<<<<<< HEAD
-__Nnu = (-std::template numeric_limits< _Tp> ::infinity()); 
-# 159
-__Npnu = std::template numeric_limits< _Tp> ::infinity(); 
-=======
 __Nnu = (-std::numeric_limits< _Tp> ::infinity()); 
 # 159
 __Npnu = std::numeric_limits< _Tp> ::infinity(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 160
 return; 
 # 161
 }  
 # 163
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 168
-const _Tp __fp_min = std::sqrt(std::template numeric_limits< _Tp> ::min()); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 168
 const _Tp __fp_min = std::sqrt(std::numeric_limits< _Tp> ::min()); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 169
 const int __max_iter = 15000; 
 # 170
@@ -20748,11 +20273,7 @@ int __epsP = 0;
 # 375
 int __epsQ = 0; 
 # 377
-<<<<<<< HEAD
-_Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 379
 do 
 # 380
@@ -20830,11 +20351,7 @@ __term *= (__xx4 / (((_Tp)__i) * (__nu + ((_Tp)__i))));
 # 467
 __Jn += __term; 
 # 468
-<<<<<<< HEAD
-if (std::abs(__term / __Jn) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (std::abs(__term / __Jn) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 469
 break; }  
 # 470
@@ -20856,11 +20373,7 @@ std::__throw_domain_error("Bad argument in __cyl_bessel_j."); } else {
 # 497
 if (__isnan(__nu) || __isnan(__x)) { 
 # 498
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 499
 if ((__x * __x) < (((_Tp)10) * (__nu + ((_Tp)1)))) { 
 # 500
@@ -20902,11 +20415,7 @@ std::__throw_domain_error("Bad argument in __cyl_neumann_n."); } else {
 # 539
 if (__isnan(__nu) || __isnan(__x)) { 
 # 540
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 541
 if (__x > ((_Tp)1000)) 
 # 542
@@ -20970,11 +20479,7 @@ std::__throw_domain_error("Bad argument in __sph_bessel."); } else {
 # 611
 if (__isnan(__x)) { 
 # 612
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 613
 if (__x == ((_Tp)0)) 
 # 614
@@ -21012,19 +20517,11 @@ std::__throw_domain_error("Bad argument in __sph_neumann."); } else {
 # 649
 if (__isnan(__x)) { 
 # 650
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 651
-if (__x == ((_Tp)0)) { 
-# 652
-return -std::template numeric_limits< _Tp> ::infinity(); } else 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 651
 if (__x == ((_Tp)0)) { 
 # 652
 return -std::numeric_limits< _Tp> ::infinity(); } else 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 654
 { 
 # 655
@@ -21122,11 +20619,7 @@ __beta(_Tp __x, _Tp __y)
 # 193
 if (__isnan(__x) || __isnan(__y)) { 
 # 194
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 196
 return __beta_lgamma(__x, __y); }  
 # 197
@@ -21146,11 +20639,7 @@ __ellint_rf(_Tp __x, _Tp __y, _Tp __z)
 # 79
 { 
 # 80
-<<<<<<< HEAD
-const _Tp __min = std::template numeric_limits< _Tp> ::min(); 
-=======
 const _Tp __min = std::numeric_limits< _Tp> ::min(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 81
 const _Tp __lolim = ((_Tp)5) * __min; 
 # 83
@@ -21180,11 +20669,7 @@ _Tp __yn = __y;
 # 99
 _Tp __zn = __z; 
 # 101
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 102
 const _Tp __errtol = std::pow(__eps, ((_Tp)1) / ((_Tp)6)); 
 # 103
@@ -21262,11 +20747,7 @@ for (unsigned __i = (2); __i < __max_iter; ++__i)
 # 166
 __term *= (((((2) * __i) - (1)) * __kk) / ((2) * __i)); 
 # 167
-<<<<<<< HEAD
-if (__term < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (__term < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 168
 break; }  
 # 169
@@ -21286,19 +20767,11 @@ __comp_ellint_1(_Tp __k)
 # 196
 if (__isnan(__k)) { 
 # 197
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 198
-if (std::abs(__k) >= ((_Tp)1)) { 
-# 199
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 198
 if (std::abs(__k) >= ((_Tp)1)) { 
 # 199
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 201
 return __ellint_rf((_Tp)0, ((_Tp)1) - (__k * __k), (_Tp)1); }  }  
 # 202
@@ -21312,11 +20785,7 @@ __ellint_1(_Tp __k, _Tp __phi)
 # 224
 if (__isnan(__k) || __isnan(__phi)) { 
 # 225
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 226
 if (std::abs(__k) > ((_Tp)1)) { 
 # 227
@@ -21368,11 +20837,7 @@ const _Tp __i2 = (2) * __i;
 # 281
 __term *= (((__i2m * __i2m) * __kk) / (__i2 * __i2)); 
 # 282
-<<<<<<< HEAD
-if (__term < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (__term < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 283
 break; }  
 # 284
@@ -21390,19 +20855,11 @@ __ellint_rd(_Tp __x, _Tp __y, _Tp __z)
 # 317
 { 
 # 318
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 319
-const _Tp __errtol = std::pow(__eps / ((_Tp)8), ((_Tp)1) / ((_Tp)6)); 
-# 320
-const _Tp __max = std::template numeric_limits< _Tp> ::max(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 319
 const _Tp __errtol = std::pow(__eps / ((_Tp)8), ((_Tp)1) / ((_Tp)6)); 
 # 320
 const _Tp __max = std::numeric_limits< _Tp> ::max(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 321
 const _Tp __lolim = (((_Tp)2) / std::pow(__max, ((_Tp)2) / ((_Tp)3))); 
 # 323
@@ -21510,11 +20967,7 @@ __comp_ellint_2(_Tp __k)
 # 404
 if (__isnan(__k)) { 
 # 405
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 406
 if (std::abs(__k) == 1) { 
 # 407
@@ -21542,11 +20995,7 @@ __ellint_2(_Tp __k, _Tp __phi)
 # 438
 if (__isnan(__k) || __isnan(__phi)) { 
 # 439
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 440
 if (std::abs(__k) > ((_Tp)1)) { 
 # 441
@@ -21588,11 +21037,7 @@ __ellint_rc(_Tp __x, _Tp __y)
 # 495
 { 
 # 496
-<<<<<<< HEAD
-const _Tp __min = std::template numeric_limits< _Tp> ::min(); 
-=======
 const _Tp __min = std::numeric_limits< _Tp> ::min(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 497
 const _Tp __lolim = ((_Tp)5) * __min; 
 # 499
@@ -21616,11 +21061,7 @@ _Tp __xn = __x;
 # 511
 _Tp __yn = __y; 
 # 513
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 514
 const _Tp __errtol = std::pow(__eps / ((_Tp)30), ((_Tp)1) / ((_Tp)6)); 
 # 515
@@ -21664,11 +21105,7 @@ __ellint_rj(_Tp __x, _Tp __y, _Tp __z, _Tp __p)
 # 564
 { 
 # 565
-<<<<<<< HEAD
-const _Tp __min = std::template numeric_limits< _Tp> ::min(); 
-=======
 const _Tp __min = std::numeric_limits< _Tp> ::min(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 566
 const _Tp __lolim = std::pow(((_Tp)5) * __min, ((_Tp)1) / ((_Tp)3)); 
 # 568
@@ -21704,11 +21141,7 @@ _Tp __sigma = ((_Tp)0);
 # 588
 _Tp __power4 = ((_Tp)1); 
 # 590
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 591
 const _Tp __errtol = std::pow(__eps / ((_Tp)8), ((_Tp)1) / ((_Tp)6)); 
 # 593
@@ -21800,19 +21233,11 @@ __comp_ellint_3(_Tp __k, _Tp __nu)
 # 666
 if (__isnan(__k) || __isnan(__nu)) { 
 # 667
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 668
-if (__nu == ((_Tp)1)) { 
-# 669
-return std::template numeric_limits< _Tp> ::infinity(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 668
 if (__nu == ((_Tp)1)) { 
 # 669
 return std::numeric_limits< _Tp> ::infinity(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 670
 if (std::abs(__k) > ((_Tp)1)) { 
 # 671
@@ -21836,11 +21261,7 @@ __ellint_3(_Tp __k, _Tp __nu, _Tp __phi)
 # 706
 if ((__isnan(__k) || __isnan(__nu)) || __isnan(__phi)) { 
 # 707
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 708
 if (std::abs(__k) > ((_Tp)1)) { 
 # 709
@@ -21892,11 +21313,7 @@ __expint_E1_series(_Tp __x)
 # 84
 { 
 # 85
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 86
 _Tp __term = ((_Tp)1); 
 # 87
@@ -21974,11 +21391,7 @@ __expint_En_series(unsigned __n, _Tp __x)
 # 159
 const unsigned __max_iter = (1000); 
 # 160
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 161
 const int __nm1 = __n - (1); 
 # 162
@@ -22030,15 +21443,9 @@ __expint_En_cont_frac(unsigned __n, _Tp __x)
 # 205
 const unsigned __max_iter = (1000); 
 # 206
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 207
-const _Tp __fp_min = std::template numeric_limits< _Tp> ::min(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 207
 const _Tp __fp_min = std::numeric_limits< _Tp> ::min(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 208
 const int __nm1 = __n - (1); 
 # 209
@@ -22154,11 +21561,7 @@ __term *= (__x / __i);
 # 300
 __sum += (__term / __i); 
 # 301
-<<<<<<< HEAD
-if (__term < (std::template numeric_limits< _Tp> ::epsilon() * __sum)) { 
-=======
 if (__term < (std::numeric_limits< _Tp> ::epsilon() * __sum)) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 302
 break; }  
 # 303
@@ -22188,11 +21591,7 @@ _Tp __prev = __term;
 # 331
 __term *= (__i / __x); 
 # 332
-<<<<<<< HEAD
-if (__term < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (__term < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 333
 break; }  
 # 334
@@ -22218,11 +21617,7 @@ if (__x < ((_Tp)0)) {
 # 359
 return -__expint_E1(-__x); } else { 
 # 360
-<<<<<<< HEAD
-if (__x < (-std::log(std::template numeric_limits< _Tp> ::epsilon()))) { 
-=======
 if (__x < (-std::log(std::numeric_limits< _Tp> ::epsilon()))) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 361
 return __expint_Ei_series(__x); } else { 
 # 363
@@ -22304,11 +21699,7 @@ _Tp __prev = __term;
 # 453
 __term *= ((__n - (((2) * (__i - (1))) * __x)) / __xpn2); 
 # 454
-<<<<<<< HEAD
-if (std::abs(__term) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (std::abs(__term) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 455
 break; }  
 # 456
@@ -22328,19 +21719,11 @@ __expint(unsigned __n, _Tp __x)
 # 481
 if (__isnan(__x)) { 
 # 482
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 483
-if ((__n <= (1)) && (__x == ((_Tp)0))) { 
-# 484
-return std::template numeric_limits< _Tp> ::infinity(); } else 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 483
 if ((__n <= (1)) && (__x == ((_Tp)0))) { 
 # 484
 return std::numeric_limits< _Tp> ::infinity(); } else 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 486
 { 
 # 487
@@ -22376,11 +21759,7 @@ __expint(_Tp __x)
 # 520
 if (__isnan(__x)) { 
 # 521
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 523
 return __expint_Ei(__x); }  
 # 524
@@ -22400,11 +21779,7 @@ __conf_hyperg_series(_Tp __a, _Tp __c, _Tp __x)
 # 86
 { 
 # 87
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 89
 _Tp __term = ((_Tp)1); 
 # 90
@@ -22446,19 +21821,11 @@ __conf_hyperg_luke(_Tp __a, _Tp __c, _Tp __xin)
 # 123
 { 
 # 124
-<<<<<<< HEAD
-const _Tp __big = std::pow(std::template numeric_limits< _Tp> ::max(), (_Tp)(0.16L)); 
-# 125
-const int __nmax = 20000; 
-# 126
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __big = std::pow(std::numeric_limits< _Tp> ::max(), (_Tp)(0.16L)); 
 # 125
 const int __nmax = 20000; 
 # 126
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 127
 const _Tp __x = (-__xin); 
 # 128
@@ -22606,19 +21973,11 @@ const _Tp __c_nint = std::nearbyint(__c);
 # 236
 if ((__isnan(__a) || __isnan(__c)) || __isnan(__x)) { 
 # 237
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 238
-if ((__c_nint == __c) && (__c_nint <= 0)) { 
-# 239
-return std::template numeric_limits< _Tp> ::infinity(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 238
 if ((__c_nint == __c) && (__c_nint <= 0)) { 
 # 239
 return std::numeric_limits< _Tp> ::infinity(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 240
 if (__a == ((_Tp)0)) { 
 # 241
@@ -22642,11 +22001,7 @@ __hyperg_series(_Tp __a, _Tp __b, _Tp __c, _Tp __x)
 # 274
 { 
 # 275
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 277
 _Tp __term = ((_Tp)1); 
 # 278
@@ -22688,19 +22043,11 @@ __hyperg_luke(_Tp __a, _Tp __b, _Tp __c, _Tp __xin)
 # 307
 { 
 # 308
-<<<<<<< HEAD
-const _Tp __big = std::pow(std::template numeric_limits< _Tp> ::max(), (_Tp)(0.16L)); 
-# 309
-const int __nmax = 20000; 
-# 310
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __big = std::pow(std::numeric_limits< _Tp> ::max(), (_Tp)(0.16L)); 
 # 309
 const int __nmax = 20000; 
 # 310
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 311
 const _Tp __x = (-__xin); 
 # 312
@@ -22852,19 +22199,11 @@ const _Tp __d = (__c - __a) - __b;
 # 443
 const int __intd = std::floor(__d + ((_Tp)(0.5L))); 
 # 444
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 445
-const _Tp __toler = ((_Tp)1000) * __eps; 
-# 446
-const _Tp __log_max = std::log(std::template numeric_limits< _Tp> ::max()); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 445
 const _Tp __toler = ((_Tp)1000) * __eps; 
 # 446
 const _Tp __log_max = std::log(std::numeric_limits< _Tp> ::max()); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 447
 const bool __d_integer = std::abs(__d - __intd) < __toler; 
 # 449
@@ -23258,11 +22597,7 @@ const _Tp __b_nint = std::nearbyint(__b);
 # 735
 const _Tp __c_nint = std::nearbyint(__c); 
 # 741
-<<<<<<< HEAD
-const _Tp __toler = ((_Tp)1000) * std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __toler = ((_Tp)1000) * std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 742
 if (std::abs(__x) >= ((_Tp)1)) { 
 # 743
@@ -23270,19 +22605,11 @@ std::__throw_domain_error("Argument outside unit circle in __hyperg."); } else {
 # 745
 if (((__isnan(__a) || __isnan(__b)) || __isnan(__c)) || __isnan(__x)) { 
 # 747
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 748
-if ((__c_nint == __c) && (__c_nint <= ((_Tp)0))) { 
-# 749
-return std::template numeric_limits< _Tp> ::infinity(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 748
 if ((__c_nint == __c) && (__c_nint <= ((_Tp)0))) { 
 # 749
 return std::numeric_limits< _Tp> ::infinity(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 750
 if ((std::abs(__c - __b) < __toler) || (std::abs(__c - __a) < __toler)) { 
 # 751
@@ -23340,11 +22667,7 @@ __poly_legendre_p(unsigned __l, _Tp __x)
 # 85
 if (__isnan(__x)) { 
 # 86
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 87
 if (__x == (+((_Tp)1))) { 
 # 88
@@ -23402,11 +22725,7 @@ return (_Tp)0; } else {
 # 144
 if (__isnan(__x)) { 
 # 145
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 146
 if (__m == (0)) { 
 # 147
@@ -23478,11 +22797,7 @@ __sph_legendre(unsigned __l, unsigned __m, _Tp __theta)
 # 218
 if (__isnan(__theta)) { 
 # 219
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); }  
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); }  
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 221
 const _Tp __x = std::cos(__theta); 
 # 223
@@ -23618,29 +22933,17 @@ __Ipnu = ((_Tp)0);
 # 104
 }  }  
 # 105
-<<<<<<< HEAD
-__Knu = std::template numeric_limits< _Tp> ::infinity(); 
-# 106
-__Kpnu = (-std::template numeric_limits< _Tp> ::infinity()); 
-=======
 __Knu = std::numeric_limits< _Tp> ::infinity(); 
 # 106
 __Kpnu = (-std::numeric_limits< _Tp> ::infinity()); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 107
 return; 
 # 108
 }  
 # 110
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 111
-const _Tp __fp_min = ((_Tp)10) * std::template numeric_limits< _Tp> ::epsilon(); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 111
 const _Tp __fp_min = ((_Tp)10) * std::numeric_limits< _Tp> ::epsilon(); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 112
 const int __max_iter = 15000; 
 # 113
@@ -23904,11 +23207,7 @@ std::__throw_domain_error("Bad argument in __cyl_bessel_i."); } else {
 # 274
 if (__isnan(__nu) || __isnan(__x)) { 
 # 275
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 276
 if ((__x * __x) < (((_Tp)10) * (__nu + ((_Tp)1)))) { 
 # 277
@@ -23938,11 +23237,7 @@ std::__throw_domain_error("Bad argument in __cyl_bessel_k."); } else {
 # 310
 if (__isnan(__nu) || __isnan(__x)) { 
 # 311
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 313
 { 
 # 314
@@ -23994,19 +23289,11 @@ const _Tp __rootx = std::sqrt(__absx);
 # 379
 const _Tp __z = ((((_Tp)2) * __absx) * __rootx) / ((_Tp)3); 
 # 380
-<<<<<<< HEAD
-const _Tp _S_inf = std::template numeric_limits< _Tp> ::infinity(); 
-# 382
-if (__isnan(__x)) { 
-# 383
-__Bip = (__Aip = (__Bi = (__Ai = std::template numeric_limits< _Tp> ::quiet_NaN()))); } else { 
-=======
 const _Tp _S_inf = std::numeric_limits< _Tp> ::infinity(); 
 # 382
 if (__isnan(__x)) { 
 # 383
 __Bip = (__Aip = (__Bi = (__Ai = std::numeric_limits< _Tp> ::quiet_NaN()))); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 384
 if (__z == _S_inf) 
 # 385
@@ -24130,11 +23417,7 @@ __poly_hermite(unsigned __n, _Tp __x)
 # 118
 if (__isnan(__x)) { 
 # 119
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 121
 return __poly_hermite_recursion(__n, __x); }  
 # 122
@@ -24278,11 +23561,7 @@ std::__throw_domain_error("Negative argument in __poly_laguerre."); } else {
 # 252
 if (__isnan(__x)) { 
 # 253
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 254
 if (__n == (0)) { 
 # 255
@@ -24358,11 +23637,7 @@ for (unsigned __k = (1); __k < max_iter; ++__k)
 # 90
 _Tp __term = std::pow(static_cast< _Tp>(__k), -__s); 
 # 91
-<<<<<<< HEAD
-if (__term < std::template numeric_limits< _Tp> ::epsilon()) 
-=======
 if (__term < std::numeric_limits< _Tp> ::epsilon()) 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 92
 { 
 # 93
@@ -24394,11 +23669,7 @@ for (unsigned __i = (1); __i < (10000000); ++__i)
 # 123
 _Tp __term = __sgn / std::pow(__i, __s); 
 # 124
-<<<<<<< HEAD
-if (std::abs(__term) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if (std::abs(__term) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 125
 break; }  
 # 126
@@ -24422,15 +23693,9 @@ __riemann_zeta_glob(_Tp __s)
 # 161
 _Tp __zeta = ((_Tp)0); 
 # 163
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 165
-const _Tp __max_bincoeff = (std::template numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 165
 const _Tp __max_bincoeff = (std::numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 170
 if (__s < ((_Tp)0)) 
 # 171
@@ -24532,11 +23797,7 @@ const _Tp __fact = ((_Tp)1) - std::pow(__prime[__i], -__s);
 # 268
 __zeta *= __fact; 
 # 269
-<<<<<<< HEAD
-if ((((_Tp)1) - __fact) < std::template numeric_limits< _Tp> ::epsilon()) { 
-=======
 if ((((_Tp)1) - __fact) < std::numeric_limits< _Tp> ::epsilon()) { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 270
 break; }  
 # 271
@@ -24556,19 +23817,11 @@ __riemann_zeta(_Tp __s)
 # 297
 if (__isnan(__s)) { 
 # 298
-<<<<<<< HEAD
-return std::template numeric_limits< _Tp> ::quiet_NaN(); } else { 
-# 299
-if (__s == ((_Tp)1)) { 
-# 300
-return std::template numeric_limits< _Tp> ::infinity(); } else { 
-=======
 return std::numeric_limits< _Tp> ::quiet_NaN(); } else { 
 # 299
 if (__s == ((_Tp)1)) { 
 # 300
 return std::numeric_limits< _Tp> ::infinity(); } else { 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 301
 if (__s < (-((_Tp)19))) 
 # 302
@@ -24622,15 +23875,9 @@ __hurwitz_zeta_glob(_Tp __a, _Tp __s)
 # 369
 _Tp __zeta = ((_Tp)0); 
 # 371
-<<<<<<< HEAD
-const _Tp __eps = std::template numeric_limits< _Tp> ::epsilon(); 
-# 373
-const _Tp __max_bincoeff = (std::template numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
-=======
 const _Tp __eps = std::numeric_limits< _Tp> ::epsilon(); 
 # 373
 const _Tp __max_bincoeff = (std::numeric_limits< _Tp> ::max_exponent10 * std::log((_Tp)10)) - ((_Tp)1); 
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 376
 const unsigned __maxit = (10000); 
 # 377
@@ -25245,17 +24492,10 @@ return std::__detail::__hyperg< typename __promote_4< _Tpa, _Tpb, _Tpc, _Tp> ::_
 } 
 # 1385
 }
-<<<<<<< HEAD
-# 1938 "/usr/include/c++/11/cmath" 3
-}
-# 1388 "/usr/include/c++/11/bits/specfun.h" 3
-#pragma GCC visibility pop
-=======
 # 1388
 #pragma GCC visibility pop
 # 1938 "/usr/include/c++/11/cmath" 3
 }
->>>>>>> 72f5edd (SLAM, Costmap generation)
 # 38 "/usr/include/c++/11/math.h" 3
 using std::abs;
 # 39
