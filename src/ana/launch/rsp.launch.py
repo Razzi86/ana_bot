@@ -15,40 +15,42 @@ def generate_launch_description():
     xacro_file = os.path.join(pkg_path,'description','robot.urdf.xacro')
     robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=', use_ros2_control, ' sim_mode:=', use_sim_time])
 
-    # Create a robot_state_publisher node
-    params = {'robot_description': robot_description_config, 'use_sim_time': use_sim_time}
-    node_robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        parameters=[params]
-    )
+    # # Create a robot_state_publisher node
+    # params = {'robot_description': robot_description_config, 'use_sim_time': use_sim_time}
+    # node_robot_state_publisher = Node(
+    #     package='robot_state_publisher',
+    #     executable='robot_state_publisher',
+    #     output='screen',
+    #     parameters=[params]
+    # )
 
     # Delayed launch for RViz
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        arguments=['-d', '/home/aidan/ana_bot/src/ana/config/ana_map.rviz'],
+        arguments=['-d', '/home/aidan/ana_bot/src/ana/config/ana_nav2.rviz'],
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
 
-    delayed_rviz_launch = TimerAction(
-        period=5.0,  # Delay in seconds TODO: MAKE DELAY WAIT UNTIL SPECIFIC VARIABLES ARE LOADED, 5 SECONDS DOES NOT GUARANTEE THEY WILL BE. THIS IS WHY ODOM IS MESSED UP.
-        actions=[rviz_node]
-    )
+    # delayed_rviz_launch = TimerAction(
+    #     period=5.0,  # Delay in seconds TODO: MAKE DELAY WAIT UNTIL SPECIFIC VARIABLES ARE LOADED, 5 SECONDS DOES NOT GUARANTEE THEY WILL BE. THIS IS WHY ODOM IS MESSED UP.
+    #     actions=[rviz_node]
+    # )
 
     # Launch
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
-            default_value='false',
+            default_value='true',
             description='Use sim time if true'),
         DeclareLaunchArgument(
             'use_ros2_control',
             default_value='true',
             description='Use ros2_control if true'),
-        node_robot_state_publisher,
-        delayed_rviz_launch
+        # node_robot_state_publisher,
+
+        rviz_node
+        # delayed_rviz_launch
     ])

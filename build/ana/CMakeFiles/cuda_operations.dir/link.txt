@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcuda_operations.a CMakeFiles/cuda_operations.dir/src/cuda/pointcloud_processing.cu.o
+/usr/bin/ranlib libcuda_operations.a

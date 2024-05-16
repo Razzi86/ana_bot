@@ -1,0 +1,36 @@
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence name="NavigateSequence">
+            <!-- Compute path to goal -->
+            <Fallback name="PathPlanningFallback">
+                <ComputePathToPose goal="{goal}" path="{path}" name="ComputePath"/>
+                <!-- Recovery behaviors if path planning fails -->
+                <Sequence name="PathPlanningRecovery">
+                    <ClearEntireCostmap service_name="global_costmap/clear_entire_costmap" name="ClearGlobalCostmap"/>
+                    <ComputePathToPose goal="{goal}" path="{path}" name="RecomputePath"/>
+                </Sequence>
+            </Fallback>
+            
+            <!-- Follow the planned path -->
+            <Fallback name="PathFollowingFallback">
+                <FollowPath path="{path}" name="FollowPath"/>
+                <!-- Recovery behaviors if path following fails -->
+                <Sequence name="PathFollowingRecovery">
+                    <ClearEntireCostmap service_name="local_costmap/clear_entire_costmap" name="ClearLocalCostmap"/>
+                    <ComputePathToPose goal="{goal}" path="{path}" name="RecomputePathFollowing"/>
+                </Sequence>
+            </Fallback>
+
+            <!-- Check if the goal is reached -->
+            <Fallback name="GoalReachedFallback">
+                <GoalReached/>
+                <Sequence name="GoalCheckRecovery">
+                    <IsStuck name="CheckIfStuck"/>
+                    <ClearEntireCostmap service_name="local_costmap/clear_entire_costmap" name="ClearLocalCostmapOnStuck"/>
+                    <Spin duration="1.5" name="SpinRecovery"/>
+                    <ComputePathToPose goal="{goal}" path="{path}" name="RecomputePathOnStuck"/>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

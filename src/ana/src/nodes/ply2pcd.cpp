@@ -35,13 +35,13 @@ extern "C" void processPointCloudVoxelGrid(PointXYZ *hostPoints, int numPoints, 
 class PCDPublisher : public rclcpp::Node {
 public:
     PCDPublisher() : Node("pcd_publisher") {
-        auto qos_default = rclcpp::QoS(rclcpp::KeepLast(10));
+        auto qos_default = rclcpp::QoS(rclcpp::KeepLast(100));
         publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("mapped_point_cloud", qos_default);
         
-        auto qos_grid = rclcpp::QoS(rclcpp::KeepLast(10)).transient_local().reliable();
+        auto qos_grid = rclcpp::QoS(rclcpp::KeepLast(100)).transient_local().reliable();
         grid_publisher_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("costmap_new", qos_grid);
         
-        auto qos_height = rclcpp::QoS(rclcpp::KeepLast(10));
+        auto qos_height = rclcpp::QoS(rclcpp::KeepLast(100));
         height_publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("height_map", qos_height);
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(5000),
@@ -133,7 +133,7 @@ private:
         // Convert cloud to an occupancy grid
 
         // Convert cloud to an occupancy grid and publish height data
-        auto grid = createOccupancyGrid(cloud, 0.005f);  // Example: 5cm grid cell size
+        auto grid = createOccupancyGrid(cloud, 0.05f);  // Example: 5cm grid cell size
         std_msgs::msg::Float32MultiArray height_data;
         height_data.data.resize(grid.info.width * grid.info.height, -1.0); // Initialize with -1.0 (unknown height)
 
@@ -220,7 +220,7 @@ private:
     void applyGradientCosts(int x, int y, nav_msgs::msg::OccupancyGrid& costmap, int width, int height) {
         
         // RESOLUTION == 0.005
-        const int range = 80;
+        const int range = 34;
         // const int distance3 = 5 * 5;  // Squared distance
         const int distanceA = 20 * 20;
         const int distanceB = 28 * 28;
@@ -254,12 +254,12 @@ private:
         }
 
         // // RESOLUTION == 0.05
-        // const int range = 10;
+        // const int range = 5;
         // // const int distance3 = 5 * 5;  // Squared distance
-        // const int distanceA = 4 * 4;
-        // const int distanceB = 7 * 7;
-        // const int distanceC = 9 * 9;
-        // const int distanceD = 10 * 10;
+        // const int distanceA = 2 * 2;
+        // const int distanceB = 3 * 3;
+        // const int distanceC = 4 * 4;
+        // const int distanceD = 5 * 5;
 
         // for (int dx = -range; dx <= range; dx++) {
         //     for (int dy = -range; dy <= range; dy++) {

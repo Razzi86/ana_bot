@@ -1,0 +1,28 @@
+# rtabmap.yaml
+
+# Enable RGB-D mode
+RGBD/Enabled: true
+
+# Do not generate point clouds
+RGBD/PointCloud: false
+
+# Use depth images
+RGBD/ProximityBySpace: false
+
+# Set the max depth range
+RGBD/MaxDepth: 10.0
+
+# Set the detection rate to zero to disable new map creation
+Rtabmap/DetectionRate: 0
+
+# Disable memory incrementation
+Mem/IncrementalMemory: false
+
+# Use all nodes in working memory for localization
+Mem/InitWMWithAllNodes: true
+
+# Disable scan matching
+RGBD/ScanMatching: false
+
+# Set other parameters as needed
+Kp/MaxFeatures: 0

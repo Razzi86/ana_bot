@@ -1,0 +1,8 @@
+source;share/ana/hook/cmake_prefix_path.ps1
+source;share/ana/hook/cmake_prefix_path.dsv
+source;share/ana/hook/cmake_prefix_path.sh
+source;share/ana/local_setup.bash
+source;share/ana/local_setup.dsv
+source;share/ana/local_setup.ps1
+source;share/ana/local_setup.sh
+source;share/ana/local_setup.zsh

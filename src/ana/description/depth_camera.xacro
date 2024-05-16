@@ -33,7 +33,8 @@
         <sensor name="camera" type="depth">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
-            <update_rate>20</update_rate>
+            <!-- <update_rate>20</update_rate> -->
+            <update_rate>5</update_rate>
             <camera>
                 <!-- specific to D435i | radians -->
                 <horizontal_fov>1.501</horizontal_fov>

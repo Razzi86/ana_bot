@@ -24,7 +24,7 @@ public:
         pub_ = it.advertise("/filtered/depth/image_raw", 10);
     }
 
-    // WORKING: preprocess depth camera before RTAB-MAP uses it
+    // WORKING: preproceFss depth camera before RTAB-MAP uses it
     void callback(const sensor_msgs::msg::Image::ConstSharedPtr& msg) {
         cv_bridge::CvImagePtr cv_ptr;
         try {

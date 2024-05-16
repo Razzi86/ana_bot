@@ -1,6 +1,7 @@
 amcl:
   ros__parameters:
     use_sim_time: True
+    transform_publish_period: 0.02  # Publish transform every 0.05 seconds (20 Hz)
     alpha1: 0.2
     alpha2: 0.2
     alpha3: 0.2
@@ -26,11 +27,11 @@ amcl:
     recovery_alpha_fast: 0.0
     recovery_alpha_slow: 0.0
     resample_interval: 1
-    robot_model_type: "nav2_amcl::DifferentialMotionModel"
+    robot_model_type: "differential"
     save_pose_rate: 0.5
     sigma_hit: 0.2
     tf_broadcast: true
-    transform_tolerance: 1.0
+    transform_tolerance: 0.1 # was 1.0, changed to 0.1 for faster updates
     update_min_a: 0.2
     update_min_d: 0.25
     z_hit: 0.5
@@ -45,8 +46,12 @@ bt_navigator:
     global_frame: map
     robot_base_frame: base_link
     odom_topic: /odom
-    bt_loop_duration: 10
+    bt_loop_duration: 20 # Purpose: This parameter often signifies the duration in milliseconds that the behavior tree navigator waits or loops during its operations. It could impact how frequently the behavior tree checks its status and updates.
     default_server_timeout: 20
+    behavior_tree_tick_rate: 5.0  # Adjust this value to a suitable rate
+    # default_bt_xml_filename: "/home/aidan/ana_bot/src/ana/config/simple_navigation_bt.xml"  # Path to your custom behavior tree
+    # default_bt_xml_filename: "navigate_to_pose_w_replanning_and_recovery.xml"  # Path relative to the nav2_bt_navigator package
+    # default_bt_xml_filename: "navigate_through_poses_w_replanning_and_recovery.xml"
     # 'default_nav_through_poses_bt_xml' and 'default_nav_to_pose_bt_xml' are use defaults:
     # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
     # nav2_bt_navigator/navigate_through_poses_w_replanning_and_recovery.xml
@@ -100,6 +105,7 @@ bt_navigator:
       - nav2_drive_on_heading_cancel_bt_node
       - nav2_is_battery_charging_condition_bt_node
 
+
 bt_navigator_navigate_through_poses_rclcpp_node:
   ros__parameters:
     use_sim_time: True
@@ -111,7 +117,7 @@ bt_navigator_navigate_to_pose_rclcpp_node:
 controller_server:
   ros__parameters:
     use_sim_time: True
-    controller_frequency: 20.0
+    controller_frequency: 40.0 # was 40hz
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
@@ -193,10 +199,10 @@ local_costmap:
       resolution: 0.05
       robot_radius: 0.22
       plugins: ["voxel_layer", "inflation_layer"]
-      inflation_layer:
+      inflation_layer: # MAKING THE COSTMAP
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        cost_scaling_factor: 2.0
+        inflation_radius: 0.25
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -251,14 +257,14 @@ global_costmap:
         #   obstacle_min_range: 0.0
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
-        map_topic: /costmap_new
+        map_topic: /costmap_new # was /costmap_new
         # yaml_filename: "/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.yaml"  # Path to your YAML file
         map_subscribe_transient_local: True
         subscribe_to_updates: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        cost_scaling_factor: 2.0 # cost inflation
+        inflation_radius: 0.25 # cost radius scaling
       always_send_full_costmap: True
 
 map_server:
@@ -278,7 +284,7 @@ map_saver:
 
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 20.0
+    expected_planner_frequency: 40.0 # was 20hz, lowered to 5hz
     use_sim_time: True
     planner_plugins: ["GridBased"]
     GridBased:
@@ -315,8 +321,8 @@ behavior_server:
       plugin: "nav2_behaviors/AssistedTeleop"
     global_frame: odom
     robot_base_frame: base_link
-    transform_tolerance: 0.1
-    use_sim_time: true
+    transform_tolerance: 0.5 # was 0.1
+    use_sim_time: True
     simulate_ahead_time: 2.0
     max_rotational_vel: 1.0
     min_rotational_vel: 0.4
@@ -324,7 +330,9 @@ behavior_server:
 
 robot_state_publisher:
   ros__parameters:
-    use_sim_time: True
+    transform_timeout: 0.5
+    transform_buffer_size: 120
+    use_sim_time: true
 
 waypoint_follower:
   ros__parameters:

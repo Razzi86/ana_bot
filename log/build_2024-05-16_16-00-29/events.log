@@ -1,0 +1,239 @@
+[0.000000] (-) TimerEvent: {}
+[0.000091] (ana) JobQueued: {'identifier': 'ana', 'dependencies': OrderedDict()}
+[0.000152] (my_python_pkg) JobQueued: {'identifier': 'my_python_pkg', 'dependencies': OrderedDict()}
+[0.000212] (ana) JobStarted: {'identifier': 'ana'}
+[0.004036] (my_python_pkg) JobStarted: {'identifier': 'my_python_pkg'}
+[0.008489] (ana) JobProgress: {'identifier': 'ana', 'progress': 'cmake'}
+[0.009749] (ana) JobProgress: {'identifier': 'ana', 'progress': 'build'}
+[0.009846] (ana) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aidan/ana_bot/build/ana', '--', '-j16', '-l16'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2306'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2282,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2282'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/29b2e62f_84eb_42db_8776_080fbab71e6d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[0.047729] (ana) StdoutLine: {'line': b'[ 18%] Built target cuda_operations\n'}
+[0.067358] (ana) StdoutLine: {'line': b'[ 45%] Built target depth_live_filter_node\n'}
+[0.099489] (-) TimerEvent: {}
+[0.103032] (ana) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target publish_pcd_node\x1b[0m\n'}
+[0.150949] (ana) StdoutLine: {'line': b'[ 72%] Built target occupancy_grid_subscriber_node\n'}
+[0.164337] (ana) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/publish_pcd_node.dir/src/nodes/ply2pcd.cpp.o\x1b[0m\n'}
+[0.199596] (-) TimerEvent: {}
+[0.299822] (-) TimerEvent: {}
+[0.400059] (-) TimerEvent: {}
+[0.500427] (my_python_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_python_pkg', 'build', '--build-base', '/home/aidan/ana_bot/build/my_python_pkg/build', 'install', '--record', '/home/aidan/ana_bot/build/my_python_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/aidan/ana_bot/src/my_python_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aidan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/aidan', 'OLDPWD': '/home/aidan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2306', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/aidan/ana_bot/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'aidan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aidan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2282,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2282', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29b2e62f_84eb_42db_8776_080fbab71e6d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.136', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aidan/ana_bot/build/my_python_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/aidan/ana_bot/build/my_python_pkg/prefix_override:/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/aidan/ana_bot/install/ana'}, 'shell': False}
+[0.501719] (-) TimerEvent: {}
+[0.601885] (-) TimerEvent: {}
+[0.697113] (my_python_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.697552] (my_python_pkg) StdoutLine: {'line': b'writing ../../build/my_python_pkg/my_python_pkg.egg-info/PKG-INFO\n'}
+[0.697702] (my_python_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/my_python_pkg/my_python_pkg.egg-info/dependency_links.txt\n'}
+[0.697810] (my_python_pkg) StdoutLine: {'line': b'writing entry points to ../../build/my_python_pkg/my_python_pkg.egg-info/entry_points.txt\n'}
+[0.697907] (my_python_pkg) StdoutLine: {'line': b'writing requirements to ../../build/my_python_pkg/my_python_pkg.egg-info/requires.txt\n'}
+[0.697985] (my_python_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/my_python_pkg/my_python_pkg.egg-info/top_level.txt\n'}
+[0.699093] (my_python_pkg) StdoutLine: {'line': b"reading manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.699664] (my_python_pkg) StdoutLine: {'line': b"writing manifest file '../../build/my_python_pkg/my_python_pkg.egg-info/SOURCES.txt'\n"}
+[0.699748] (my_python_pkg) StdoutLine: {'line': b'running build\n'}
+[0.699797] (my_python_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.699928] (my_python_pkg) StdoutLine: {'line': b'running install\n'}
+[0.700158] (my_python_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.701029] (my_python_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.701150] (my_python_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.701945] (-) TimerEvent: {}
+[0.702137] (my_python_pkg) StdoutLine: {'line': b"removing '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.702335] (my_python_pkg) StdoutLine: {'line': b'Copying ../../build/my_python_pkg/my_python_pkg.egg-info to /home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages/my_python_pkg-0.0.0-py3.10.egg-info\n'}
+[0.702870] (my_python_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.716921] (my_python_pkg) StdoutLine: {'line': b'Installing arduino_serial script to /home/aidan/ana_bot/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.717099] (my_python_pkg) StdoutLine: {'line': b'Installing motor_control script to /home/aidan/ana_bot/install/my_python_pkg/lib/my_python_pkg\n'}
+[0.717274] (my_python_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/aidan/ana_bot/build/my_python_pkg/install.log'\n"}
+[0.733007] (my_python_pkg) CommandEnded: {'returncode': 0}
+[0.740095] (my_python_pkg) JobEnded: {'identifier': 'my_python_pkg', 'rc': 0}
+[0.802054] (-) TimerEvent: {}
+[0.902334] (-) TimerEvent: {}
+[1.002614] (-) TimerEvent: {}
+[1.102896] (-) TimerEvent: {}
+[1.203165] (-) TimerEvent: {}
+[1.303406] (-) TimerEvent: {}
+[1.403673] (-) TimerEvent: {}
+[1.503950] (-) TimerEvent: {}
+[1.604231] (-) TimerEvent: {}
+[1.704515] (-) TimerEvent: {}
+[1.804758] (-) TimerEvent: {}
+[1.905003] (-) TimerEvent: {}
+[2.005247] (-) TimerEvent: {}
+[2.105489] (-) TimerEvent: {}
+[2.205726] (-) TimerEvent: {}
+[2.305973] (-) TimerEvent: {}
+[2.406224] (-) TimerEvent: {}
+[2.506467] (-) TimerEvent: {}
+[2.606712] (-) TimerEvent: {}
+[2.706957] (-) TimerEvent: {}
+[2.807202] (-) TimerEvent: {}
+[2.907447] (-) TimerEvent: {}
+[3.007716] (-) TimerEvent: {}
+[3.108052] (-) TimerEvent: {}
+[3.208382] (-) TimerEvent: {}
+[3.308653] (-) TimerEvent: {}
+[3.408900] (-) TimerEvent: {}
+[3.509152] (-) TimerEvent: {}
+[3.609415] (-) TimerEvent: {}
+[3.709681] (-) TimerEvent: {}
+[3.809942] (-) TimerEvent: {}
+[3.910186] (-) TimerEvent: {}
+[4.010399] (-) TimerEvent: {}
+[4.110640] (-) TimerEvent: {}
+[4.210889] (-) TimerEvent: {}
+[4.311141] (-) TimerEvent: {}
+[4.411390] (-) TimerEvent: {}
+[4.511642] (-) TimerEvent: {}
+[4.611887] (-) TimerEvent: {}
+[4.712133] (-) TimerEvent: {}
+[4.812412] (-) TimerEvent: {}
+[4.912698] (-) TimerEvent: {}
+[5.013004] (-) TimerEvent: {}
+[5.113287] (-) TimerEvent: {}
+[5.213555] (-) TimerEvent: {}
+[5.313844] (-) TimerEvent: {}
+[5.414116] (-) TimerEvent: {}
+[5.514404] (-) TimerEvent: {}
+[5.614672] (-) TimerEvent: {}
+[5.714944] (-) TimerEvent: {}
+[5.815211] (-) TimerEvent: {}
+[5.915481] (-) TimerEvent: {}
+[6.015738] (-) TimerEvent: {}
+[6.116008] (-) TimerEvent: {}
+[6.216263] (-) TimerEvent: {}
+[6.316567] (-) TimerEvent: {}
+[6.416816] (-) TimerEvent: {}
+[6.517068] (-) TimerEvent: {}
+[6.617313] (-) TimerEvent: {}
+[6.717584] (-) TimerEvent: {}
+[6.817818] (-) TimerEvent: {}
+[6.918072] (-) TimerEvent: {}
+[7.018360] (-) TimerEvent: {}
+[7.118658] (-) TimerEvent: {}
+[7.157006] (ana) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CUDA device code CMakeFiles/publish_pcd_node.dir/cmake_device_link.o\x1b[0m\n'}
+[7.193338] (ana) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable publish_pcd_node\x1b[0m\n'}
+[7.218755] (-) TimerEvent: {}
+[7.318992] (-) TimerEvent: {}
+[7.419250] (-) TimerEvent: {}
+[7.519551] (-) TimerEvent: {}
+[7.619803] (-) TimerEvent: {}
+[7.720057] (-) TimerEvent: {}
+[7.820273] (-) TimerEvent: {}
+[7.920522] (-) TimerEvent: {}
+[8.020764] (-) TimerEvent: {}
+[8.121003] (-) TimerEvent: {}
+[8.221251] (-) TimerEvent: {}
+[8.321497] (-) TimerEvent: {}
+[8.421765] (-) TimerEvent: {}
+[8.522011] (-) TimerEvent: {}
+[8.622257] (-) TimerEvent: {}
+[8.722500] (-) TimerEvent: {}
+[8.822740] (-) TimerEvent: {}
+[8.922982] (-) TimerEvent: {}
+[9.023252] (-) TimerEvent: {}
+[9.123534] (-) TimerEvent: {}
+[9.223806] (-) TimerEvent: {}
+[9.324127] (-) TimerEvent: {}
+[9.424415] (-) TimerEvent: {}
+[9.524718] (-) TimerEvent: {}
+[9.624964] (-) TimerEvent: {}
+[9.725280] (-) TimerEvent: {}
+[9.825585] (-) TimerEvent: {}
+[9.925889] (-) TimerEvent: {}
+[10.026201] (-) TimerEvent: {}
+[10.126552] (-) TimerEvent: {}
+[10.226974] (-) TimerEvent: {}
+[10.327288] (-) TimerEvent: {}
+[10.427604] (-) TimerEvent: {}
+[10.527842] (-) TimerEvent: {}
+[10.628099] (-) TimerEvent: {}
+[10.728374] (-) TimerEvent: {}
+[10.828611] (-) TimerEvent: {}
+[10.928879] (-) TimerEvent: {}
+[11.029132] (-) TimerEvent: {}
+[11.129410] (-) TimerEvent: {}
+[11.229675] (-) TimerEvent: {}
+[11.329969] (-) TimerEvent: {}
+[11.430220] (-) TimerEvent: {}
+[11.530451] (-) TimerEvent: {}
+[11.630691] (-) TimerEvent: {}
+[11.730965] (-) TimerEvent: {}
+[11.831213] (-) TimerEvent: {}
+[11.931491] (-) TimerEvent: {}
+[12.031822] (-) TimerEvent: {}
+[12.132119] (-) TimerEvent: {}
+[12.232426] (-) TimerEvent: {}
+[12.332690] (-) TimerEvent: {}
+[12.432959] (-) TimerEvent: {}
+[12.533225] (-) TimerEvent: {}
+[12.633535] (-) TimerEvent: {}
+[12.733864] (-) TimerEvent: {}
+[12.767420] (ana) StdoutLine: {'line': b'[100%] Built target publish_pcd_node\n'}
+[12.784301] (ana) CommandEnded: {'returncode': 0}
+[12.805847] (ana) JobProgress: {'identifier': 'ana', 'progress': 'install'}
+[12.811569] (ana) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aidan/ana_bot/build/ana'], 'cwd': '/home/aidan/ana_bot/build/ana', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'aidan'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aidan'), ('OLDPWD', '/home/aidan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2306'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/aidan/ana_bot/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'aidan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'aidan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/lib/cuda/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aidan-Z390-AORUS-MASTER:@/tmp/.ICE-unix/2282,unix/aidan-Z390-AORUS-MASTER:/tmp/.ICE-unix/2282'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/29b2e62f_84eb_42db_8776_080fbab71e6d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/aidan/ana_bot/install/my_python_pkg:/home/aidan/ana_bot/install/ana:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/aidan/ana_bot/build/ana'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/aidan/ana_bot/install/my_python_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/aidan/ana_bot/install/ana:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble')]), 'shell': False}
+[12.816056] (ana) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.816379] (ana) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[12.816744] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/depth_live_filter_node\n'}
+[12.816889] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/publish_pcd_node\n'}
+[12.817028] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/occupancy_grid_subscriber_node\n'}
+[12.817088] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/lib/ana/libcuda_operations.a\n'}
+[12.817262] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/amcl_params.yaml\n'}
+[12.817358] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana.rviz\n'}
+[12.817445] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_map.rviz\n'}
+[12.817507] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/ana_nav2.rviz\n'}
+[12.817567] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/custom_navigator.xml\n'}
+[12.817627] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/diff_drive_bot.rviz\n'}
+[12.817684] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/gazebo_params.yaml\n'}
+[12.817741] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/mapper_params_online_async.yaml\n'}
+[12.817797] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/my_controllers.yaml\n'}
+[12.817853] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/nav2_params.yaml\n'}
+[12.817910] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/rtabmap.yaml\n'}
+[12.817958] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simple_navigation_bt.xml\n'}
+[12.818016] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/simulation_depth.rviz\n'}
+[12.818071] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/config/twist_mux.yaml\n'}
+[12.818194] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/camera.xacro\n'}
+[12.818263] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/depth_camera.xacro\n'}
+[12.818335] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_diff_control.xacro\n'}
+[12.818413] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/gazebo_four_diff_control.xacro\n'}
+[12.818488] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/inertial_macros.xacro\n'}
+[12.818562] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot.urdf.xacro\n'}
+[12.818629] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/robot_core.xacro\n'}
+[12.818687] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/description/ros2_diff_control.xacro\n'}
+[12.818819] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/launch_sim.launch.py\n'}
+[12.818882] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/localization_launch.py\n'}
+[12.818951] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/nav2.launch.py\n'}
+[12.819014] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/navigation_launch.py\n'}
+[12.819075] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/online_async_launch.py\n'}
+[12.819137] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rsp.launch.py\n'}
+[12.819198] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/launch/rtab.launch.py\n'}
+[12.819347] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/bedroom.world\n'}
+[12.819422] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/empty.world\n'}
+[12.819490] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles.world\n'}
+[12.819555] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/obstacles_walls.world\n'}
+[12.819615] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/worlds/outside.world\n'}
+[12.819749] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/ana_chassis.stl\n'}
+[12.819820] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/meshes/d435i.stl\n'}
+[12.819993] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/mapped_point_cloud.pcd\n'}
+[12.820074] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.pgm\n'}
+[12.820133] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/occupancy_grid.yaml\n'}
+[12.820190] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/rtab_settings.config\n'}
+[12.820252] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.pcd\n'}
+[12.820310] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4.ply\n'}
+[12.820384] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot1.png\n'}
+[12.820447] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_screenshot2.png\n'}
+[12.820505] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/rtab_maps/settings4_toLoad.ini\n'}
+[12.820609] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/package_run_dependencies/ana\n'}
+[12.820717] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/parent_prefix_path/ana\n'}
+[12.820820] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.sh\n'}
+[12.820942] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/ament_prefix_path.dsv\n'}
+[12.821044] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.sh\n'}
+[12.821118] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/environment/path.dsv\n'}
+[12.821215] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.bash\n'}
+[12.821310] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.sh\n'}
+[12.821402] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.zsh\n'}
+[12.821497] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/local_setup.dsv\n'}
+[12.821574] (ana) StdoutLine: {'line': b'-- Symlinking: /home/aidan/ana_bot/install/ana/share/ana/package.dsv\n'}
+[12.827011] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ament_index/resource_index/packages/ana\n'}
+[12.827126] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig.cmake\n'}
+[12.827207] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/cmake/anaConfig-version.cmake\n'}
+[12.827282] (ana) StdoutLine: {'line': b'-- Up-to-date symlink: /home/aidan/ana_bot/install/ana/share/ana/package.xml\n'}
+[12.828302] (ana) CommandEnded: {'returncode': 0}
+[12.833954] (-) TimerEvent: {}
+[12.857410] (ana) JobEnded: {'identifier': 'ana', 'rc': 0}
+[12.857993] (-) EventReactorShutdown: {}
