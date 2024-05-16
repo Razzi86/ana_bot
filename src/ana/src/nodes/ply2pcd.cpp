@@ -133,7 +133,7 @@ private:
         // Convert cloud to an occupancy grid
 
         // Convert cloud to an occupancy grid and publish height data
-        auto grid = createOccupancyGrid(cloud, 0.05f);  // Example: 5cm grid cell size
+        auto grid = createOccupancyGrid(cloud, 0.005f);  // Example: 5cm grid cell size
         std_msgs::msg::Float32MultiArray height_data;
         height_data.data.resize(grid.info.width * grid.info.height, -1.0); // Initialize with -1.0 (unknown height)
 

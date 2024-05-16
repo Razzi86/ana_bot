@@ -33,11 +33,6 @@ def generate_launch_description():
     bringup_dir = get_package_share_directory('ana')
     nav2_params_path = os.path.join(bringup_dir, 'config', 'nav2_params.yaml')
 
-
-    print("Parameter file path:", nav2_params_path)
-    print("YAML filename:", os.path.join('/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.yaml'))
-
-
     namespace = LaunchConfiguration('namespace')
     use_sim_time = LaunchConfiguration('use_sim_time')
     autostart = LaunchConfiguration('autostart')
@@ -67,7 +62,7 @@ def generate_launch_description():
 
     # Create our own temporary YAML files that include substitutions
     param_substitutions = {
-        'use_sim_time': use_sim_time,
+        'use_sim_time': 'true',
         'autostart': autostart}
 
     configured_params = ParameterFile(

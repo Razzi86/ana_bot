@@ -6,13 +6,14 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    use_sim_time = LaunchConfiguration('use_sim_time')
+    # use_sim_time = LaunchConfiguration('use_sim_time')
     qos = LaunchConfiguration('qos')
     localization = LaunchConfiguration('localization')
 
     parameters = {
         'frame_id': 'base_link',
-        'use_sim_time': use_sim_time,
+        # 'use_sim_time': use_sim_time,
+        'use_sim_time' : True,
         'subscribe_depth': False, # depth camera
         'use_action_for_goal': True,
         'qos_image': qos,

@@ -30,14 +30,13 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}]
     )
 
-    static_transform_odom_to_base_link = ExecuteProcess(
-    cmd=[
-        'ros2', 'run', 'tf2_ros', 'static_transform_publisher',
-        '0', '0', '0', '0', '0', '0', '1',  # x, y, z, qx, qy, qz, qw
-        'odom', 'base_link'  # parent_frame_id, child_frame_id
-    ],
-    output='screen'
-)
+    # static_transform_odom_to_base_link = ExecuteProcess(
+    # cmd=[
+    #     'ros2', 'run', 'tf2_ros', 'static_transform_publisher',
+    #     '0', '0', '0', '0', '0', '0', '1',  # x, y, z, qx, qy, qz, qw
+    #     'odom', 'base_link'  # parent_frame_id, child_frame_id
+    # ],
+    # output='screen')
 
     depth_live_filter_node = Node(
         package='ana',  # Adjust if your package name is different
@@ -77,11 +76,11 @@ def generate_launch_description():
             )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
 
-    nlocalization_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory(package_name),'launch','navigation_launch.py'
-        )]), launch_arguments={'use_sim_time': 'true'}.items()
-    )
+    # localization_launch = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([os.path.join(
+    #         get_package_share_directory(package_name),'launch','navigation_launch.py'
+    #     )]), launch_arguments={'use_sim_time': 'true'}.items()
+    # )
     
     # parameter file changes gazebo refresh from 10 to 400hz
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
@@ -108,7 +107,8 @@ def generate_launch_description():
             '-z', '0.0',  # Z coordinate (height)
             '-Y', '0.0'   # Yaw orientation
         ],
-        output='screen'
+        output='screen',
+        parameters=[{'use_sim_time': True}] # ADDED
     )
 
     
@@ -116,12 +116,14 @@ def generate_launch_description():
         package="controller_manager",
         executable="spawner",
         arguments=["diff_cont"],
+        parameters=[{'use_sim_time': True}] # ADDED
     )
     
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_broad"],
+        parameters=[{'use_sim_time': True}] # ADDED
     )
 
     rtab_node = IncludeLaunchDescription(
@@ -156,7 +158,7 @@ def generate_launch_description():
         pcd_publisher_node,
         nav2_node,
         twist_mux,
-        nlocalization_launch,
-        static_transform_odom_to_base_link
+        # localization_launch
+        # static_transform_odom_to_base_link
         # occupancy_grid_subscriber_node,
     ])
