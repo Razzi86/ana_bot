@@ -1,69 +1,32 @@
+# configuration settings for controller_manager for various controllers
 controller_manager:
+  # ros2 settings
   ros__parameters:
-    update_rate: 30
-    use_sim_time: True
+    update_rate: 30 # hz which controllers are updated
+    use_sim_time: True # use simulation time
 
-    diff_cont:
-      type: diff_drive_controller/DiffDriveController
+    diff_cont: # diff drive controller configuration
+      type: diff_drive_controller/DiffDriveController # ros2 diff drive controller
 
-    joint_broad:
+    joint_broad: # joint state controller configuration
       type: joint_state_broadcaster/JointStateBroadcaster
 
+# configuration settings for differential drive controller "diff_control"
 diff_cont:
   ros__parameters:
 
-    publish_rate: 50.0
+    publish_rate: 50.0 # hz, N messages per second
 
-    base_frame_id: base_link
-    odom_frame_id: "odom"
+    # reference frame for robot base
+    base_frame_id: base_link # usually the moving part
+    # reference frame for the odometry information
+    odom_frame_id: "odom" # tracks position relative to start
 
+    # joint names
     left_wheel_names: ['front_left_wheel_joint', 'back_left_wheel_joint']
     right_wheel_names: ['front_right_wheel_joint', 'back_right_wheel_joint']
     wheel_separation: 0.188
     wheel_radius: 0.0325
 
-    use_stamped_vel: false # exclusive to diff drive
-
-    # open_loop: false    
-
-    # wheels_per_side: x
-    # wheel_separation_multiplier: x
-    # left_wheel_radius_multiplier: x
-    # right_wheel_radius_multiplier: x
-
-    # odom_frame_id: x
-    # pose_covariance_diagonal: x
-    # twist_covariance_diagonal: x
-    # open_loop: x
-    # enable_odom_tf: x
-
-    # cmd_vel_timeout: x
-    # publish_limited_velocity: x
-    # velocity_rolling_window_size: x
+    use_stamped_vel: false # if controller should use a timstamped velocity command
     
-
-    # linear.x.has_velocity_limits: false
-    # linear.x.has_acceleration_limits: false
-    # linear.x.has_jerk_limits: false
-    # linear.x.max_velocity: NAN
-    # linear.x.min_velocity: NAN
-    # linear.x.max_acceleration: NAN
-    # linear.x.min_acceleration: NAN
-    # linear.x.max_jerk: NAN
-    # linear.x.min_jerk: NAN
-
-    # angular.z.has_velocity_limits: false
-    # angular.z.has_acceleration_limits: false
-    # angular.z.has_jerk_limits: false
-    # angular.z.max_velocity: NAN
-    # angular.z.min_velocity: NAN
-    # angular.z.max_acceleration: NAN
-    # angular.z.min_acceleration: NAN
-    # angular.z.max_jerk: NAN
-    # angular.z.min_jerk: NAN
-
-
-
-
-# joint_broad:
-#   ros__parameters:

@@ -1,18 +1,19 @@
+# Adaptive Monte Carlo Localization (AMCL) configuration
 amcl:
   ros__parameters:
     use_sim_time: True
-    transform_publish_period: 0.02  # Publish transform every 0.05 seconds (20 Hz)
-    alpha1: 0.2
+    transform_publish_period: 0.02  # time in seconds between publising pose estimates
+    alpha1: 0.2 # motion model parameters
     alpha2: 0.2
     alpha3: 0.2
     alpha4: 0.2
     alpha5: 0.2
-    base_frame_id: "base_footprint"
+    base_frame_id: "base_footprint" # frame ID of robot base
     beam_skip_distance: 0.5
     beam_skip_error_threshold: 0.9
     beam_skip_threshold: 0.3
     do_beamskip: false
-    global_frame_id: "map"
+    global_frame_id: "map" # global frame for map #TODO
     lambda_short: 0.1
     laser_likelihood_max_dist: 2.0
     laser_max_range: 100.0
@@ -21,16 +22,16 @@ amcl:
     max_beams: 60
     max_particles: 2000
     min_particles: 500
-    odom_frame_id: "odom"
+    odom_frame_id: "odom" # frame ID for odometry
     pf_err: 0.05
     pf_z: 0.99
     recovery_alpha_fast: 0.0
     recovery_alpha_slow: 0.0
     resample_interval: 1
-    robot_model_type: "differential"
+    robot_model_type: "differential" # type of robot model
     save_pose_rate: 0.5
     sigma_hit: 0.2
-    tf_broadcast: true
+    tf_broadcast: true # broadcase transform
     transform_tolerance: 0.1 # was 1.0, changed to 0.1 for faster updates
     update_min_a: 0.2
     update_min_d: 0.25
@@ -38,17 +39,18 @@ amcl:
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
-    scan_topic: scan
+    scan_topic: scan # topic for laser scan input
 
+# Behavior Tree (BT) Navigator Configuration
 bt_navigator:
   ros__parameters:
     use_sim_time: True
-    global_frame: map
-    robot_base_frame: base_link
-    odom_topic: /odom
-    bt_loop_duration: 20 # Purpose: This parameter often signifies the duration in milliseconds that the behavior tree navigator waits or loops during its operations. It could impact how frequently the behavior tree checks its status and updates.
+    global_frame: map # global frame of reference
+    robot_base_frame: base_link # base frame of the robot
+    odom_topic: /odom # topic for odometry data
+    bt_loop_duration: 20 # behavior tree loop in ms
     default_server_timeout: 20
-    behavior_tree_tick_rate: 5.0  # Adjust this value to a suitable rate
+    behavior_tree_tick_rate: 5.0  # behavior tree tick rate
     # default_bt_xml_filename: "/home/aidan/ana_bot/src/ana/config/simple_navigation_bt.xml"  # Path to your custom behavior tree
     # default_bt_xml_filename: "navigate_to_pose_w_replanning_and_recovery.xml"  # Path relative to the nav2_bt_navigator package
     # default_bt_xml_filename: "navigate_through_poses_w_replanning_and_recovery.xml"
@@ -56,6 +58,8 @@ bt_navigator:
     # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
     # nav2_bt_navigator/navigate_through_poses_w_replanning_and_recovery.xml
     # They can be set here or via a RewrittenYaml remap from a parent launch file to Nav2.
+    
+    # Behavior Tree noes for navigation (default imports)
     plugin_lib_names:
       - nav2_compute_path_to_pose_action_bt_node
       - nav2_compute_path_through_poses_action_bt_node
@@ -105,6 +109,7 @@ bt_navigator:
       - nav2_drive_on_heading_cancel_bt_node
       - nav2_is_battery_charging_condition_bt_node
 
+# BT node configurations for specific tasls
 
 bt_navigator_navigate_through_poses_rclcpp_node:
   ros__parameters:
@@ -114,39 +119,44 @@ bt_navigator_navigate_to_pose_rclcpp_node:
   ros__parameters:
     use_sim_time: True
 
+# controller server config
 controller_server:
   ros__parameters:
     use_sim_time: True
-    controller_frequency: 40.0 # was 40hz
+    controller_frequency: 40.0
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
-    progress_checker_plugin: "progress_checker"
-    goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
+    progress_checker_plugin: "progress_checker" # progress checking plugin
+    goal_checker_plugins: ["general_goal_checker"] # goal checking plugin
     controller_plugins: ["FollowPath"]
 
     # Progress checker parameters
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
-      required_movement_radius: 0.5
-      movement_time_allowance: 10.0
+      required_movement_radius: 0.5 # radius within the robot should have moved
+      movement_time_allowance: 10.0 # time allowed to move the required radius
+    
     # Goal checker parameters
     #precise_goal_checker:
     #  plugin: "nav2_controller::SimpleGoalChecker"
     #  xy_goal_tolerance: 0.25
     #  yaw_goal_tolerance: 0.25
     #  stateful: True
+
+    # goal checker parameters
     general_goal_checker:
-      stateful: True
+      stateful: True # stateful configuration option
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.25
-      yaw_goal_tolerance: 0.25
-    # DWB parameters
+      xy_goal_tolerance: 0.25 # tolerance for goal position in meters
+      yaw_goal_tolerance: 0.25 # tolerance for goal orientation in radians
+
+    # Dynamic Window Approach (DWB), local planner parameters
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
-      debug_trajectory_details: True
-      min_vel_x: 0.0
+      debug_trajectory_details: True # trajectory debugging
+      min_vel_x: 0.0 # minimum velocities in different directions
       min_vel_y: 0.0
       max_vel_x: 0.26
       max_vel_y: 0.0
@@ -156,10 +166,10 @@ controller_server:
       min_speed_theta: 0.0
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
-      acc_lim_x: 2.5
+      acc_lim_x: 2.5 # acceleration limits
       acc_lim_y: 0.0
       acc_lim_theta: 3.2
-      decel_lim_x: -2.5
+      decel_lim_x: -2.5 # deceleration limits
       decel_lim_y: 0.0
       decel_lim_theta: -3.2
       vx_samples: 20
@@ -170,10 +180,10 @@ controller_server:
       angular_granularity: 0.025
       transform_tolerance: 0.2
       xy_goal_tolerance: 0.25
-      trans_stopped_velocity: 0.25
-      short_circuit_trajectory_evaluation: True
-      stateful: True
-      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
+      trans_stopped_velocity: 0.25 # threshold for robot to be considered stopped
+      short_circuit_trajectory_evaluation: True # whether to short circuit trajectory evaluation
+      stateful: True 
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"] # trajactory critiques 
       BaseObstacle.scale: 0.02
       PathAlign.scale: 32.0
       PathAlign.forward_point_distance: 0.1
@@ -183,27 +193,29 @@ controller_server:
       GoalDist.scale: 24.0
       RotateToGoal.scale: 32.0
       RotateToGoal.slowing_factor: 5.0
-      RotateToGoal.lookahead_time: -1.0
+      RotateToGoal.lookahead_time
 
 local_costmap:
   local_costmap:
     ros__parameters:
       update_frequency: 5.0
       publish_frequency: 2.0
-      global_frame: odom
-      robot_base_frame: base_link
+      global_frame: odom # global frame of reference for local costmap
+      robot_base_frame: base_link # global frame of the robot for local costmap
       use_sim_time: True
-      rolling_window: true
-      width: 3
-      height: 3
-      resolution: 0.05
-      robot_radius: 0.22
+      rolling_window: true # whether costmap is continuously rolling
+      width: 3 # width of local costmap
+      height: 3 # height of local costmap
+      resolution: 0.05 # resolution of the local costmap in meters per cell
+      robot_radius: 0.22 # radius of robot in meters
       plugins: ["voxel_layer", "inflation_layer"]
-      inflation_layer: # MAKING THE COSTMAP
+
+      inflation_layer: # local costmap
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.0
-        inflation_radius: 0.55
-      voxel_layer:
+        cost_scaling_factor: 2.0 # scaling factor for the cost
+        inflation_radius: 0.25 # radius of inflation around obstacles
+
+      voxel_layer: # voxel filter
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
         publish_voxel_map: True
@@ -223,24 +235,27 @@ local_costmap:
         #   raytrace_min_range: 0.0
         #   obstacle_max_range: 2.5
         #   obstacle_min_range: 0.0
-      static_layer:
+
+      static_layer: # static map
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
+
       always_send_full_costmap: True
 
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 1.0
-      publish_frequency: 1.0
-      global_frame: odom
-      robot_base_frame: base_link
+      update_frequency: 5.0
+      publish_frequency: 2.0
+      global_frame: odom # global frame of reference for local costmap
+      robot_base_frame: base_link # global frame of the robot for local costmap
       use_sim_time: True
-      robot_radius: 0.22
-      resolution: 0.05
+      resolution: 0.05 # resolution of the local costmap in meters per cell
+      robot_radius: 0.22 # radius of robot in meters
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
-      obstacle_layer:
+
+      obstacle_layer: # obstacle layer parameters
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: False # True for observations (below), false for no observation
         # # FOR OBSERVING LIVE
@@ -255,16 +270,18 @@ global_costmap:
         #   raytrace_min_range: 0.0
         #   obstacle_max_range: 2.5
         #   obstacle_min_range: 0.0
-      static_layer:
+
+      static_layer: # static map
         plugin: "nav2_costmap_2d::StaticLayer"
-        map_topic: /costmap_new # was /costmap_new
+        map_topic: /costmap_new # static map topic
         # yaml_filename: "/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.yaml"  # Path to your YAML file
         map_subscribe_transient_local: True
         subscribe_to_updates: True
+
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.0 # cost inflation
-        inflation_radius: 0.25 # cost radius scaling
+        cost_scaling_factor: 2.0 # scaling factor for the cost
+        inflation_radius: 0.25 # radius of inflation around obstacles
       always_send_full_costmap: True
 
 map_server:

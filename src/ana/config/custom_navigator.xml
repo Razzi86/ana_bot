@@ -1,23 +1,35 @@
+<!-- behavior tree to execute: "NavigateWithRecovery" -->
 <root main_tree_to_execute="NavigateWithRecovery">
+  <!-- assign bt an ID: NavigateWithRecovery -->
   <BehaviorTree ID="NavigateWithRecovery">
+    <!-- fallback node: tries child nodes in order and moves to the next if the previous fails -->
     <Fallback name="NavigateWithRecoveryFallback">
+      <!-- sequence node: executes children in order, all must succeed for sequence to succeed -->
       <Sequence name="NavigateToPose">
+        <!-- checks if goal has been updated: if yes, restart sequence -->
         <GoalUpdated/>
+        <!-- compute path to target pose from current pose -->
         <ComputePathToPose goal="${goal_pose}" path="${path}"/>
+        <!-- robot follows the computed path -->
         <FollowPath path="${path}"/>
       </Sequence>
+      <!-- reactive fallback node: similar to fallback, but re-checks all conditions of all children before trying any -->
       <ReactiveFallback name="RecoveryFallback">
+        <!-- sequence for costmap clearing and reattempting path computation -->
         <Sequence name="ClearCostmapRecovery">
+          <!-- clear entire costmap to remove potential obstacles -->
           <ClearEntireCostmap/>
           <ComputePathToPose goal="${goal_pose}" path="${path}"/>
           <FollowPath path="${path}"/>
         </Sequence>
         <Sequence name="SpinRecovery">
+          <!-- robot spins 360 degrees to potential clear local obstacles or reorient itself -->
           <Spin/>
           <ComputePathToPose goal="${goal_pose}" path="${path}"/>
           <FollowPath path="${path}"/>
         </Sequence>
         <Sequence name="BackUpRecovery">
+          <!-- robot moves backwards for a predefined distance or time -->
           <BackUp/>
           <ComputePathToPose goal="${goal_pose}" path="${path}"/>
           <FollowPath path="${path}"/>

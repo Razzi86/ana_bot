@@ -1,8 +1,12 @@
+<!-- name of behavior tree to execute -->
 <root main_tree_to_execute="MainTree">
+    <!-- id of behavior tree -->
     <BehaviorTree ID="MainTree">
+        <!-- sequence node: executes child nodes in order; all must succeed for the sequence to succeed -->
         <Sequence name="NavigateSequence">
-            <!-- Compute path to goal -->
+            <!-- tries child nodes in order and moves to the next if the previous fails -->
             <Fallback name="PathPlanningFallback">
+                <!-- compute path to target pose from current pose -->
                 <ComputePathToPose goal="{goal}" path="{path}" name="ComputePath"/>
                 <!-- Recovery behaviors if path planning fails -->
                 <Sequence name="PathPlanningRecovery">

@@ -1,3 +1,6 @@
+# gazebo simulation configuration block
 gazebo:
+  # ros2 parameters for gazebo
   ros__parameters:
+    # sets the rate that Gazebo will publish update (1 = 1hz = 1 per second)
     publish_rate: 400.0
