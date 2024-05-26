@@ -13,11 +13,11 @@ slam_toolbox:
     odom_frame: odom
     map_frame: map
     base_frame: base_footprint
-    scan_topic: /scan # LASER SCANNER
+    scan_topic: /livox_gazebo_plugin/out # USE CARTOGRAPHER !!!!!
+    scan_type: pointcloud2
     use_map_saver: true
     mode: mapping #localization
 
-    # UNCOMMENT THIS AND PUT FULL PATH TO MAP_SERIAL.DATA
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose

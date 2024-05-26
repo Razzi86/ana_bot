@@ -85,7 +85,7 @@ def generate_launch_description():
     
     # parameter file changes gazebo refresh from 10 to 400hz
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
-    world_file = '/home/aidan/ana_bot/src/ana/worlds/outside.world'
+    world_file = '/home/aidan/ana_bot/src/ana/worlds/outside3.world'
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]), 
@@ -103,8 +103,8 @@ def generate_launch_description():
         arguments=[
             '-topic', 'robot_description', 
             '-entity', 'my_bot',
-            '-x', '-2.0',  # X coordinate
-            '-y', '-4.0',  # Y coordinate
+            '-x', '0.0',  # X coordinate
+            '-y', '0.0',  # Y coordinate
             '-z', '0.0',  # Z coordinate (height)
             '-Y', '0.0'   # Yaw orientation
         ],
@@ -129,21 +129,20 @@ def generate_launch_description():
 
     rtab_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory(package_name),'launch','rtab.launch.py'
+            get_package_share_directory(package_name),'launch','rtab_3D.launch.py'
         )]),     
         launch_arguments={
             'use_sim_time': 'true',
-            'depth_topic': '/filtered/depth/image_raw'  # Ensure this remapping is correct
         }.items()
     )
 
-    pcd_publisher_node = Node(
-        package='ana',  # Replace 'ana' with your package name if different
-        executable='publish_pcd_node',  # The name of your executable
-        name='pcd_publisher',
-        output='screen',
-        parameters=[{'use_sim_time': True}]
-    )
+    # pcd_publisher_node = Node(
+    #     package='ana',  # Replace 'ana' with your package name if different
+    #     executable='publish_pcd_node',  # The name of your executable
+    #     name='pcd_publisher',
+    #     output='screen',
+    #     parameters=[{'use_sim_time': True}]
+    # )
     
     # Launch
     return LaunchDescription([
@@ -156,7 +155,7 @@ def generate_launch_description():
         diff_drive_spawner,
         joint_broad_spawner,
         node_robot_state_publisher,
-        pcd_publisher_node,
+        # pcd_publisher_node,
         nav2_node,
         twist_mux,
         # localization_launch

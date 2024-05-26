@@ -62,7 +62,7 @@
             </plugin>
         </sensor>
 
-        <!-- <sensor name="rgb_camera" type="camera">
+        <sensor name="rgb_camera" type="camera">
             <pose>0 0 0 0 0 0</pose>
             <visualize>true</visualize>
             <update_rate>30</update_rate> <!-- Frame rate for RGB camera -->
@@ -82,7 +82,7 @@
             <plugin name="rgb_camera_controller" filename="libgazebo_ros_camera.so">
                 <frame_name>camera_link_optical</frame_name>
             </plugin>
-        </sensor> -->
+        </sensor>
 
     </gazebo>
 

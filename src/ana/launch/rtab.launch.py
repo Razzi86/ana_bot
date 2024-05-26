@@ -14,19 +14,19 @@ def generate_launch_description():
         'frame_id': 'base_link',
         # 'use_sim_time': use_sim_time,
         'use_sim_time' : True,
-        'subscribe_depth': False, # depth camera
+        'subscribe_depth': True, # depth camera
         'use_action_for_goal': True,
         'qos_image': qos,
         'qos_imu': qos,
         'Reg/Force3DoF': 'true',
         'Optimizer/GravitySigma': '0',  # Disable imu constraints as we are already in 2D
-        'max_depth': 10.0,
-        'Mem/IncrementalMemory': 'False',  # Disable memory incrementation
+        'max_depth': 9.9,
+        'Mem/IncrementalMemory': 'True',  # Disable memory incrementation
         'Mem/InitWMWithAllNodes': 'True',  # Use all nodes in working memory for localization
-        'Rtabmap/DetectionRate': '0',  # Disable new map creation
-        'Kp/MaxFeatures': '0',  # Disable feature extraction
-        'RGBD/ProximityBySpace': 'false',  # Disable joining new clouds by space
-        'RGBD/Mapping': 'false'  # Disable mapping features
+        'Rtabmap/DetectionRate': '1',  # Disable new map creation
+        'Kp/MaxFeatures': '1000',  # Disable feature extraction
+        'RGBD/ProximityBySpace': 'true',  # Disable joining new clouds by space
+        'RGBD/Mapping': 'true'  # Disable mapping features
     }
 
     remappings = [

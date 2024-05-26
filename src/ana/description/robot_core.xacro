@@ -31,7 +31,8 @@
         <child link="base_footprint"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
-    
+
+    <!-- sits on top of base link, used for 3d navigation (for 2d, only base_link is used) -->
     <link name="base_footprint">
     </link>
 

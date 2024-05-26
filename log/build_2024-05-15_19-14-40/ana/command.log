@@ -1,2 +1,0 @@
-Invoking command in '/home/aidan/ana_bot/build/ana': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake /home/aidan/ana_bot/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ana_bot/install/ana
-Invoked command in '/home/aidan/ana_bot/build/ana' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/aidan/ana_bot/install/my_python_pkg:/opt/ros/humble /usr/bin/cmake /home/aidan/ana_bot/src/ana -DCMAKE_INSTALL_PREFIX=/home/aidan/ana_bot/install/ana

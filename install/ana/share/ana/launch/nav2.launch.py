@@ -1,1 +1,0 @@
-/home/aidan/ana_bot/src/ana/launch/nav2.launch.py
