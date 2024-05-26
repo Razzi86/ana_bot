@@ -6,3 +6,13 @@
 /ana_bot/build/
 /ana_bot/install/
 /ana_bot/log/
+
+# Ignore specific large files in src and install directories
+src/ana/rtab_maps/*.pcd
+src/ana/rtab_maps/*.ply
+install/ana/share/ana/rtab_maps/*.pcd
+install/ana/share/ana/rtab_maps/*.ply
+
+# Ignore Git object packs (usually not necessary as .git/ should already be ignored)
+.git/objects/pack/*.pack
+
