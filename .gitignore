@@ -12,6 +12,7 @@ src/ana/rtab_maps/*.pcd
 src/ana/rtab_maps/*.ply
 install/ana/share/ana/rtab_maps/*.pcd
 install/ana/share/ana/rtab_maps/*.ply
+/src/ana/rtab_maps/*.pgm
 
 # Ignore Git object packs (usually not necessary as .git/ should already be ignored)
 .git/objects/pack/*.pack
