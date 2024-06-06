@@ -6,7 +6,7 @@ ANA is a person project that I'm very proud of. ANA runs on the ROS2 Humble fram
 
 ## 3D Printed Chassis
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="55%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="53%" />
 </p>
 
 ## SLAM
@@ -18,7 +18,7 @@ ANA is a person project that I'm very proud of. ANA runs on the ROS2 Humble fram
 ## Gallery
 - ANA navigating through an obstacle course using its SLAM and Nav2 capabilities.
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="49%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="100%" />
 </p>
 - Real-time mapping demonstration using the onboard depth camera.
 
