@@ -1,49 +1,34 @@
 # ANA - Autonomous Navigation Assembly
 
-ANA is a person project that I'm very proud of. ANA runs on the ROS2 Humble framework, and uses SLAM, Nav2, 3D Lidar, Depth Images, and various other sensors to autonomous navigate and map complex terrains. This github is meant to showcase ANA's lifspan, and I hope those who view it can be inspired by or learn from my progress and the open source code.
+After hundreads of hours of development, going down countless preventable rabbit holes, and a few realizations that the bug I've been trying to fix for days was just a simple namespace error, I've completed the first major milestone and goal for this project. In the begining I simply wanted to apply a few things I learned from my robotics software engineer internship, but that quickly turned into a project bigger than myself. I present ANA, a DIY wheeled robot that uses sensor fusion and SLAM to map out and autonomous navigate complex terrains. ANA uses input from depth imaging, pointcloud, rgb camera, encoder motors, and various other sensors to make inferences and calculated decisions. I know that with enough time I'll look back at ANA as a rather simple project, but to complete it I had to go through development and debugging hell that overall made me a better engineer. 
 
-## Hardware
+## Overview
+- Linux: Ubuntu 22.04 LTS
+- ROS2: Humble
+- Software: Gazebo classic, RViz2, RTAB-Map
+- Features: SLAM, Nav2, Depth Sensing, Pointcloud Processing, Skid Steer, Odometry/Encoder
 
 ## 3D Printed Chassis
+- Perception: D435i, Velodyne VLP-16, Livox Mid-360
+- Computations: NVIDIA Jetson Orin Nano, Arduino Leonardo
+- Other: Arduino REV3 Motor Shield, Quadrature Encoder Motors, Lipo/Battery
 <p float="left">
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="75%" />
 </p>
 
-## SLAM
+## RTAB-Map SLAM
+- Livox Mid-360
 <p float="left">
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/1.gif" width="75%" />
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/2.gif" width="75%" />
 </p>
 
-## Gallery
-- ANA navigating through an obstacle course using its SLAM and Nav2 capabilities.
+- Intel D435i
+
+## Nav2
+- A node processes the SLAM-created 3D pointcloud and creates a 2D costmap based on height
+- Nav2 performs path planning and autonomous navigation based on the odometry, static global, and live local costmap (Lidar, Depth)
+- Controller uses skid-steer
 <p float="left">
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="75%" />
 </p>
-- Real-time mapping demonstration using the onboard depth camera.
-
-## Framework
-- Ubuntu 22.04 LTS
-- ROS2 Humble
-- Gazebo Classic for simulation
-
-## Components
-1. **ROS2 Humble**: The core framework providing tools and libraries designed for a robust robotic system.
-2. **Gazebo Classic**: For simulation of the robot in a high-fidelity 3D environment.
-3. **Depth Camera**: For environmental perception and obstacle detection.
-4. **Jetson Orin**: Powers the processing needs for real-time data handling and computation.
-
-## Features
-- **SLAM**: Implements RTAB-Map for efficient 3D mapping and localization.
-- **Navigation and Path Planning**: Utilizes the Nav2 stack for dynamic path planning and obstacle avoidance.
-- **Depth Sensing**: Equipped with a depth camera to perceive and interact with the environment in three dimensions.
-- **Skid Steering**: Allows the robot to maneuver tightly and swiftly with a four-wheeled skid steering system.
-
-## 3D printed chassis and assembled components
-<p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_stuff.jpg" width="28%" />
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_moving.gif" width="21%" />
-</p>
-
-## RViz2 & Gazebo (new more-in-sync RViz/Gazebo gif to be added soon)
-<img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_gif.gif" width="80%" />
