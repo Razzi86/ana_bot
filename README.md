@@ -13,14 +13,15 @@ After hundreads of hours of development, going down countless preventable rabbit
 - Computations: NVIDIA Jetson Orin Nano, Arduino Leonardo
 - Other: Arduino REV3 Motor Shield, Quadrature Encoder Motors, Lipo/Battery
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="75%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="60%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_moving.gif" width="25.3%" />
 </p>
 
 ## RTAB-Map SLAM
 - Livox Mid-360
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/1.gif" width="75%" />
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/2.gif" width="75%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/1.gif" width="100%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/2.gif" width="100%" />
 </p>
 
 - Intel D435i
@@ -30,5 +31,10 @@ After hundreads of hours of development, going down countless preventable rabbit
 - Nav2 performs path planning and autonomous navigation based on the odometry, static global, and live local costmap (Lidar, Depth)
 - Controller uses skid-steer
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="75%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="100%" />
+</p>
+
+## Prototypes
+<p float="left">
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_stuff.jpg" width="50%" />
 </p>
