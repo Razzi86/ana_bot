@@ -27,8 +27,9 @@ After months of development, countless debugging rabbit holes, and the few times
 - Intel D435i
 
 ## Nav2
-- A node processes the SLAM-created 3D pointcloud and creates a 2D costmap based on height
-- Nav2 performs path planning and autonomous navigation based on the odometry, static global, and live local costmap (Lidar, Depth)
+- A node processes the SLAM-created 3D pointcloud and creates a 2D global costmap based on height
+- The local costmap is created live based on height, and will be used for obstacle avoidance
+- Nav2 performs control, path planning, and autonomous navigation based on the odometry, static global, and live local costmap (Lidar, Depth)
 - Controller uses skid-steer
 <p float="left">
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="100%" />
