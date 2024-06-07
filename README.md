@@ -9,7 +9,7 @@ After months of development, countless debugging rabbit holes, and the few times
 - Features: SLAM, Nav2, Depth Sensing, Pointcloud Processing, Skid Steer, Odometry/Encoder
 
 ## 3D Printed Chassis
-- Perception: D435i, Velodyne VLP-16, Livox Mid-360
+- Perception: Intel D435i, Velodyne VLP-16, Livox Mid-360, RPLIDAR A3
 - Computations: NVIDIA Jetson Orin Nano, Arduino Leonardo
 - Other: Arduino REV3 Motor Shield, Quadrature Encoder Motors, Lipo/Battery
 <p float="left">
