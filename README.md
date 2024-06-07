@@ -32,8 +32,8 @@ After months of development, countless debugging rabbit holes, and the few times
 - Nav2 performs control, path planning, and autonomous navigation based on the odometry, static global, and live local costmap (Lidar, Depth)
 - Controller uses skid-steer
 <p float="left">
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="74%" />
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_moving.gif" width="24%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/3.gif" width="72%" />
+  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car_moving.gif" width="23%" />
 </p>
 
 ## Prototypes
