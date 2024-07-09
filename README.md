@@ -15,7 +15,6 @@ After months of development, countless debugging rabbit holes, and the few times
 <p float="left">
   <img src="https://github.com/Razzi86/Razzi86.github.io/blob/master/assets/img/car2.jpg" width="34%" />
   <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/VelodyneLivox.jpeg" width="34%" />
-  <img src="https://github.com/Razzi86/ana_bot/blob/main/src/ana/github_content/car.jpg" width="60%" />
 </p>
 
 ## RTAB-Map SLAM
