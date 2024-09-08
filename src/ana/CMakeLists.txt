@@ -61,6 +61,7 @@ add_definitions(${PCL_DEFINITIONS})
 add_executable(depth_live_filter_node src/nodes/depth_live_filter.cpp)
 add_executable(publish_pcd_node src/nodes/ply2pcd.cpp)
 add_executable(occupancy_grid_subscriber_node src/nodes/occupancy_grid_subscriber.cpp)
+add_executable(point_net_node src/nodes/point_net_filter.cpp)
 
 # Enable CUDA language support and define CUDA library
 enable_language(CUDA)  # Enable CUDA language support (for CMake >= 3.18)
@@ -99,6 +100,13 @@ ament_target_dependencies(occupancy_grid_subscriber_node
   pcl_conversions
   nav2_costmap_2d
 )
+ament_target_dependencies(point_net_node
+  rclcpp
+  sensor_msgs
+  image_transport
+  cv_bridge
+  OpenCV
+)
 
 
 # If building tests, find and load test dependencies
@@ -109,6 +117,7 @@ endif()
 
 # Install executables and/or libraries
 install(TARGETS
+  point_net_node
   depth_live_filter_node
   publish_pcd_node
   occupancy_grid_subscriber_node
@@ -157,6 +166,20 @@ target_link_libraries(occupancy_grid_subscriber_node
   ${tf2_ros_LIBRARIES}
   ${PCL_LIBRARIES}
   cuda_operations
+  ${CUDA_LIBRARIES}
+  ${CUDA_cudart_LIBRARY}
+  ${nav2_costmap_2d_LIBRARIES}
+)
+target_link_libraries(point_net_node
+  ${rclcpp_LIBRARIES}
+  ${std_msgs_LIBRARIES}
+  ${sensor_msgs_LIBRARIES}
+  ${nav_msgs_LIBRARIES}
+  ${geometry_msgs_LIBRARIES}
+  ${tf2_ros_LIBRARIES}
+  ${PCL_LIBRARIES}
+  cuda_operations
+  ${OpenCV_LIBRARIES}
   ${CUDA_LIBRARIES}
   ${CUDA_cudart_LIBRARY}
   ${nav2_costmap_2d_LIBRARIES}

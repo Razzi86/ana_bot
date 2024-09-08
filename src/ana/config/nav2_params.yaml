@@ -41,6 +41,22 @@ amcl:
     z_short: 0.05
     scan_topic: scan # topic for laser scan input
 
+pointcloud_to_laserscan:
+  ros__parameters:
+    target_frame: base_link          # Frame to which the point cloud is transformed
+    transform_tolerance: 0.2         # How late a transform can be and still be used
+    min_height: 0.0                  # Minimum height to consider in the point cloud
+    max_height: 0.5                  # Maximum height to consider in the point cloud
+    angle_min: -1.57                 # Start angle of the scan (rad)
+    angle_max: 1.57                  # End angle of the scan (rad)
+    angle_increment: 0.0174533       # Angular distance between measurements (rad)
+    scan_time: 0.033                 # Time between scans (s)
+    range_min: 0.1                   # Minimum range value (m)
+    range_max: 10.0                  # Maximum range value (m)
+    use_inf: true                    # Whether to use infinities or not
+    topic: /livox_gazebo_plugin/out  # Topic where the pointcloud2 messages are published
+    output_frame: base_link          # Frame ID for the output laser scan
+
 # Behavior Tree (BT) Navigator Configuration
 bt_navigator:
   ros__parameters:
@@ -155,6 +171,9 @@ controller_server:
     # Dynamic Window Approach (DWB), local planner parameters
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist", "ObstacleFootprintCritic"]
+      ObstacleFootprintCritic:
+        plugin: "dwb_critics::ObstacleFootprintCritic"
       debug_trajectory_details: True
       min_vel_x: 0.1
       min_vel_y: 0.1
@@ -188,7 +207,6 @@ controller_server:
       trans_stopped_velocity: 0.25
       short_circuit_trajectory_evaluation: True
       stateful: True
-      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 50.0 # how far to be away from cost
       PathAlign.scale: 3.0
       PathAlign.forward_point_distance: 0.2
@@ -204,18 +222,18 @@ local_costmap:
   local_costmap:
     ros__parameters:
       # footprint: "[[-0.25, 0.25], [0.25, 0.25], [0.25, -0.25], [-0.25, -0.25]]"
-      footprint: "[[-0.5, 0.5], [0.5, 0.5], [0.5, -0.5], [-0.5, -0.5]]"
+      footprint: "[[-0.175, 0.175], [0.175, 0.175], [0.175, -0.175], [-0.175, -0.175]]"
       update_frequency: 5.0
       publish_frequency: 2.0
       global_frame: odom # global frame of reference for local costmap
       robot_base_frame: base_link # global frame of the robot for local costmap
       use_sim_time: True
       rolling_window: true # whether costmap is continuously rolling
-      width: 3 # width of local costmap
-      height: 3 # height of local costmap
+      width: 8 # width of local costmap
+      height: 8 # height of local costmap
       resolution: 0.05 # resolution of the local costmap in meters per cell
-      robot_radius: 0.22 # radius of robot in meters
-      plugins: ["voxel_layer", "inflation_layer"]
+      robot_radius: 0.175 # radius of robot in meters
+      plugins: ["voxel_layer", "inflation_layer", "pointcloud_layer"] # static_layer
 
       inflation_layer: # local costmap
         plugin: "nav2_costmap_2d::InflationLayer"
@@ -223,6 +241,7 @@ local_costmap:
         # inflation_radius: 0.6
         cost_scaling_factor: 5.0 # cost inflation, lower = smoother
         inflation_radius: 0.28 # cost radius scaling, meters avoidance from initial high cost
+
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -232,21 +251,28 @@ local_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        # observation_sources: scan
-        # scan:
-        #   topic: /scan
-        #   max_obstacle_height: 2.0
-        #   clearing: True
-        #   marking: True
-        #   data_type: "LaserScan"
-        #   raytrace_max_range: 3.0
-        #   raytrace_min_range: 0.0
-        #   obstacle_max_range: 2.5
-        #   obstacle_min_range: 0.0
 
-      static_layer: # static map
-        plugin: "nav2_costmap_2d::StaticLayer"
-        map_subscribe_transient_local: True
+      pointcloud_layer: # pointcloud layer parameters
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: True
+        pointcloud_topic: /livox_gazebo_plugin/out
+        max_obstacle_height: 0.2
+        min_obstacle_height: 0.0
+        observation_sources: pointcloud
+        pointcloud:
+          topic: /livox_gazebo_plugin/out
+          max_obstacle_height: 0.2
+          min_obstacle_height: 0.0
+          marking: true
+          clearing: true
+          raytrace_max_range: 8.0
+          obstacle_max_range: 8.0
+          data_type: "PointCloud2"
+
+      # static_layer: # static map
+      #   plugin: "nav2_costmap_2d::StaticLayer"
+      #   map_topic: /costmap_new
+      #   map_subscribe_transient_local: True
 
       always_send_full_costmap: True
 
@@ -254,47 +280,43 @@ global_costmap:
   global_costmap:
     ros__parameters:
       # footprint: "[[-0.25, 0.25], [0.25, 0.25], [0.25, -0.25], [-0.25, -0.25]]"
-      footprint: "[[-0.5, 0.5], [0.5, 0.5], [0.5, -0.5], [-0.5, -0.5]]"
+      footprint: "[[-0.175, 0.175], [0.175, 0.175], [0.175, -0.175], [-0.175, -0.175]]"
       update_frequency: 1.0
       publish_frequency: 1.0
-      global_frame: odom
+      global_frame: map
       robot_base_frame: base_link
       use_sim_time: True
       resolution: 0.05 # resolution of the local costmap in meters per cell
-      robot_radius: 0.22 # radius of robot in meters
+      robot_radius: 0.175 # radius of robot in meters
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
 
-      obstacle_layer: # obstacle layer parameters
+      obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
-        enabled: False # True for observations (below), false for no observation
-        # # FOR OBSERVING LIVE
-        # observation_sources: scan
-        # scan:
-        #   topic: /scan
-        #   max_obstacle_height: 2.0
-        #   clearing: True
-        #   marking: True
-        #   data_type: "LaserScan"
-        #   raytrace_max_range: 3.0
-        #   raytrace_min_range: 0.0
-        #   obstacle_max_range: 2.5
-        #   obstacle_min_range: 0.0
+        enabled: True
+        observation_sources: pointcloud
+        pointcloud:
+          topic: /livox_gazebo_plugin/out
+          max_obstacle_height: 0.2
+          min_obstacle_height: 0.0
+          marking: true
+          clearing: true
+          data_type: "PointCloud2"
+          
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        # cost_scaling_factor: 5.0
+        # inflation_radius: 0.28
+        cost_scaling_factor: 2.0
+        inflation_radius: 0.2
+      always_send_full_costmap: True
 
-      static_layer: # static map
+      static_layer: # static map AND can be updated dynamically from obstacle_layer
         plugin: "nav2_costmap_2d::StaticLayer"
         map_topic: /costmap_new # static map topic
         # yaml_filename: "/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.yaml"  # Path to your YAML file
         map_subscribe_transient_local: True
         subscribe_to_updates: True
-
-      inflation_layer:
-        plugin: "nav2_costmap_2d::InflationLayer"
-        # cost_scaling_factor: 2.0 # cost inflation
-        # inflation_radius: 0.6 # cost radius scaling
-        cost_scaling_factor: 5.0 # cost inflation, lower = smoother
-        inflation_radius: 0.28 # cost radius scaling, meters avoidance from initial high cost
-      always_send_full_costmap: True
 
 map_server:
   ros__parameters:
@@ -321,6 +343,8 @@ planner_server:
       tolerance: 0.5
       path_distance_bias: 50.0  # Increased from 32.0 for a more direct path preference
       goal_distance_bias: 40.0  # This is already quite high, but you might increase it slightly if needed
+      # path_distance_bias: 10.0  # Increased from 32.0 for a more direct path preference
+      # goal_distance_bias: 8.0  # This is already quite high, but you might increase it slightly if needed
       use_astar: true
       allow_unknown: true
 
