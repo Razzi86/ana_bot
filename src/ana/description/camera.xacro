@@ -27,32 +27,4 @@
 
     <link name="camera_link_optical"></link>
 
-    <gazebo reference="camera_link">
-        <material>Gazebo/Grey</material>
-
-        <sensor name="camera" type="camera">
-            <pose> 0 0 0 0 0 0 </pose>
-            <visualize>true</visualize>
-            <update_rate>10</update_rate>
-            <camera>
-                <!-- specific to D435i | radians -->
-                <horizontal_fov>1.501</horizontal_fov>
-                <image>
-                    <format>R8G8B8</format>
-                    <width>1920</width>
-                    <height>1080</height>
-                </image>
-                <!-- filter for min max ranges -->
-                <clip>
-                    <near>0.05</near>
-                    <far>8.0</far>
-                </clip>
-            </camera>
-
-            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-                <frame_name>camera_link_optical</frame_name>
-            </plugin>
-        </sensor>
-    </gazebo>
-
 </robot>

@@ -11,24 +11,22 @@ def generate_launch_description():
     package_name='ana'
 
     xacro_file = os.path.join(get_package_share_directory(package_name), 'description', 'robot.urdf.xacro')
-    robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=true sim_mode:=true'])
+    robot_description_config = Command(['xacro ', xacro_file])
 
-    # Updated part of the script
+    # Node to publish robot state information (joint states, transformations)
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
         parameters=[{
-            'robot_description': ParameterValue(robot_description_config, value_type=str), 
-            'use_sim_time': True
-        }]
+            'robot_description': ParameterValue(robot_description_config, value_type=str)}]
     )
 
     joint_state_publisher = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
         name='joint_state_publisher',
-        parameters=[{'use_sim_time': True}]
+        parameters=[{'use_sim_time': False}]
     )
 
     # static_transform_odom_to_base_link = ExecuteProcess(
@@ -40,18 +38,18 @@ def generate_launch_description():
     # output='screen')
 
     depth_live_filter_node = Node(
-        package='ana',  # Adjust if your package name is different
-        executable='depth_live_filter_node',  # The executable name as defined in CMakeLists.txt
-        name='depth_live_filter',  # Optional: Specify a custom node name
+        package='ana', 
+        executable='depth_live_filter_node',
+        name='depth_live_filter',
         output='screen',
-        parameters=[{'use_sim_time': True}]
+        parameters=[{'use_sim_time': False}]
     )
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
     twist_mux = Node(
         package="twist_mux",
         executable="twist_mux",
-        parameters=[twist_mux_params, {'use_sim_time': True}],
+        parameters=[twist_mux_params, {'use_sim_time': False}],
         remappings=[('/cmd_vel_out', '/diff_cont/cmd_vel_unstamped')]
     )
 
@@ -60,71 +58,72 @@ def generate_launch_description():
     #     executable='occupancy_grid_subscriber_node',  # The executable name as defined in CMakeLists.txt
     #     name='occupancy_grid_subscriber',  # Optional: Specify a custom node name
     #     output='screen',
-    #     parameters=[{'use_sim_time': True}]  # Add any specific parameters required by your node
+    #     parameters=[{'use_sim_time': False}]  # Add any specific parameters required by your node
     # )
 
-        
+    
+    # TODO: Gazebo
     # below automatically does the sim_time, gazebo_ros, robot_description, and joint_state_publisher terminal commands
     rsp_node = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
-                )]), launch_arguments={'use_sim_time': 'true'}.items()
+                )])
     )
 
     nav2_node = IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory(package_name),'launch','navigation_launch.py'
-            )]), launch_arguments={'use_sim_time': 'true'}.items()
+            )])
     )
 
     # localization_launch = IncludeLaunchDescription(
     #     PythonLaunchDescriptionSource([os.path.join(
     #         get_package_share_directory(package_name),'launch','navigation_launch.py'
-    #     )]), launch_arguments={'use_sim_time': 'true'}.items()
+    #     )])
     # )
     
-    # parameter file changes gazebo refresh from 10 to 400hz
-    gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
-    world_file = '/home/aidan/ana_bot/src/ana/worlds/outside.world'
-    gazebo = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]), 
-                    launch_arguments={'world': world_file}.items()
-    )
+    # # parameter file changes gazebo refresh from 10 to 400hz
+    # gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
+    # world_file = '/home/aidan/ana_bot/src/ana/worlds/outside.world'
+    # gazebo = IncludeLaunchDescription(
+    #             PythonLaunchDescriptionSource([os.path.join(
+    #                 get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]), 
+    #                 launch_arguments={'world': world_file}.items()
+    # )
 
     # spawn_entity = Node(
     #     package='gazebo_ros', executable='spawn_entity.py', 
     #     arguments=['-topic', 'robot_description', '-entity', 'my_bot'],
     #     output='screen')
 
-    spawn_entity = Node(
-        package='gazebo_ros', 
-        executable='spawn_entity.py',
-        arguments=[
-            '-topic', 'robot_description', 
-            '-entity', 'my_bot',
-            '-x', '-2.0',  # X coordinate
-            '-y', '-4.0',  # Y coordinate
-            '-z', '0.0',  # Z coordinate (height)
-            '-Y', '0.0'   # Yaw orientation
-        ],
-        output='screen',
-        parameters=[{'use_sim_time': True}] # ADDED
-    )
+    # spawn_entity = Node(
+    #     package='gazebo_ros', 
+    #     executable='spawn_entity.py',
+    #     arguments=[
+    #         '-topic', 'robot_description', 
+    #         '-entity', 'my_bot',
+    #         '-x', '-2.0',  # X coordinate
+    #         '-y', '-4.0',  # Y coordinate
+    #         '-z', '0.0',  # Z coordinate (height)
+    #         '-Y', '0.0'   # Yaw orientation
+    #     ],
+    #     output='screen',
+    #     parameters=[{'use_sim_time': False}] # ADDED
+    # )
 
     
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["diff_cont"],
-        parameters=[{'use_sim_time': True}] # ADDED
+        parameters=[{'use_sim_time': False}] # ADDED
     )
     
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_broad"],
-        parameters=[{'use_sim_time': True}] # ADDED
+        parameters=[{'use_sim_time': False}] # ADDED
     )
 
     rtab_node = IncludeLaunchDescription(
@@ -132,7 +131,7 @@ def generate_launch_description():
             get_package_share_directory(package_name),'launch','rtab.launch.py'
         )]),     
         launch_arguments={
-            'use_sim_time': 'true',
+            'use_sim_time': 'false',
             'depth_topic': '/filtered/depth/image_raw'  # Ensure this remapping is correct
         }.items()
     )
@@ -142,7 +141,7 @@ def generate_launch_description():
         executable='publish_pcd_node',  # The name of your executable
         name='pcd_publisher',
         output='screen',
-        parameters=[{'use_sim_time': True}]
+        parameters=[{'use_sim_time': False}]
     )
     
     # Launch
@@ -151,8 +150,8 @@ def generate_launch_description():
         joint_state_publisher,
         rsp_node,
         rtab_node,
-        gazebo,
-        spawn_entity,
+        # gazebo,
+        # spawn_entity,
         diff_drive_spawner,
         joint_broad_spawner,
         node_robot_state_publisher,

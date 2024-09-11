@@ -18,43 +18,4 @@
       </visual>
   </link>
 
-  <gazebo reference="livox_lidar">
-      <material>Gazebo/Blue</material>
-
-      <sensor name="livox_lidar_sensor" type="gpu_ray">
-          <pose>0 0 0 0 0 0</pose>
-          <!-- <visualize>false</visualize> visualize lasers -->
-          <update_rate>10</update_rate>
-          <ray>
-              <scan>
-                  <horizontal>
-                      <samples>3600</samples> <!-- Increased to simulate higher point density -->
-                      <resolution>1</resolution>
-                      <min_angle>-3.14159</min_angle> <!-- -180 degrees in radians -->
-                      <max_angle>3.14159</max_angle> <!-- 180 degrees in radians -->
-                  </horizontal>
-                  <vertical>
-                      <samples>59</samples> <!-- total degrees -->
-                      <resolution>1</resolution>
-                      <min_angle>-0.1222</min_angle> <!-- -7 degrees in radians -->
-                      <max_angle>0.9076</max_angle> <!-- 52 degrees in radians -->
-                  </vertical>
-              </scan>
-              <range>
-                  <min>0.17</min> <!-- depth camera is .1246 meters away -->
-                  <max>70.0</max> <!-- Maximum range at 80% reflectivity -->
-                  <resolution>0.01</resolution>
-              </range>
-          </ray>
-          <noise>
-              <mean>0.0</mean>
-              <stddev>0.02</stddev> <!-- Random error standard deviation -->
-          </noise>
-          <plugin name="livox_gazebo_plugin" filename="libgazebo_ros_ray_sensor.so">
-              <topicName>/livox/scan</topicName>
-              <frameName>livox_lidar</frameName>
-          </plugin>
-      </sensor>
-  </gazebo>
-
 </robot>

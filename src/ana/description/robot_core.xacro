@@ -61,10 +61,6 @@
         </xacro:inertial_box>
     </link>
 
-    <gazebo reference="chassis">
-        <material>Gazebo/Blue</material>
-    </gazebo>
-
     <!-- FRONT LEFT WHEEL LINK -->
 
     <joint name="front_left_wheel_joint" type="continuous">
@@ -91,10 +87,6 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <gazebo reference="front_left_wheel">
-        <material>Gazebo/Black</material>
-    </gazebo>
-    
     <!-- FRONT RIGHT WHEEL LINK -->
 
     <joint name="front_right_wheel_joint" type="continuous">
@@ -121,10 +113,6 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <gazebo reference="front_right_wheel">
-        <material>Gazebo/Black</material>
-    </gazebo>
-
     <!-- BACK LEFT WHEEL LINK -->
 
     <joint name="back_left_wheel_joint" type="continuous">
@@ -150,12 +138,6 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-
-    <gazebo reference="back_left_wheel">
-        <material>Gazebo/Black</material>
-        <!-- <mu1 value="0.001"/> -->          <!--friction does not want to work -->
-        <!-- <mu2 value="0.001"/> -->
-    </gazebo>
     
     <!-- BACK RIGHT WHEEL LINK -->
 
@@ -182,11 +164,5 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-
-    <gazebo reference="back_right_wheel">
-        <material>Gazebo/Black</material>
-        <!-- <mu1 value="0.001"/> -->           <!--friction does not want to work -->
-        <!-- <mu2 value="0.001"/> -->
-    </gazebo>
 
 </robot>
