@@ -31,7 +31,7 @@ def generate_launch_description():
         name='rviz2',
         arguments=['-d', '/home/aidan/ana_bot/src/ana/config/rviz2_livox.rviz'],
         output='screen',
-        parameters=[{'use_sim_time': True}]
+        parameters=[{'use_sim_time': False}]
     )
 
     # delayed_rviz_launch = TimerAction(
@@ -43,7 +43,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
-            default_value='true',
+            default_value='false',
             description='Use sim time if true'),
         DeclareLaunchArgument(
             'use_ros2_control',

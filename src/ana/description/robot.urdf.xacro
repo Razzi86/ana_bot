@@ -11,6 +11,7 @@
     <!-- <xacro:include filename="camera.xacro"/> -->
     <xacro:include filename="depth_camera.xacro"/>
 
-    <xacro:include filename="livox_mid_360.xacro"/>
+    <!-- <xacro:include filename="livox_mid_360.xacro"/> -->
+    <xacro:include filename="velodyne_vlp16.xacro"/>
     
 </robot>

@@ -62,7 +62,7 @@ def generate_launch_description():
 
     # Create our own temporary YAML files that include substitutions
     param_substitutions = {
-        'use_sim_time': 'true',
+        'use_sim_time': 'false',
         'autostart': autostart}
 
     configured_params = ParameterFile(
@@ -83,7 +83,7 @@ def generate_launch_description():
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='true',
+        default_value='false',
         description='Use simulation (Gazebo) clock if true')
 
     declare_params_file_cmd = DeclareLaunchArgument(
@@ -201,7 +201,7 @@ def generate_launch_description():
                 name='map_server',
                 output='screen',
                 parameters=[{
-                    'use_sim_time': True,
+                    'use_sim_time': False,
                     'yaml_filename': '/home/aidan/ana_bot/src/ana/rtab_maps/occupancy_grid.yaml'
                 }]),
 

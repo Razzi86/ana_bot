@@ -48,7 +48,7 @@
             <geometry>
                 <mesh filename="file:///home/aidan/ana_bot/src/ana/meshes/ana_chassis.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="blue"/>
+            <material name="white"/>
         </visual>
         <collision>
             <origin xyz="0.1175 0.0835 0.0295"/> <!-- chassis location ajusted to be in the middle of the chassis -->

@@ -9,7 +9,7 @@ def generate_launch_description():
             executable='velodyne_driver_node',
             name='velodyne_node',
             parameters=[{
-                'frame_id': 'velodyne',
+                'frame_id': 'base_link',
                 'model': 'VLP16',  # Ensure this is VLP16
                 'port': 2368,
                 'rpm': 600.0,
@@ -28,9 +28,9 @@ def generate_launch_description():
                 ('velodyne_points', '/velodyne_points')
             ]
         ),
-        # Automatically launch RViz with the specified configuration file
-        ExecuteProcess(
-            cmd=['rviz2', '-d', '/home/aidan/ros2_ws/src/ana_bot/src/ana/config/velodyne_rviz.rviz'],
-            output='screen'
-        )
+        # # Automatically launch RViz with the specified configuration file
+        # ExecuteProcess(
+        #     cmd=['rviz2', '-d', '/home/aidan/ros2_ws/src/ana_bot/src/ana/config/velodyne_rviz.rviz'],
+        #     output='screen'
+        # )
     ])

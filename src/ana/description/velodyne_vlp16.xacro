@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="velodyne_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="velodyne_lidar"/>
+      <origin xyz="0 0 0.2" rpy="0 0 0"/>  <!-- Adjust the height as necessary -->
+  </joint>
+
+  <link name="velodyne_lidar">
+      <visual>
+          <geometry>
+              <cylinder radius="0.05" length="0.15"/> <!-- Adjust size as needed -->
+          </geometry>
+          <material name="white">
+              <color rgba="0.5 0.5 0.5 1.0"/> <!-- Grey color -->
+          </material>
+      </visual>
+  </link>
+
+</robot>

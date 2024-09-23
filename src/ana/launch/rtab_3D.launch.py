@@ -20,7 +20,7 @@ def generate_launch_description():
 
         # Launch arguments
         DeclareLaunchArgument(
-            'use_sim_time', default_value='true',
+            'use_sim_time', default_value='false',
             description='Use simulation (Gazebo) clock if true'),
         
         # DeclareLaunchArgument(
@@ -55,7 +55,7 @@ def generate_launch_description():
               'OdomF2M/BundleAdjustment': 'false'
             }],
             remappings=[
-              ('scan_cloud', '/livox_gazebo_plugin/out')
+              ('scan_cloud', '/velodyne_points')
             ]),
             
         Node(
@@ -108,7 +108,7 @@ def generate_launch_description():
               'Vis/MinInliers': '200'  # Example setting for minimum inliers
             }],
             remappings=[
-              ('scan_cloud', '/livox_gazebo_plugin/out') # changing this caused SLAM to work, but there are two clouds
+              ('scan_cloud', '/velodyne_points') # changing this caused SLAM to work, but there are two clouds
             ],
             arguments=[
               '-d' # This will delete the previous database (~/.ros/rtabmap.db)
@@ -129,118 +129,4 @@ def generate_launch_description():
             ]),
     ])
 
-
-
-
-
-# from launch import LaunchDescription
-# from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable
-# from launch.substitutions import LaunchConfiguration
-# from launch.conditions import IfCondition, UnlessCondition
-# from launch_ros.actions import Node
-
-# def generate_launch_description():
-
-#     # use_sim_time = LaunchConfiguration('use_sim_time')
-#     qos = LaunchConfiguration('qos')
-#     localization = LaunchConfiguration('localization')
-
-#     # # 3D PointCloud2 loads
-#     # parameters = {
-#     #     'frame_id': 'base_link',
-#     #     'use_sim_time': True,
-#     #     'subscribe_depth': False,
-#     #     'subscribe_scan': False,
-#     #     'subscribe_scan_cloud': True,
-#     #     'approx_sync': True,
-#     #     'queue_size': 10,
-#     #     'Grid/RangeMax': 250.0,
-#     #     'Grid/CellSize': 0.05,
-#     #     'Grid/FromDepth': True,
-#     #     'Grid/3D': True,
-#     #     'Grid/MapFrameProjection': False,
-#     #     'Grid/RayTracing': True,
-#     #     'Rtabmap/DetectionRate': 1,
-#     #     'Rtabmap/TimeThreshold': 700,
-#     # }
-
-#     # Parameters tailored for SLAM with a 3D point cloud
-#     parameters = {
-#         'frame_id': 'base_link',
-#         'use_sim_time': True,
-#         'subscribe_depth': False,
-#         'subscribe_scan': False,
-#         'subscribe_scan_cloud': True,
-#         'approx_sync': True,
-#         'queue_size': 10,
-#         'Grid/RangeMax': 100.0,  # Adjust based on your LiDAR's actual range
-#         'Grid/CellSize': 0.05,
-#         'Grid/FromDepth': False,  # Important: Set to False for direct point cloud usage
-#         'Grid/3D': 'True',
-#         'Grid/MapFrameProjection': False,
-#         'Grid/RayTracing': True,
-#         'Rtabmap/DetectionRate': 1,
-#         'Rtabmap/TimeThreshold': 700,
-#         'Optimizer/GravitySigma': '0',  # Disable imu constraints as we are already in 2D
-#         'Mem/IncrementalMemory': 'True',  # Disable memory incrementation
-#         'Mem/InitWMWithAllNodes': 'True',  # Use all nodes in working memory for localization
-#         'Rtabmap/DetectionRate': '5',  # Disable new map creation
-#         'Kp/MaxFeatures': '1000',  # Disable feature extraction
-#         'RGBD/ProximityBySpace': 'true',  # Disable joining new clouds by space
-#         'RGBD/Mapping': 'true'  # Disable mapping features
-#     }
-
-#     remappings = [
-#         ('scan_cloud', '/livox_gazebo_plugin/out')
-#     ]
-
-#     return LaunchDescription([
-#         # Launch arguments
-#         DeclareLaunchArgument(
-#             'use_sim_time',
-#             default_value='true',
-#             description='Use simulation time if true'),
-
-#         DeclareLaunchArgument(
-#             'qos',
-#             default_value='sensor_data',
-#             description='Quality of service profile for sensor data'),
-
-#         DeclareLaunchArgument(
-#             'localization',
-#             default_value='false',
-#             description='Enable localization mode if true'),
-
-#         # Mapping node, active unless in localization mode:
-#         Node(
-#             condition=UnlessCondition(localization),
-#             package='rtabmap_slam',
-#             executable='rtabmap',
-#             name='rtabmap',
-#             output='screen',
-#             parameters=[parameters],
-#             remappings=remappings,
-#             arguments=['-d']  # Optionally delete the existing database on start
-#         ),
-
-#         # Localization node:
-#         Node(
-#             condition=IfCondition(localization),
-#             package='rtabmap_slam',
-#             executable='rtabmap',
-#             output='screen',
-#             parameters=[parameters],
-#             remappings=remappings,
-#             arguments=['-d']  # Optionally delete the existing database on start
-#         ),
-
-#         # Visualization node:
-#         Node(
-#             package='rtabmap_viz',
-#             executable='rtabmap_viz',
-#             output='screen',
-#             parameters=[parameters],
-#             remappings=remappings
-#         )
-#     ])
 

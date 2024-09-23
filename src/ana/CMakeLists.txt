@@ -108,7 +108,6 @@ ament_target_dependencies(point_net_node
   OpenCV
 )
 
-
 # If building tests, find and load test dependencies
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -184,6 +183,7 @@ target_link_libraries(point_net_node
   ${CUDA_cudart_LIBRARY}
   ${nav2_costmap_2d_LIBRARIES}
 )
+
 # target_link_libraries(PointCloudFilterCuda ${CUDA_LIBRARIES})
 
 # Finalize the ament package

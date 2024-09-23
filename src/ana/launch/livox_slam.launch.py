@@ -10,8 +10,14 @@ from launch_ros.parameter_descriptions import ParameterValue
 def generate_launch_description():
     package_name='ana'
 
+    velodyne_node = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory(package_name),'launch', 'velodyne_launch.py'
+        )])
+    )
+
     xacro_file = os.path.join(get_package_share_directory(package_name), 'description', 'robot.urdf.xacro')
-    robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=true sim_mode:=true'])
+    robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=true sim_mode:=false'])
 
     # Updated part of the script
     node_robot_state_publisher = Node(
@@ -29,13 +35,13 @@ def generate_launch_description():
         parameters=[{'use_sim_time': False}]
     )
 
-    # static_transform_odom_to_base_link = ExecuteProcess(
-    # cmd=[
-    #     'ros2', 'run', 'tf2_ros', 'static_transform_publisher',
-    #     '0', '0', '0', '0', '0', '0', '1',  # x, y, z, qx, qy, qz, qw
-    #     'odom', 'base_link'  # parent_frame_id, child_frame_id
-    # ],
-    # output='screen')
+    static_transform_odom_to_base_link = ExecuteProcess(
+    cmd=[
+        'ros2', 'run', 'tf2_ros', 'static_transform_publisher',
+        '0', '0', '0', '0', '0', '0', '1',  # x, y, z, qx, qy, qz, qw
+        'odom', 'base_link'  # parent_frame_id, child_frame_id
+    ],
+    output='screen')
 
     # depth_live_filter_node = Node(
     #     package='ana',  # Adjust if your package name is different
@@ -126,14 +132,14 @@ def generate_launch_description():
         parameters=[{'use_sim_time': False}] # ADDED
     )
 
-    # rtab_node = IncludeLaunchDescription(
-    #     PythonLaunchDescriptionSource([os.path.join(
-    #         get_package_share_directory(package_name),'launch','rtab_3D.launch.py'
-    #     )]),     
-    #     launch_arguments={
-    #         'use_sim_time': 'false',
-    #     }.items()
-    # )
+    rtab_node = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory(package_name),'launch','rtab_3D.launch.py'
+        )]),     
+        launch_arguments={
+            'use_sim_time': 'false',
+        }.items()
+    )
 
     pcd_publisher_node = Node(
         package='ana',  # Replace 'ana' with your package name if different
@@ -156,7 +162,7 @@ def generate_launch_description():
         # depth_live_filter_node,
         joint_state_publisher,
         rsp_node,
-        # rtab_node,
+        rtab_node,
         # gazebo,
         # spawn_entity,
         diff_drive_spawner,
@@ -166,7 +172,8 @@ def generate_launch_description():
         nav2_node,
         twist_mux,
         # localization_launch
-        # static_transform_odom_to_base_link
+        static_transform_odom_to_base_link,
         occupancy_grid_subscriber_node,
-        static_transform_publisher
+        static_transform_publisher,
+        velodyne_node,
     ])

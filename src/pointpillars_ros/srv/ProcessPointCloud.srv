@@ -1,0 +1,3 @@
+sensor_msgs/PointCloud2 pointcloud  # Input point cloud data
+---
+std_msgs/String detections  # Output detection results (you can modify this as needed)

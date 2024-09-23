@@ -10,6 +10,12 @@ from launch_ros.parameter_descriptions import ParameterValue
 def generate_launch_description():
     package_name='ana'
 
+    # velodyne_node = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([os.path.join(
+    #         get_package_share_directory(package_name),'launch', 'velodyne_launch.py'
+    #     )])
+    # )
+
     xacro_file = os.path.join(get_package_share_directory(package_name), 'description', 'robot.urdf.xacro')
     robot_description_config = Command(['xacro ', xacro_file])
 
@@ -158,6 +164,7 @@ def generate_launch_description():
         pcd_publisher_node,
         nav2_node,
         twist_mux,
+        # velodyne_node,
         # localization_launch
         # static_transform_odom_to_base_link
         # occupancy_grid_subscriber_node,
