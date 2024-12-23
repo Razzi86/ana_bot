@@ -4,11 +4,11 @@ temporary unfinished readme.
 ## Framework
 - ROS2 Humble
 - Ubuntu 22.04
-- Gazebo Classic
-- RViz2
 
 ## List of components:
 - NVIDIA Jetson Orin Nano Developer Kit
+- Velodyne Puck (VLP-16)
+- Zed 2i (Not currently implemented)
 - Intel D435i RealSense Depth Camera
 - 2x Arduino Leonardo
 - 2x Arduino Motor Shield Rev3
