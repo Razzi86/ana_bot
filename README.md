@@ -1,7 +1,6 @@
-VIEW IMAGES: https://razzi86.github.io/
+VIEW PROJECT IMAGES: https://razzi86.github.io/
 
 # ANA - Autonomous Navigation Assembly
-temporary unfinished readme.
 
 ## Framework
 - ROS2 Humble
