@@ -1,4 +1,4 @@
-VIEW PROJECT IMAGES: https://razzi86.github.io/
+VIEW PROJECT ON MY WEBSITE: https://razzi86.github.io/
 
 # ANA - Autonomous Navigation Assembly
 
